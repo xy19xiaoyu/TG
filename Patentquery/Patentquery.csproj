@@ -945,6 +945,8 @@
     <Compile Include="zt\ZtFileUpLoad.ashx.cs">
       <DependentUpon>ZtFileUpLoad.ashx</DependentUpon>
     </Compile>
+    <Content Include="ckfinder\userfiles\files\2000-2.jpg" />
+    <Content Include="ckfinder\userfiles\files\submit.jpg" />
     <Content Include="Comm\AutoCollects.aspx" />
     <Content Include="Comm\autost.aspx" />
     <Content Include="Comm\ExportExcel.aspx" />
