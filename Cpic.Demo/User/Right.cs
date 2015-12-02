@@ -148,7 +148,7 @@ namespace Cpic.Cprs2010.User
         public static bool DeleteRight(string RightCode)
         {
             string sqlDelRight = "Delete TbRight WHERE RightCode =@RightCode";
-            SqlParameter[] parms = {              
+            SqlParameter[] parms = {
                 new SqlParameter("@RightCode",RightCode)
             };
             if (DBA.SqlDbAccess.ExecNoQuery(CommandType.Text, sqlDelRight, parms) > 0)
@@ -279,7 +279,7 @@ namespace Cpic.Cprs2010.User
             }
             catch (Exception ex)
             {
-                HttpContext.Current.Response.Redirect("~/frmErrInfor.aspx");
+                return;
             }
             if (_AllPagesConfig.Rows.Count == 0)
             {

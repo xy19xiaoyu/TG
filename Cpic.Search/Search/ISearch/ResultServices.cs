@@ -102,7 +102,7 @@ namespace Cpic.Cprs2010.Search
         /// <param name="PageIndex">要取的页数</param>
         /// <param name="PageSize">页数大小</param>
         /// <param name="SortExpression">排序字段</param>
-        /// <returns>list(int)</int></returns>
+        /// <returns>list(int)</returns>
         public List<int> GetResultList(SearchPattern sp, int PageSize, int PageIndex, string SortExpression)
         {
             List<int> lstfml = new List<int>();
@@ -220,7 +220,7 @@ namespace Cpic.Cprs2010.Search
         /// <param name="PageIndex">要取的页数</param>
         /// <param name="PageSize">页数大小</param>
         /// <param name="SortExpression">排序字段</param>
-        /// <returns>list(int)</int></returns>
+        /// <returns>list(int)</returns>
         public List<int> GetResultListByEnd(SearchPattern sp, int PageSize, int PageIndex, string SortExpression)
         {
             List<int> lstfml = new List<int>();

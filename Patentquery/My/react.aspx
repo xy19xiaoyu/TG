@@ -11,28 +11,36 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div id="example">
-        </div>
-        <div id="json">
-        </div>
-        <script type="text/babel">
-              var arr = [
-                <h1>Hello world!</h1>,
-                <h2>React is awesome</h2>,
+        <div>
+            <div id="example">
+            </div>
+            <div id="json">
+            </div>
+            <script type="text/babel">
+              var arr = [              
+                <h2>React is awesome</h2>
               ];
               ReactDOM.render(
                 <div>{arr}</div>,
                 document.getElementById('example')
               );
 
-      ReactDOM.render(
-        <h3>hello json</h3>, 
-        $("#json")[0]  
-      );     
-      //alert($("#json").first());
+    
+               $.getJSON(
+                    "../comm/PatentInfo.aspx",
+                    function(data){
+                        ReactDOM.render(
+                        <div>
+                            <h3>{data.ret}</h3>
+                            <h4>{data.err}</h4>
+                            <h5>{data.data}</h5>
+                        </div>
+                , 
+                            $("#json")[0]  
+                        );
+               });
     </script>
-    </div>
+        </div>
     </form>
 </body>
 </html>

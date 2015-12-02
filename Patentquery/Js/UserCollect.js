@@ -288,7 +288,8 @@ function ShowHotTop() {
                     //
                     if (!frozen) {
                         cc.push('<td class="hot">');
-                        cc.push(FormatTitle1(rowData.type, rowData.title, rowData.Number, rowData.appno, rowData.count, rowData.Pid));
+                        debugger;
+                        cc.push(FormatCoTitle(rowData.type, rowData.title, rowData.Number, rowData.zhuanLiLeiXing, rowData.count, rowData.Pid));
                         cc.push('</td>'); ;
                     }
 
@@ -316,9 +317,9 @@ function ShowHotTop() {
     });
 }
 
-function FormatTitle1(type, strTitle, strANX, zhuanLiLeiXing, count, cpic) {
+function FormatCoTitle(type, strTitle, strANX, zhuanLiLeiXing, count, cpic) {
+    debugger;
     var strReturn = "";
-    strTitle
     if (type.toUpperCase() == "CN") {
         if (zhuanLiLeiXing == "3")//外观设计专利
         {
