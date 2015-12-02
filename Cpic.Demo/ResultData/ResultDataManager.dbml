@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataInfo" Class="ResultDataManagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=DataInfo;Persist Security Info=True;User ID=sa" SettingsObjectName="Cpic.Cprs2010.Search.ResultData.Properties.Settings" SettingsPropertyName="DataInfoConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=127.0.0.1;Initial Catalog=DataInfo;Persist Security Info=True;User ID=sa" SettingsObjectName="Cpic.Cprs2010.Search.ResultData.Properties.Settings" SettingsPropertyName="DataInfoConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DwpiAccessionNoSerialNo" Member="DwpiAccessionNoSerialNo">
     <Type Name="DwpiAccessionNoSerialNo">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_ZJPT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery_ZJPT;Persist Security Info=True;User ID=sa" SettingsObjectName="ProXZQDLL.Properties.Settings" SettingsPropertyName="PatentQuery_ZJPTConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_TG" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=127.0.0.1;Initial Catalog=PatentQuery_TG;Persist Security Info=True;User ID=sa" SettingsObjectName="ProXZQDLL.Properties.Settings" SettingsPropertyName="PatentQuery_TGConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TbRight" Member="TbRight">
     <Type Name="TbRight">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

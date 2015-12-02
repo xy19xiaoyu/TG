@@ -130,7 +130,7 @@ namespace Cpic.Cprs2010.User
                 new SqlParameter("@RightName",RightName),
                 new SqlParameter("@CheckLogIn",CheckLogIn),
                 new SqlParameter("@CheckRight",CheckRight)};
-            if (DBA.SqlDbAccess.ExecNoQuery(trans,CommandType.Text, sqlAddRight, parms) > 0)
+            if (DBA.SqlDbAccess.ExecNoQuery(trans, CommandType.Text, sqlAddRight, parms) > 0)
             {
                 return true;
             }
@@ -279,8 +279,6 @@ namespace Cpic.Cprs2010.User
             }
             catch (Exception ex)
             {
-                HttpContext.Current.Session.Add("ERROR_MESSAGE", "数据库操作错误!");
-                HttpContext.Current.Session.Add("ERROR_Exception", ex);
                 HttpContext.Current.Response.Redirect("~/frmErrInfor.aspx");
             }
             if (_AllPagesConfig.Rows.Count == 0)
@@ -368,7 +366,7 @@ namespace Cpic.Cprs2010.User
                             if ((CheckExists == true && IsExists == false) || CheckExists == false)
                             {
                                 DataRow dr = _AllPagesConfig.NewRow();
-                                dr["页面路径"] = file.FullName.Replace(WebSiteRootPaht, "~/").Replace("\\","/");
+                                dr["页面路径"] = file.FullName.Replace(WebSiteRootPaht, "~/").Replace("\\", "/");
                                 dr["页面标题"] = string.Empty;
                                 dr["是否验证登陆"] = false;
                                 dr["是否验证权限"] = false;

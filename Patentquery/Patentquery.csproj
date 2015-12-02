@@ -58,6 +58,9 @@
       <HintPath>..\Ref_dll\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Ref_dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Ref_dll\NPOI.dll</HintPath>
@@ -180,6 +183,13 @@
     </Compile>
     <Compile Include="Comm\ipcSearch.aspx.designer.cs">
       <DependentUpon>ipcSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comm\PatentInfo.aspx.cs">
+      <DependentUpon>PatentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comm\PatentInfo.aspx.designer.cs">
+      <DependentUpon>PatentInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Comm\Similar.aspx.cs">
       <DependentUpon>Similar.aspx</DependentUpon>
@@ -369,6 +379,13 @@
     </Compile>
     <Compile Include="My\PatentSectionShow.aspx.designer.cs">
       <DependentUpon>PatentSectionShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My\react.aspx.cs">
+      <DependentUpon>react.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My\react.aspx.designer.cs">
+      <DependentUpon>react.aspx</DependentUpon>
     </Compile>
     <Compile Include="My\SplitScreenDisplay.aspx.cs">
       <DependentUpon>SplitScreenDisplay.aspx</DependentUpon>
@@ -954,6 +971,7 @@
     <Content Include="Comm\getCSIndexValues.aspx" />
     <Content Include="Comm\getSimilar.aspx" />
     <Content Include="Comm\ipcSearch.aspx" />
+    <Content Include="Comm\PatentInfo.aspx" />
     <Content Include="Comm\Similar.aspx" />
     <Content Include="Comm\sysTreeNodes.aspx" />
     <Content Include="Comm\BSP.aspx" />
@@ -1482,6 +1500,9 @@
     <Content Include="Js\bootstrap-switch.min.js" />
     <Content Include="Js\bootstrap.js" />
     <Content Include="Js\bootstrap.min.js" />
+    <Content Include="Js\ceact\browser.min.js" />
+    <Content Include="Js\ceact\react-dom.js" />
+    <Content Include="Js\ceact\react.js" />
     <Content Include="Js\CN_EntrancesTip.js" />
     <Content Include="Js\csindex.js" />
     <Content Include="Js\DetailsPage1.js" />
@@ -1525,6 +1546,7 @@
     <Content Include="My\frmZlSmart.aspx" />
     <Content Include="My\Opinion.aspx" />
     <Content Include="My\PatentSectionShow.aspx" />
+    <Content Include="My\react.aspx" />
     <Content Include="My\SplitScreenDisplay.aspx" />
     <Content Include="My\UserService.asmx" />
     <Content Include="My\WebLogin.aspx" />
