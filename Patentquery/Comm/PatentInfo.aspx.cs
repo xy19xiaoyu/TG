@@ -10,40 +10,82 @@ namespace Patentquery.Comm
 {
     public partial class PatentInfo : System.Web.UI.Page
     {
+        private SearchInterface.ClsSearch search = new SearchInterface.ClsSearch();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string appno = string.Empty;
+            string id = string.Empty;
             string type = string.Empty;
-            string resultType = string.Empty;
+
             resutBase ret = new resutBase() { ret = false, err = "参数错误" };
-
-            Request.ContentType = "application/x-json;charset=UTF-8";
-            if (Request["appno"] == null || Request["type"] == null || Request["resultType"] == null)
+            
+            if (Request["id"] == null || Request["type"] == null)
             {
                 Response.Write(ret.ToString());
                 return;
             }
-            if (string.IsNullOrEmpty(Request["appno"].ToString().Trim()) || string.IsNullOrEmpty(Request["type"].ToString().Trim()) || string.IsNullOrEmpty(Request["resultType"].ToString().Trim()))
+            if (string.IsNullOrEmpty(Request["id"].ToString().Trim()) || string.IsNullOrEmpty(Request["type"].ToString().Trim()))
             {
                 Response.Write(ret.ToString());
                 return;
             }
 
-            appno = Request["appno"].ToString();
+            id = Request["id"].ToString();
             type = Request["type"].ToString();
-            resultType = Request["resultType"].ToString();
-            object o = new object();
+            object data = null;
             switch (type.ToUpper())
             {
                 case "B":
+                    data = "b";
+                    //著录项目
+                    break;
                 case "C":
+                    //string xmltext = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "0");
+                    //if (xmltext.StartsWith("ERROR："))
+                    //{
+                    //    data = xmltext;
+                    //}
+                    //else
+                    //{
+                    //    MSXML2.DOMDocument30Class xml = new MSXML2.DOMDocument30Class();
+                    //    MSXML2.DOMDocument30Class xslt = new MSXML2.DOMDocument30Class();
+                    //    //xmltext=xmltext.Replace("<![CDATA[<math>", "<math>").Replace("</math>]]>", "</math>");
+                    //    xml.loadXML(xmltext);
+
+                    //    XmlDocument doc = new XmlDocument();
+                    //    doc.Load(Server.MapPath("~") + "\\newcss\\claims.xsl");
+                    //    string xsltext = doc.InnerXml;
+
+                    //    xslt.loadXML(xsltext);
+                    //    LiteralRights.Text = xml.transformNode(xslt).Replace("charset=UTF-16", "charset=GB2312");
+                    //}
+                    //权利要求
+                    break;
                 case "D":
+                    data = "d";
+                    //说明书
+                    break;
+                case "PDF":
+                    //PDF                    
+                    data = "<div id=\"123\">hello json</div>";
+                    break;
                 case "P":
+                    //图片
+                    break;
+                case "L":
+                    //法律状态
+                    break;
+                case "R":
+                    //引文
+                    break;
+                default:
+                    data = null;
                     break;
             }
-
-
+            ret.data = data;
+            ret.ret = true;
+            ret.err = "";
+            Response.Write(ret.ToString());
         }
     }
     public class resutBase

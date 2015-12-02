@@ -8,6 +8,9 @@
     <script src="../Js/ceact/react-dom.js" type="text/javascript"></script>
     <script src="../easyui/jquery.min.js" type="text/javascript"></script>
     <script src="../Js/ceact/browser.min.js" type="text/javascript"></script>
+    <script>
+       
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -18,29 +21,30 @@
             </div>
             <script type="text/babel">
               var arr = [              
-                <h2>React is awesome</h2>
+                <h2 id="123">React is awesome</h2>
               ];
               ReactDOM.render(
                 <div>{arr}</div>,
                 document.getElementById('example')
               );
 
-    
+               var HelloMessage = React.createClass({
+                    render: function() {
+                        return <div dangerouslySetInnerHTML={{__html: this.props.name}}></div>;
+                    }
+                });
                $.getJSON(
-                    "../comm/PatentInfo.aspx",
+                    "../comm/PatentInfo.aspx?type=pdf&id=123",
                     function(data){
+                        if(data.ret){ alert(data.data);}
                         ReactDOM.render(
-                        <div>
-                            <h3>{data.ret}</h3>
-                            <h4>{data.err}</h4>
-                            <h5>{data.data}</h5>
-                        </div>
+                            <HelloMessage name={data.data}/>
                 , 
                             $("#json")[0]  
                         );
                });
-    </script>
-        </div>
+            </script>
+</div>
     </form>
 </body>
 </html>
