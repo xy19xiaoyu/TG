@@ -1,0 +1,6 @@
+bcp PatentQuery_TG.dbo.tbuser  in c:\in\tbuser.txt  -U"sa" -P"xiaoyu20" -c -t"|"
+bcp PatentQuery_TG.dbo.TbRight  in c:\in\TbRight.txt  -U"sa" -P"xiaoyu20" -c -t"|"
+bcp PatentQuery_TG.dbo.TbRole  in c:\in\TbRole.txt  -U"sa" -P"xiaoyu20" -c -t"|"
+bcp PatentQuery_TG.dbo.TbRoleRight  in c:\in\TbRoleRight.txt  -U"sa" -P"xiaoyu20" -c -t"|"
+bcp PatentQuery_TG.dbo.TbUserRole  in c:\in\TbUserRole.txt  -U"sa" -P"xiaoyu20" -c -t"|"
+bcp PatentQuery_TG.dbo.TLC_Collects  in c:\in\TLC_Collects.txt  -U"sa" -P"xiaoyu20" -c -t"|"
