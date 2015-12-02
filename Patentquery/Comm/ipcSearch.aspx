@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ipcSearch.aspx.cs" Inherits="Patentquery.Comm.ipcSearch" %>

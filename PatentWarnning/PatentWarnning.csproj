@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AE83690-1D12-468E-9C45-3C265A130FAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatentWarnning</RootNamespace>
+    <AssemblyName>PatentWarnning</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CnCompare.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScanSearch.cs" />
+    <Compile Include="Service References\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TaskWarnning.cs" />
+    <Compile Include="YJini.cs" />
+    <Compile Include="ConvertLstByte.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cpic.Demo\DBA\DBA.vbproj">
+      <Project>{95E4DC4D-C9FD-4E6D-AE33-2E28E13641D5}</Project>
+      <Name>DBA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cpic.Demo\ResultData\ResultData.csproj">
+      <Project>{9ECEAF25-A205-4F45-A996-A7F9774681A7}</Project>
+      <Name>ResultData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cpic.Search\SearchPool\ISearchPool\ISearchPool.csproj">
+      <Project>{A9A04BF2-BCE8-40F7-9595-72CF2CE9E512}</Project>
+      <Name>ISearchPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cpic.Search\Search\ISearch\ISearch.csproj">
+      <Project>{C5EB21DD-D0B3-42DF-8891-A51CAFD16042}</Project>
+      <Name>ISearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patentquery_TLC\TLC.csproj">
+      <Project>{D7800E50-E0A2-4FD3-8EA1-D3618F886E07}</Project>
+      <Name>TLC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProXZQDLL\ProXZQDLL.csproj">
+      <Project>{410C51CD-FACE-4342-B14E-FE96BD75D5A6}</Project>
+      <Name>ProXZQDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\接口程序及测试代码\SearchInterface\SearchInterface.csproj">
+      <Project>{FD3CA31F-EBDE-4493-A472-637C6963E7D0}</Project>
+      <Name>SearchInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\PatentWarnning.ServiceReference.ResultInfoWebService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\SearchWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\SearchWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

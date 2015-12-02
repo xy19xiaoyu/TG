@@ -1,0 +1,12 @@
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\SocketSearchPool.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\SocketSearchPool.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\ISearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\ISearchPool.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\SocketSearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\log4net.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\ISearch.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\SocketSearch.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\bin\Release\ISearchPool.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\obj\Release\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\obj\Release\SocketSearchPool.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\SearchPool\SocketSearchPool\obj\Release\SocketSearchPool.pdb

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_ZJPT" Class="CfgDataManagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery_ZJPT;Persist Security Info=True;User ID=sa" SettingsObjectName="Cpic.Cprs2010.Cfg.Properties.Settings" SettingsPropertyName="PatentQuery_ZJPTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CountryConfig" Member="CountryConfig">
+    <Type Name="CountryConfig">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DaiMa" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="MingCheng" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="leixing" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tb_UsetPatentInfo" Member="Tb_UsetPatentInfo">
+    <Type Name="Tb_UsetPatentInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApNo" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Info" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZPT_SJWH_DLJGPZB" Member="ZPT_SJWH_DLJGPZB">
+    <Type Name="ZPT_SJWH_DLJGPZB">
+      <Column Name="DAILIJGID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGDM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGDZ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGYB" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGLXDH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGYHZH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGMC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGFZRXM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGBZH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGBZS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SHANGJIZGDW" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PIBIANDW" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GONGSDJBJ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ZHUANLIDJRQ" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DENGJIRQ" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="JINGJIXZ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGZT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SUOZAIDQ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JINGYINGFW" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SHEWAIQBJ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGJC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="KEZIQXJBJ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BIANGENGBJ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REGNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REGTIME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MODNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MODTIME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YOUXIAOBJ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NIANJIANZT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DAILIJGYDDH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CHENGJIECXGDQ" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

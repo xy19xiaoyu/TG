@@ -1,0 +1,102 @@
+﻿body 
+{
+	color:#333333;
+	font-size:14px;
+	font-family:Microsoft YaHei;
+	line-height:150%;
+	background-color:#FEFEFE;
+	background-image: url(../Images/bgBody.jpg);
+	background-repeat:repeat-x;
+	background-position:center top;
+	margin:0px;
+}
+a
+{
+	color:#666666;
+	text-decoration:none;
+}
+img
+{
+    border-style:none;
+    vertical-align:middle;
+}
+dl
+{
+	margin:20px 0px 0px 10px;
+	padding:5px 0px;
+}
+dl dt
+{
+	clear:both;
+	float:left;
+	width:50px;
+	text-align:right;
+	line-height:26px;
+	padding:0px 10px 0px 0px;
+}
+dl dd
+{
+    *width:115px;
+    margin:5px 0px;
+    _margin-left:-2px;
+}
+#box
+{
+	width:350px;
+	height:200px;
+	background-color:#FFFFFF;
+	margin:150px auto 0px auto;
+}
+#title
+{
+	clear:both;
+	height:26px;
+	font-size:15px;
+	text-align:center;
+}
+#login
+{
+	clear:both;
+	height:124px;
+}
+#login .textBox
+{
+	width:120px;
+	border:solid 1px #4E4E4E;
+	background-color:#EFEFEF;
+}
+#info
+{
+	float:left;
+	width:200px;
+}
+#command
+{
+	float:left;
+	width:150px;
+	text-align:center;
+	padding-top:30px;
+}
+#shadow
+{
+	clear:both;
+	width:500px;
+	height:100px;
+	text-align:center;
+	background-image:url("/Images/bgLoginShadow.png");
+	_background-image:none;
+	padding-top:20px;
+	margin-right:auto;
+	margin-left:auto;
+}
+#footer
+{
+	clear:both;
+	text-align:center;
+	padding:10px;
+	margin:50px auto 0px auto;
+}
+#footer span
+{
+	color:#4E4E4E;
+}

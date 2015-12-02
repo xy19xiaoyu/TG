@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cn-patent-document>
+  <doc-number>1042182</doc-number>
+  <kind>A</kind>
+  <doc-filing_no>88109272.X</doc-filing_no>
+  <claims>
+    <claim id="ci1" num="001">
+      <claim-text>1、从黄瓜花叶病毒株C得到的下列序列的壳蛋白基因。                <br /></claim-text>
+      <claim-text>黄瓜花叶毒株C壳蛋白基因序列长度：1426        1987，10，20                <br /></claim-text>
+      <claim-text>1                    CAATTCCCGC    CGCAATCGGG    AGTTCTTCCG    CGTCCCGCTC    CGAAGCCTTC                <br /></claim-text>
+      <claim-text>51                AGACCGCAGG    TGGTTAACGG    TCTTTAGTCA    CTTTGGTGCG    TATTAGTATA                <br /></claim-text>
+      <claim-text>101            TAAGTATTTG    TGAGTCTGTA    CATAATACTA    TATCTATAGA    GTCCTGTGTG                <br /></claim-text>
+      <claim-text>181            AGTTGATACA    GTACACATCT    GTGACGCGAT    GCCGTGTTGA    GAAGGGATCA                <br /></claim-text>
+      <claim-text>201            CATCTGGTTT    TAGTAAGCCT    ACATCATAGT    TTTGAGGTTC    AATTCCTCTT                <br /></claim-text>
+      <claim-text>261            ACTCCCTGTT    GAGTACCTTA    CTTTCTCATG    GATGCTTCTC    CGACGAGATT                <br /></claim-text>
+      <claim-text>301            GTCGTTATTG    TCTACTGACT    ATATAGACAG    TGTGTGTGCT    GTGTTTTCTC                <br /></claim-text>
+      <claim-text>361            TTTTGTGTCG    TAGAATTGAG    TCGAGTCATG    GACAAATCTG    AATCAACCAG                <br /></claim-text>
+      <claim-text>401            TGCTGGTCGT    AACCATCGAC    GTCGTCCGCG    TCGTGGTTCC    CGCTCCGCCC                <br /></claim-text>
+      <claim-text>451            CCTCCTCCGC    GGATGCTAAC    TTTAGAGTCT    TGTCGCAGCA    GCTTTCGCGA                <br /></claim-text>
+      <claim-text>501            CTTAATAAGA    CGTTAGCAGC    TGGTCGTCCA    ACTATTAACC    ACCCAACCTT                <br /></claim-text>
+      <claim-text>551            TGTAGGGAGT    GAACGCTGTA    GACCTAGGTA    CACGTTCACA    TCTATTACCC                <br /></claim-text>
+      <claim-text>601            TAAAGCCACC    AAAAATAGAC    CGTGAGTCTT    ATTACGGTAA    AAGGTTGTTA                <br /></claim-text>
+      <claim-text>651            CTACCTGATT    CAGTCACGGA    ATATGATAAG    AAGCTTGTTT    CGCGCATTCA                <br /></claim-text>
+      <claim-text>701            AATTCGAGTT    AATCCTTTGC    CGAAATTTGA    TTCTACCGTG    TGGGTGACAG                <br /></claim-text>
+      <claim-text>751            TCCGTAAAGT    TCCTGCCTCC    TCGGACTTAT    CCGTTGCCGC    CATCTCTGCT                <br /></claim-text>
+      <claim-text>801            ATGTTCGCGG    ACGGAGCCTC    ACCGGTACTG    GTTTATCAGT    ATGCCGCATC                <br /></claim-text>
+      <claim-text>351            TGGAGTCCAA    GCCAACAACA    AACTGTTGTT    TGATCTTCG    GCGATGCGCG                <br /></claim-text>
+      <claim-text>951            CTGATATAGG    TGACATGAGA    AAGTACGCCG    TCCTCGTGTA    TTCAAAAGAC                <br /></claim-text>
+      <claim-text>951            GATGCGCTCG    AGACGGACGA    GCTAGTACTT    CATGTTGACA    TCGAGCACCA                <br /></claim-text>
+      <claim-text>1001        ACGCATTCCC    ACATCTGGAG    TGCTCCCAGT    CTGATTCCGT    GTTCCCAGAA                <br /></claim-text>
+      <claim-text>1051        CCCTCCCTCC    GATCTCTGTG    GCGGGAGCTG    AGTTGGCAGT    TCTACTACAA                <br /></claim-text>
+      <claim-text>1101        ACTGTCTGGA    GTCACTAAAC    GTTTTACGGT    GAACGGGTTG    TCCATCCAGC                <br /></claim-text>
+      <claim-text>1151        TTACGGCTAA    AATGGTCAGT    CGTGGAGAAA    TCCACGCCAG    CAGATTTACA                <br /></claim-text>
+      <claim-text>1201        AATCTCTGAG    GCGCCTTTGA    AACCATCTCC    TAGGTTTCTT    CGGAAGGGCT                <br /></claim-text>
+      <claim-text>1251        TCGGTCCGTG    TACCTCTAGC    GCAACGTGCT    AGTTTCAGCG    TACGGCTGCC                <br /></claim-text>
+      <claim-text>1301        CCCCCACTTT    CGTGGGGGCC    TCCAAAAGGA    GACCAAAAAA    AAAAAAAAAA                <br /></claim-text>
+      <claim-text>1331        AAAAAAAAAA    AAAAAAAAAA    AAAAAAAAAA    AAAAAAAAAA    AAAAAAAAAA                <br /></claim-text>
+      <claim-text>1401        AAAAAAAAAA    AAAAAAAAAA    GAATTC                <br /></claim-text>
+    </claim>
+    <!-- SIPO <DP n="1"> -->
+    <claim id="ci2" num="002">
+      <claim-text>2、一种植物转化载体，它含有权利要求1的壳蛋白基因、花椰菜花叶病毒的35S启动子和花椰菜花叶病毒35S基因或菜豆种子贮存基因的多腺苷化信号。                <br /></claim-text>
+    </claim>
+    <claim id="ci3" num="003">
+      <claim-text>3、一种包含权利要求2的植物转化载体的细菌细胞。                <br /></claim-text>
+    </claim>
+    <claim id="ci4" num="004">
+      <claim-text>4、一种转化的植物细胞，它包含CMV-C壳蛋白基因、花椰菜花叶病毒35S启动子以及花椰菜花叶病毒基因或菜豆种子贮存基因的多腺苷化信号。                <br /></claim-text>
+    </claim>
+    <claim id="ci5" num="005">
+      <claim-text>5、一种含有权利要求4的转化细胞并是选自葫芦科或茄科的植物。                <br /></claim-text>
+    </claim>
+    <claim id="ci6" num="006">
+      <claim-text>6、按权利要求5的一种葫芦科植物。                <br /></claim-text>
+    </claim>
+    <claim id="ci7" num="007">
+      <claim-text>7、按权利要求5的一种茄科植物。                <br /></claim-text>
+    </claim>
+    <claim id="ci8" num="008">
+      <claim-text>8、一种产生抗病毒的葫芦科植物的方法，包括繁殖一种表达权利要求1的壳蛋白基因的葫芦科植物。                <br /></claim-text>
+    </claim>
+    <claim id="ci9" num="009">
+      <claim-text>9、一种产生抗病毒的茄科植物的方法，包括繁殖一种表达权利要求1的壳蛋白基因的茄科植物。                <br /></claim-text>
+    </claim>
+    <!-- SIPO <DP n="2"> -->
+  </claims>
+</cn-patent-document>

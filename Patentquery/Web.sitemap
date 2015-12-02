@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="#" title="首页" description="">
+    <siteMapNode url="/Default.aspx" title="网站首页" description=""></siteMapNode>
+    <siteMapNode url="/Channel/" title="频道" description=""></siteMapNode>
+    <siteMapNode url="/Down/" title="下载" description=""></siteMapNode>
+    <siteMapNode url="/Edu/" title="学习" description=""></siteMapNode>
+    <siteMapNode url="/Exam/" title="考试" description=""></siteMapNode>
+    <siteMapNode url="/Bbs/" title="论坛" description=""></siteMapNode>
+  </siteMapNode>
+</siteMap>

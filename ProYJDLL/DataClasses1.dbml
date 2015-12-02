@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_ZJPT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery_ZJPT;Persist Security Info=True;User ID=sa" SettingsObjectName="ProYJDLL.Properties.Settings" SettingsPropertyName="PatentQuery_ZJPTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ZtDbList" Member="ZtDbList">
+    <Type Name="ZtDbList">
+      <Column Name="DbID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ztDbName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="dbType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DbDes" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsDel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TLC_Albums" Member="TLC_Albums">
+    <Type Name="TLC_Albums">
+      <Column Name="AlbumId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Orders" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="live" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsParent" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sysTree" Member="sysTree">
+    <Type Name="sysTree">
+      <Column Name="NodeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NodeName" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="PNodeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsParent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="des" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="live" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="NodeName1" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.city" Member="city">
+    <Type Name="city">
+      <Column Name="cityID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cityName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="provincialID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PY" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="provincial_city" Member="provincial" ThisKey="provincialID" OtherKey="provincialID" Type="provincial" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Applicant" Member="Applicant">
+    <Type Name="Applicant">
+      <Column Name="pubno" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="pubtype" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pubvol" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="filingno" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="appl" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="mark" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="pubmk" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventor" Member="Inventor">
+    <Type Name="Inventor">
+      <Column Name="pubno" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="pubtype" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pubvol" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="filingno" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="inventor" Member="inventor1" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="mark" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="pubmk" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.provincial" Member="provincial">
+    <Type Name="provincial">
+      <Column Name="provincialID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="provincialName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PY" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DaiMa" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="provincial_city" Member="city" ThisKey="provincialID" OtherKey="provincialID" Type="city" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CountryConfig" Member="CountryConfig">
+    <Type Name="CountryConfig">
+      <Column Name="id" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DaiMa" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MingCheng" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="leixing" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.C_W_SEARCHLIS" Member="C_W_SEARCHLIS">
+    <Type Name="C_W_SEARCHLIS">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="W_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="S_NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CHANGEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CURRENTNUM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CHANGENUM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEARCHFILE" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMPAREFILE" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ApplicantYJ" Member="ApplicantYJ">
+    <Type Name="ApplicantYJ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="appl" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventorYJ" Member="InventorYJ">
+    <Type Name="InventorYJ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="inventor" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbShiJie" Member="TbShiJie">
+    <Type Name="TbShiJie">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DaiMa" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="MingCheng" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.C_EARLY_WARNING" Member="C_EARLY_WARNING">
+    <Type Name="C_EARLY_WARNING">
+      <Column Name="C_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALIAS" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PERIOD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="C_TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dbsource" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BEIZHU" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.C_W_SECARCH" Member="C_W_SECARCH">
+    <Type Name="C_W_SECARCH">
+      <Column Name="W_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="C_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="S_NAME" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PATTERN" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CHANGEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CURRENTNUM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CHANGENUM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEARCHFILE" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMPAREFILE" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NID" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

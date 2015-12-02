@@ -1,0 +1,262 @@
+﻿body 
+{
+	color:#333333;
+	font-size:14px;
+	font-family:Microsoft YaHei;
+	line-height:150%;
+	background-color:#FEFEFE;
+	background-image: url(../Images/bgBody.jpg);
+	background-repeat:repeat-x;
+	background-position:center top;
+	margin:0px;
+}
+a
+{
+	color:#555555;
+	text-decoration:none;
+}
+img
+{
+    border-style:none;
+    vertical-align:middle;
+}
+h1
+{
+    font-size:24px;
+    font-family:Microsoft YaHei;
+    line-height:150%;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+h2
+{
+    font-size:18px;
+    font-family:Microsoft YaHei;
+    line-height:150%;
+    padding:0px;
+    margin:0px;
+}
+h3
+{
+    font-size:15px;
+    font-weight:bold;
+    line-height:150%;
+    padding:0px;
+    margin:0px;
+}
+dl
+{
+	margin:20px 0px 0px 10px;
+	padding:0px;
+}
+dl dt
+{
+	clear:both;
+	float:left;
+	width:100px;
+	text-align:right;
+	line-height:26px;
+	padding:0px 10px 0px 0px;
+}
+dl dd
+{
+	padding:4px 0px
+}
+dl dd .command
+{
+	text-align:center;
+}
+.textBox
+{
+	color:#AFAFAF;
+	border:solid 1px #4E4E4E;
+	background-color:#1A1A1A;
+}
+.btn
+{
+	width:80px;
+	height:20px;
+	color:#FF6600;
+	line-height:20px;
+	text-align:center;
+	background-image: url(../Images/My/bgBtn.gif);
+	background-color:#1A1A1A;
+	border-style:none;
+}
+.btnCancel
+{
+	width:80px;
+	height:20px;
+	color:#888888;
+	line-height:20px;
+	text-align:center;
+	background-image: url(../Images/My/bgBtn.gif);
+	background-color:#1A1A1A;
+	border-style:none;
+}
+#header
+{
+    width:1024px;
+	height:42px;
+	margin:auto;
+}
+#logo
+{
+	float:left; 
+	margin-top:10px;
+	margin-left:50px;
+}
+#title
+{
+    font-size:25px;
+	margin-top:40px;
+    margin-left:20px;
+}
+#account
+{
+	margin-top:10px;
+    margin-left:60px;
+}
+#menu
+{
+	float:left;
+	width:719px;
+	height:52px;
+	background-image: url(../Images/bgMenu.png);
+	background-repeat:no-repeat;
+	margin-top:10px;
+    margin-left:60px;
+}
+#content
+{
+    clear:both;
+	background-image: url(../Images/bgContent.png);
+	background-repeat:repeat-x;
+	padding-top:200px;
+}
+#main
+{
+    width:1024px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#left
+{
+    float:left;
+    width:200px;
+}
+#center
+{
+    float:left;
+    width:624px;
+}
+#right
+{
+    float:left;
+    width:180px;
+}
+.menu
+{
+	float:left;
+	height:24px;
+	background-image: url(../Images/My/bgMenuRight.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+	*margin-top:-20px;
+}
+.staticMenuStyle
+{
+}
+.staticMenuItemStyle
+{
+	padding:0px 8px;
+}
+.staticMenuItemStyle a
+{
+}
+.staticSelectedStyle
+{
+}
+.staticHoverStyle
+{
+}
+.dynamicMenuStyle
+{
+	margin-left:5px;
+	z-index:100;
+}
+.dynamicMenuItemStyle
+{
+	background-color:#111111;
+	border:solid 1px #111111;
+	padding:0px 6px;
+}
+.dynamicMenuItemStyle a
+{
+}
+.dynamicSelectedStyle
+{
+	background-color:#333333;
+}
+.dynamicSelectedStyle a
+{
+}
+.dynamicHoverStyle
+{
+	background-color:#333333;
+}
+.dynamicHoverStyle a
+{
+}
+#account
+{
+	float:right;
+	padding-right:10px;
+}
+#path
+{
+	clear:both;
+	height:26px;
+	line-height:26px;
+	background-image: url(../Images/My/bgPath.gif);
+	padding-left:10px;
+}
+#command
+{
+	text-align:center;
+	padding:10px;
+}
+table.grid
+{
+	width:400px;
+	background-color:#333333;
+	border-style:none;
+	margin:10px auto;
+}
+table.grid tr th
+{
+	font-weight:bold;
+	background-color:#222222;
+	text-align:center;
+	padding:3px;
+}
+table.grid tr td
+{
+	background-color:#282828;
+	text-align:center;
+	padding:3px;
+}
+.clear
+{
+    clear:both;
+}
+#footer
+{
+    clear:both;
+    height:89px;
+    background-image:url("../Images/bgFooter.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-bottom:20px;
+}

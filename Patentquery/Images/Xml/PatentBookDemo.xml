@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cn-patent-document>
+  <doc-number>1042182</doc-number>
+  <kind>A</kind>
+  <doc-filing_no>88109272.X</doc-filing_no>
+  <description>
+    <technical-field id="technical-field001">
+      <p id="d0" num="001">本发明涉及黄瓜花叶病毒株C（CMV-C）的壳蛋白基因，更具体说，本发明涉及一种制备所说的基因并把它掺入转移载体中的方法，还涉及将它用于生产对CMV病毒感染具有抗性的转化植物细胞和转化植株。            <br /></p>
+    </technical-field>
+    <background-art id="background-art001">
+      <p id="d1" num="002">黄瓜花叶病毒（CMV）是一种单链（+）RNA植物病毒，它具有一个在功能上被区分的基因组。这种病毒基因组含有4种称为RNA1-4的RNA;分别为3389核苷酸、3035核苷酸、2193核苷酸和1027核苷酸（Peden        and        Symons，1973;Gould        and        Symons，1982;Rezaian等人，1984;Rezaian等人，1985）。对于感染来说只需要RNA1-3，因为RNA-3也编码由RNA4编码的壳蛋白（Peden和Symons，1973）。CMV        RNA通过转译从RNA1产生一个95KDal的多肽，从RNA2产生一个94KDal多肽（Gordon等人，1983），并从RNA3产生两种多肽：它的5′端编码一种35KDal多肽，而3″端编码一种24.5KDal的多肽（Gould和Symons，1982）。该24.5KDal多肽与由RNA4编码的多肽是相同的，并且是壳蛋白。            <br /></p>
+      <p id="d2" num="003">CMV壳蛋白基因转移并整合到植物基因组中后，它不含有其表达所必需的信号。必须通过基因工程使它的转译起始密码（ATG）上游含有一个组成启动子，以及在转译终止密码下游加入多聚腺苷酸（Poly        A）信号（AATAAA）。有好几种在植物中起作用的启动子可以利用，但是，我们认为最好的启动子是由Ca        MV、Ti基因的胭            <br /><!-- SIPO <DP n="1"> -->脂碱合酶（Bevan等人，1983）和章鱼碱合酶（Depicker等人，1982）以及大豆贮存蛋白（云扁豆蛋白）基因得到的那些组成启动子。从这些基因得到的多聚腺苷酸加入信号也适于我们的用途。            <br /></p>
+      <p id="d3" num="004">EP223452描述了对病毒病有抗性的植物以及产生这种植物的方法。其他文献还有An，G.等人（1985）的“用于高等植物转化的新的克隆载体”EMBO        J.4∶277-284;Dodds，J.A.等人（1985）的“黄瓜花叶病毒株之间的交叉保护作用：宿主及接种物类型对于病毒粒子积累及攻击株的双链RNA的影响”Virology        144∶301-309;Pietrzak，M.等人（1986）的“用新的植物表达载体转化原生质体后两种细菌抗生素抗性基因在植物中的表达”Nuc.Acids        Res.14∶5857-5868。            <br /></p>
+    </background-art>
+    <disclosure id="disclosure001">
+      <p id="d4" num="005">本发明提供了：            <br /></p>
+      <p id="d5" num="006">从黄瓜花叶病毒株C（CMV-C）得到的壳蛋白基因。            <br /></p>
+      <p id="d6" num="007">一种含有从CMV-C得到的壳蛋白基因、花椰菜花叶病毒35S基因的启动子、以及花椰菜花叶病毒35S基因或菜豆（Phaseolus        Vulgavis）种子贮存蛋白基因的多聚腺苷酸信号的植物转化载体。            <br /></p>
+      <p id="d7" num="008">一种含有植物转化载体的细菌细胞，该载体含有得自CMV-C的壳蛋白基因、花椰菜花叶病毒35S基因的启动子、以及花椰菜花叶病毒35S基因或菜豆贮存蛋白基因的多聚腺苷化信号。            <br /></p>
+      <p id="d8" num="009">一种含有得自CMV-C的壳蛋白基因、花椰菜花叶病毒35S基因的启动子、以及花椰菜花叶病毒基因或菜豆种子贮存蛋白基因（云扁豆蛋白）的多腺苷化信号的转化植物细胞。            <br /></p>
+      <p id="d9" num="010">一种包含转化细胞的植物，该转化细胞含有CMV-C壳蛋白基            <br /><!-- SIPO <DP n="2"> -->因、花椰菜花叶病毒35S启动子、花椰菜花叶病毒基因或菜豆种子贮存蛋白基因（云扁豆蛋白）的多腺苷化信号。本发明的转化植物包括甜菜、柑桔类水果、玉米、黄瓜、辣椒、土豆、大豆、南瓜、西红柿。特别是葫芦科（如南瓜、黄瓜等）以及茄科（辣椒、西红柿等）的植物。            <br /></p>
+      <p id="d10" num="011">一种产生抗病毒植物的方法，包括繁殖一种表达黄瓜花叶病毒株C的壳蛋白基因的植物。特别是产生葫芦科和茄科植物的方法。            <br /></p>
+    </disclosure>
+    <description-of-drawings id="description-of-drawings001">
+      <p id="d11" num="012">图1至图5用来表示本发明的构成。采用一些常规方法图示质粒和DNA片段：            <br /></p>
+      <p id="d12" num="013">（1）单线图代表环状和线状的双链DNA。            <br /></p>
+      <p id="d13" num="014">（2）星号（＊）表示所代表的分子是环状的，没有星号表示该分子是线状的。            <br /></p>
+      <p id="d14" num="015">（3）功能成分的天然分界之间的结合用沿水平线的垂直线表示。            <br /></p>
+      <p id="d15" num="016">（4）指出基因或功能成分。            <br /></p>
+      <p id="d16" num="017">（5）基因和限制位点之间的距离不按比例，除非另有指出，这些图仅仅表示它们的相对位置。            <br /></p>
+    </description-of-drawings>
+    <mode-for-invention id="mode-for-invention001">
+      <p id="d17" num="018">在实施本发明中所采用的大部分重组DNA的方法是该领域中专业人员所熟知的标准方法。它们在例如EP223452中有详细描述，该专利被作为本文的参考文献。酶是由商业来源得到的，并按销售商建议的方式或该领域中已知的其他变化方式使用。各种试剂、缓冲剂和培养条件也都是该领域中的专业人员公知的。包括这些标准技术的一般参考资料有以下文献：R.Wu，ed.（1979）Methodsin        Enzymology        Vol.68;J.H.Miller（1972）            <br /><!-- SIPO <DP n="3"> -->Experiments        in        Molecular        Genetics;T.Maniatis等人（1982）Molecular        Cloning：A        Laboratory        Manual;D.M.Glovered.（1985）DNA        Cloning        Vol.Ⅱ;所有这些都被作为本文的参考文献。            <br /></p>
+      <p id="d18" num="019">实例1        CMV        RNA的分离            <br /></p>
+      <p id="d19" num="020">在烟草植物中繁殖黄瓜花叶病毒株C（CMV-C），并用Lot等人（Annals        of        Phytopathology        4：25，1972）的方法分离出RNA。            <br /></p>
+      <p id="d20" num="021">实例2        CMV-C的克隆            <br /></p>
+      <p id="d21" num="022">（a）双链<sub>c</sub>DNA3的合成            <br /></p>
+      <p id="d22" num="023">将全部CMV-C RNA多腺苷化以提供一个寡聚dT引物的退火位点。反应缓冲液如下：5μl1MTris pH7.9;1μl 1M MgCl<sub>2</sub>;2.5μl0.1M MnCl<sub>2</sub>;5μl5μ NaCl;0.5μl100mM ATP;18μl2.8mg/ml牛血清清蛋白，3.2μl这种缓冲液与2μg CMV-C的总RNA混合，加入3.8μl水和1μl多腺苷酸聚合酶，并将反应混合物在37℃保温10分钟。            <br /></p>
+      <p id="d23" num="024">将所得到的多腺苷化的RNA用于Polites和Marotti（Biotechniques4：514，1986）的<sub>c</sub>DNA合成方案中，所不同的是用0.75mM Kcl代替50mM NaCl，以及用130μCi/100μl<sup>32</sup>P-dCTP代替10-50μCi/100μl。            <br /></p>
+      <p id="d24" num="025">在ds-cDNA被合成后，用G-100柱层析纯化，用乙醇沉淀，并悬浮在20μl1×EcoRⅠ甲基化酶缓冲液中（100nM            <br /><!-- SIPO <DP n="4"> -->NaCl，100mM        Tris-HCl        pH8.0，1mM        EDTA，80μM        S-腺苷基蛋氨酸，100μg/ml牛血清清蛋白）。取出2μl等分液用于随后的凝胶分析，对该反应混合物追加1μl        32mM的S-腺苷基蛋氨酸和1μl（20单位）EcoRⅠ甲基化酶，该反应在37℃下保温30分钟，并通过在70℃保温10分钟停止反应。            <br /></p>
+      <p id="d25" num="026">从上述反应物中取出2μl，并加入1μl（5单位）大肠杆菌DNA聚合酶I的Klenow片段。反应在37℃保温10分钟，然后用酚/氯仿提取，再用乙醇沉淀。用70%乙醇、再用70%乙醇/0.3M醋酸钠洗涤沉淀。            <br /></p>
+      <p id="d26" num="027">干燥这些沉淀物并重新悬浮在8μl0.5μg/μl的磷酸化的EcoRⅠ连接子中（得自Collaborative Research，Inc，128Spring Stereet，Lexington，MA02173）。加入1μl10X连接酶缓冲液（800mM Tris-HCl pH8.0，200mM MgCl<sub>2</sub>，150mMDTT，10mM ATP）以及1μl T4DNA连接酶（4单位/μl），反应在15℃下保温过夜。            <br /></p>
+      <p id="d27" num="028">通过在65℃保温10分钟停止连接反应。加入60μl水，10μl10XEcoRⅠ盐（900mM Tris pH8.0，100mM MgCl<sub>2</sub>，100mM NaCl）以及10μl EcoRⅠ（10单位/μl），反应在37℃下保温1小时（开始时取出5μl的等分液用于随后的凝胶分析）。用酚/氯仿停止该反应，并用氯仿提取，取出5μl的等分液用于凝胶分析，将剩下的一半冻干后备用。另一半通过G-100柱层析纯化，含有cDNA的G-            <br /><!-- SIPO <DP n="5"> -->100组分通过丁醇提取进行浓缩，用乙醇沉淀，并再悬浮在10μl水中。取出3μl用于以后的分析，然后加入1μlλgtll臂（得自Stratagene        Co.，3770Tandy        St，San        Diego，CA92121），1μl10X连接酶缓冲液以及1μl        T4DNA连接酶，反应在15℃下保温过夜。            <br /></p>
+      <p id="d28" num="029">按照包装提取剂制造商（Gigapack        Plus，也是得自Stratagene）所建议的步骤将得到的连接了的λgtll/cDNA分子包装起来，这就得到重组λ噬菌体，按照本领域专业人员公知的方法将它进行平皿培养。            <br /></p>
+      <p id="d29" num="030">对由纯化的CMV白叶株（得自Dr.D.Gonsalves，Cornell        University，Geneva，NY）RNA4得到的单链cDNA进行放射性标记，然后用它进行杂交以鉴别含有壳蛋白基因的λ克隆。这种RNA4的单链cDNA以如下方式合成：如上面对总CMV-C        RNA描述的那样使RNA4多腺苷化，所不同的是用5.8μg        RNA4。以Polites和Marotti（Biotechniques4：514，1986）描述的方法合成第一链，所不同的是不含无放射性的dCTP，而代之以260μCi/100μl的放射性dCTP。            <br /></p>
+      <p id="d30" num="031">这种标记的单链cDNA通过P6柱层析而纯化，并用于探测从上述λ噬菌体平皿得到的复制滤片。单链cDNA与好几个噬菌体克隆的DNA杂交，表明它们至少含有一部分CMV-C壳蛋白基因。培养几个这种λ克隆，并按该领域中专业人员公知的方法由它们分离出DNA。            <br /></p>
+      <p id="d31" num="032">实例3        包含CMV-C壳蛋白基因的pUC19克隆的构建            <br /></p>
+      <!-- SIPO <DP n="6"> -->
+      <p id="d32" num="033">用标准方法将上面实例中的几个克隆的cDNA转移到质粒载体pUC19中（得自Bethesda        Research，P.O.Box        6009，Gaithersburg，Md20877）。然后用Maxam和Gilbert（Methods        in        Enzymology        65：499，1980）所描述的方法测定在pUC19中克隆的片段的序列。以这种信息为依据，鉴别出一个含有完整壳蛋白基因的克隆。这一克隆（称为pCMV9.9）序列示于图1中。            <br /></p>
+      <p id="d33" num="034">实例4用CaMV35S多腺苷化信号构建包含可在植物中表达的CMV-C壳蛋白基因的微T-DNA质粒            <br /></p>
+      <p id="d34" num="035">为了连接CaMV35S启动子和多腺苷化信号，一个从AccⅠ位点（311位置）延伸到EcoRⅠ位点（1421位置）的片段从pCMV9.9中切下，并连接到载体pDH51（Pietrzak等人，1986）（得自Thomas        Hohn，Friedrich        Miescher        Institute，P.O.Box2543，CH-4002，Basel，Switzerland）的多克隆位点上。这是通过下述操作完成的：对pCMV9.9进行完全EcoRⅠ和部分AccⅠ的消化，从适当的AccⅠ-EcoRⅠ片段上产生一个平头分子（利用大肠杆菌DNA聚合酶Ⅰ的Klenow片段），并将它连接到pDH51的SmaⅠ位点上（图2）。这种克隆称为pDH51/CP19，用Maxam-Gilbert的方法测定其序列以证实它适于在植物中表达。            <br /></p>
+      <p id="d35" num="036">将这种能在植物中表达的壳蛋白基因转移至适于农杆菌介导的基因转移的载体中。从pDH51/CP19上切下一个EcoRⅠ-EcoRⅠ片段，并将它置于pUC1813质粒的EcoRⅠ位点上（pUC1813是得自Robert        Kay，Dept.of        Chemistry，            <br /><!-- SIPO <DP n="7"> -->Washington        State        University，Pullman，Washington），产生出质粒pUC1813/CP19。通过HindⅢ的部分消化切下一个包含可在植物中表达的基因的1.8Kb片段，并将它连接到载体pGA482上（An等人，1985）（得自Cynehung        An，Institute        of        Biological        Chemistry，Washington        State        University）。            <br /></p>
+      <p id="d36" num="037">得到的质粒被称为pGA482/CR19H（图3）。从包含该基因的pUC1813克隆中切下一个部分的BamHⅠ-BamHⅠ片段，将它插入pGA482/CP19的BglⅡ位点上，从而将可在植物中表达的葡糖苷酸酶基因（得自Clontech        Laboratories，Inc.，4055Fabian        Way，Palo        Alto，CA）加在pGA482/CP19H中。这种最终的构建体称为pGA482/CP19/GUS（图3），并通过Maxam-Gilbert定序法加以证实。            <br /></p>
+      <p id="d37" num="038">可以将这种质粒或它的衍生物转移到农杆菌株A208、C58、LBA4404、C58Z707、A4RS、A4RS（pRi278b）及其他菌株中。由ATCC（12301Parklawn        Drive，Rockville，MD）可得到菌株A208、C54、LBA4404和A4RS，从F.Casse-Delbart博士（C.N.R.A.，Routade        Saint        Cyr，F78000，Versailles，France）处可得到A4RS（pRi278b），由A.G.Hepburn博士（University        of        Illinois，Urbana，IL）处可得到C58Z707。            <br /></p>
+      <p id="d38" num="039">实例5用云扁豆蛋白多腺苷化信号构建包含可在植物中表达的            <br /><!-- SIPO <DP n="8"> -->CMV壳蛋白基因的微T-DNA质粒            <br /></p>
+      <p id="d39" num="040">通过从pDH51/CP19上切下AvrⅡ-Xba片段用云扁豆蛋白的多腺苷化信号代替35S的多腺苷化信号。这种消化去除了包含壳蛋白克隆3′端的DNA区（然而CMV壳蛋白的所有编码区保持完整）、人为引入的A-残基片段和部分pDH51多连接子。用一个从含有云扁豆蛋白多腺苷化信号的pUC1813克隆得到的XbaⅠ-XbaⅠ片段代替AvrⅡ-XbaⅠ片段。这种结构然后通过EcoRⅠ消化切下并克隆到pUC1813的EcoRⅠ位点上。此pUC1813克隆再用XbaⅠ消化，并将由35S启动子、壳蛋白编码区和云扁豆蛋白多腺苷化信号组成的片段连接到pGA482的XbaⅠ位点上。然后如前述加入葡糖苷酸酶基因以产生质粒pGA482/CP19A-/411GUS（图4）。通过Maxam-Gilbert测序法证实质粒的结构。            <br /></p>
+      <p id="d40" num="041">通过将由pUC1813（见上）得到的云扁豆蛋白多腺苷化信号置于pDH51/CP19的XbaⅠ位点构建出另一种质粒（用于试验A-残基片段对表达的影响）。通过EcoRⅠ消化，从pDH51/CP19上切下一个含有35S启动子、壳蛋白编码序列和云扁豆蛋白及35S多腺苷化信号的片段，并连接到pUC1813中。然后通过部分XbaⅠ消化从该质粒上切下包含35S启动子、壳蛋白编码序列（包括人工合成的A-残基片段）以及云扁豆多腺苷化信号的片段，并连接到pGA482的XbaⅠ位点上。随后如前述插入葡糖苷酸酶基因，得到的质粒称为pGA482/CP19/411/GUS（图5），通过Maxam-Gilbert定序法证实其结构。            <br /></p>
+      <p id="d41" num="042">将这些质粒或它们的衍生物转移到农杆菌株A208、C58、            <br /><!-- SIPO <DP n="9"> -->LBA4404、C58Z707、A4RS、A4RS（pRi278b）以及其他菌株中，而它们又被用于通过一份美国专利申请中描述的方法将CMV-C壳蛋白基因插入到植物细胞中，该专利申请是在同一天提交的，标题为“发芽植物种子的农杆菌中介的转化”，并且作为本文的证据A（ExhibitA）。            <br /></p>
+    </mode-for-invention>
+    <!-- SIPO <DP n="10"> -->
+  </description>
+</cn-patent-document>

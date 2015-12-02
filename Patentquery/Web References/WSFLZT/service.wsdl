@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCnLegal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAppno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCnLegalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCnLegalResult" type="tns:ArrayOfCnLegalStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCnLegalStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CnLegalStatus" nillable="true" type="tns:CnLegalStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CnLegalStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JUANQI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VOL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGGBR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHOUQUANGGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WUXIAOXGJDH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WUXIAOXGJDR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHONGZHIR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FANGQISXR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YUANMINGC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YUANGONGGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGSXCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGSX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DENGJISXR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HETONGBAH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RANGYUR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHOURANGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIMC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XUKEZL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BEIANRQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JIECHUR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DENGJIH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHUZHIR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHIQUANR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHOUJIANR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WENJIANMC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SourceFile" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImportData" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSHENQINGH" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCnLegalDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAppno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCnLegalDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCnLegalDetailResult" type="tns:ArrayOfCnLegalStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCnLegalDetailByAppNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAppno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCnLegalDetailByAppNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCnLegalDetailByAppNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFaLvZT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GongGaoR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaLvZT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiQR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFaLvZTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryFaLvZTResult" type="tns:ResultInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SearchPattern" type="tns:SearchPattern" />
+          <s:element minOccurs="0" maxOccurs="1" name="HitMsg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HitCount" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SearchPattern">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SearchNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pattern" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DbType" type="tns:SearchDbType" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrCnpFile" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SearchDbType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Cn" />
+          <s:enumeration value="DocDB" />
+          <s:enumeration value="Dwpi" />
+          <s:enumeration value="UserCustomLibrary" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="QueryFaLvZTGetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFaLvZTGetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryFaLvZTGetListResult" type="tns:ArrayOfCnLegalStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryZhuanYi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiMC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZQX" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DengJISXR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengQQLR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengHQLR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengQDZ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengHDZ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryZhuanYiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryZhuanYiResult" type="tns:ArrayOfCnLegal012" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCnLegal012">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CnLegal012" nillable="true" type="tns:CnLegal012" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CnLegal012">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JUANQI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIMC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZQX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DENGJISXR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGSX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGQQLR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGHQLR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGQDZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGHDZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETAIL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryZhiYa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiMC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZQX" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HeTongZT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DengJiSXR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JieChuR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DengJiH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CHuZhiR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhiQuanR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryZhiYaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryZhiYaResult" type="tns:ArrayOfCnLegal015" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCnLegal015">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CnLegal015" nillable="true" type="tns:CnLegal015" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CnLegal015">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JUANQI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIMC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZQX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HETONGZT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DENGJISXR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JIECHUR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DENGJIH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHUZHIR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHIQUANR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETAIL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryShiShiXuKe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiMC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZhuanLiZQX" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XuKeZL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HeTongZT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeiAnRQ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BianGengR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JIeChuR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HeTongBAH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RangYuR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHouRangR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryShiShiXuKeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryShiShiXuKeResult" type="tns:ArrayOfCnLegal014" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCnLegal014">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CnLegal014" nillable="true" type="tns:CnLegal014" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CnLegal014">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JUANQI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIMC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZHUANLIZQX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XUKEZL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HETONGZT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BEIANRQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BIANGENGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JIECHUR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HETONGBAH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RANGYUR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHOURANGR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETAIL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryFaLvZhuangTai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShenQingRenAppNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFaLvZhuangTaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryFaLvZhuangTaiResult" type="tns:ArrayOfTbCnLegalStatusNew" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTbCnLegalStatusNew">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TbCnLegalStatusNew" nillable="true" type="tns:TbCnLegalStatusNew" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TbCnLegalStatusNew">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalStatusInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHENQINGH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getFaLvZhuangTaiSimple">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFaLvZhuangTaiSimpleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFaLvZhuangTaiSimpleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfCnLegalStatus" nillable="true" type="tns:ArrayOfCnLegalStatus" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResultInfo" nillable="true" type="tns:ResultInfo" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCnLegalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCnLegal" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCnLegalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCnLegalDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCnLegalDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCnLegalDetailByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCnLegalDetailByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZT" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZTResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZTGetList" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZTGetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryZhuanYiSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryZhuanYi" />
+  </wsdl:message>
+  <wsdl:message name="QueryZhuanYiSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryZhuanYiResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryZhiYaSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryZhiYa" />
+  </wsdl:message>
+  <wsdl:message name="QueryZhiYaSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryZhiYaResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryShiShiXuKeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryShiShiXuKe" />
+  </wsdl:message>
+  <wsdl:message name="QueryShiShiXuKeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryShiShiXuKeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZhuangTaiSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZhuangTai" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZhuangTaiSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFaLvZhuangTaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleSoapIn">
+    <wsdl:part name="parameters" element="tns:getFaLvZhuangTaiSimple" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleSoapOut">
+    <wsdl:part name="parameters" element="tns:getFaLvZhuangTaiSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalHttpGetIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailHttpGetIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoHttpGetIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTHttpGetIn">
+    <wsdl:part name="AppNo" type="s:string" />
+    <wsdl:part name="GongGaoR" type="s:string" />
+    <wsdl:part name="FaLvZT" type="s:string" />
+    <wsdl:part name="ZhuanLiQR" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTHttpGetOut">
+    <wsdl:part name="Body" element="tns:ResultInfo" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListHttpGetIn">
+    <wsdl:part name="SearchNo" type="s:string" />
+    <wsdl:part name="PageIndex" type="s:string" />
+    <wsdl:part name="PageSize" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleHttpGetIn">
+    <wsdl:part name="AppNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalHttpPostIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailHttpPostIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoHttpPostIn">
+    <wsdl:part name="sAppno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCnLegalDetailByAppNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTHttpPostIn">
+    <wsdl:part name="AppNo" type="s:string" />
+    <wsdl:part name="GongGaoR" type="s:string" />
+    <wsdl:part name="FaLvZT" type="s:string" />
+    <wsdl:part name="ZhuanLiQR" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTHttpPostOut">
+    <wsdl:part name="Body" element="tns:ResultInfo" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListHttpPostIn">
+    <wsdl:part name="SearchNo" type="s:string" />
+    <wsdl:part name="PageIndex" type="s:string" />
+    <wsdl:part name="PageSize" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFaLvZTGetListHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCnLegalStatus" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleHttpPostIn">
+    <wsdl:part name="AppNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFaLvZhuangTaiSimpleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetCnLegal">
+      <wsdl:input message="tns:GetCnLegalSoapIn" />
+      <wsdl:output message="tns:GetCnLegalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <wsdl:input message="tns:GetCnLegalDetailSoapIn" />
+      <wsdl:output message="tns:GetCnLegalDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <wsdl:input message="tns:GetCnLegalDetailByAppNoSoapIn" />
+      <wsdl:output message="tns:GetCnLegalDetailByAppNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <wsdl:input message="tns:QueryFaLvZTSoapIn" />
+      <wsdl:output message="tns:QueryFaLvZTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <wsdl:input message="tns:QueryFaLvZTGetListSoapIn" />
+      <wsdl:output message="tns:QueryFaLvZTGetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhuanYi">
+      <wsdl:input message="tns:QueryZhuanYiSoapIn" />
+      <wsdl:output message="tns:QueryZhuanYiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhiYa">
+      <wsdl:input message="tns:QueryZhiYaSoapIn" />
+      <wsdl:output message="tns:QueryZhiYaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryShiShiXuKe">
+      <wsdl:input message="tns:QueryShiShiXuKeSoapIn" />
+      <wsdl:output message="tns:QueryShiShiXuKeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZhuangTai">
+      <wsdl:input message="tns:QueryFaLvZhuangTaiSoapIn" />
+      <wsdl:output message="tns:QueryFaLvZhuangTaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <wsdl:input message="tns:getFaLvZhuangTaiSimpleSoapIn" />
+      <wsdl:output message="tns:getFaLvZhuangTaiSimpleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="GetCnLegal">
+      <wsdl:input message="tns:GetCnLegalHttpGetIn" />
+      <wsdl:output message="tns:GetCnLegalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <wsdl:input message="tns:GetCnLegalDetailHttpGetIn" />
+      <wsdl:output message="tns:GetCnLegalDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <wsdl:input message="tns:GetCnLegalDetailByAppNoHttpGetIn" />
+      <wsdl:output message="tns:GetCnLegalDetailByAppNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <wsdl:input message="tns:QueryFaLvZTHttpGetIn" />
+      <wsdl:output message="tns:QueryFaLvZTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <wsdl:input message="tns:QueryFaLvZTGetListHttpGetIn" />
+      <wsdl:output message="tns:QueryFaLvZTGetListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <wsdl:input message="tns:getFaLvZhuangTaiSimpleHttpGetIn" />
+      <wsdl:output message="tns:getFaLvZhuangTaiSimpleHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="GetCnLegal">
+      <wsdl:input message="tns:GetCnLegalHttpPostIn" />
+      <wsdl:output message="tns:GetCnLegalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <wsdl:input message="tns:GetCnLegalDetailHttpPostIn" />
+      <wsdl:output message="tns:GetCnLegalDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <wsdl:input message="tns:GetCnLegalDetailByAppNoHttpPostIn" />
+      <wsdl:output message="tns:GetCnLegalDetailByAppNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <wsdl:input message="tns:QueryFaLvZTHttpPostIn" />
+      <wsdl:output message="tns:QueryFaLvZTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <wsdl:input message="tns:QueryFaLvZTGetListHttpPostIn" />
+      <wsdl:output message="tns:QueryFaLvZTGetListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <wsdl:input message="tns:getFaLvZhuangTaiSimpleHttpPostIn" />
+      <wsdl:output message="tns:getFaLvZhuangTaiSimpleHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCnLegal">
+      <soap:operation soapAction="http://tempuri.org/GetCnLegal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <soap:operation soapAction="http://tempuri.org/GetCnLegalDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <soap:operation soapAction="http://tempuri.org/GetCnLegalDetailByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <soap:operation soapAction="http://tempuri.org/QueryFaLvZT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <soap:operation soapAction="http://tempuri.org/QueryFaLvZTGetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhuanYi">
+      <soap:operation soapAction="http://tempuri.org/QueryZhuanYi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhiYa">
+      <soap:operation soapAction="http://tempuri.org/QueryZhiYa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryShiShiXuKe">
+      <soap:operation soapAction="http://tempuri.org/QueryShiShiXuKe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZhuangTai">
+      <soap:operation soapAction="http://tempuri.org/QueryFaLvZhuangTai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <soap:operation soapAction="http://tempuri.org/getFaLvZhuangTaiSimple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCnLegal">
+      <soap12:operation soapAction="http://tempuri.org/GetCnLegal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetCnLegalDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <soap12:operation soapAction="http://tempuri.org/GetCnLegalDetailByAppNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <soap12:operation soapAction="http://tempuri.org/QueryFaLvZT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <soap12:operation soapAction="http://tempuri.org/QueryFaLvZTGetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhuanYi">
+      <soap12:operation soapAction="http://tempuri.org/QueryZhuanYi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryZhiYa">
+      <soap12:operation soapAction="http://tempuri.org/QueryZhiYa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryShiShiXuKe">
+      <soap12:operation soapAction="http://tempuri.org/QueryShiShiXuKe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZhuangTai">
+      <soap12:operation soapAction="http://tempuri.org/QueryFaLvZhuangTai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <soap12:operation soapAction="http://tempuri.org/getFaLvZhuangTaiSimple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetCnLegal">
+      <http:operation location="/GetCnLegal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <http:operation location="/GetCnLegalDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <http:operation location="/GetCnLegalDetailByAppNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <http:operation location="/QueryFaLvZT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <http:operation location="/QueryFaLvZTGetList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <http:operation location="/getFaLvZhuangTaiSimple" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetCnLegal">
+      <http:operation location="/GetCnLegal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetail">
+      <http:operation location="/GetCnLegalDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCnLegalDetailByAppNo">
+      <http:operation location="/GetCnLegalDetailByAppNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZT">
+      <http:operation location="/QueryFaLvZT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFaLvZTGetList">
+      <http:operation location="/QueryFaLvZTGetList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFaLvZhuangTaiSimple">
+      <http:operation location="/getFaLvZhuangTaiSimple" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://202.106.92.131:9000/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://202.106.92.131:9000/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://202.106.92.131:9000/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://202.106.92.131:9000/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

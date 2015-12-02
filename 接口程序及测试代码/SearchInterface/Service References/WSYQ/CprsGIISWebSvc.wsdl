@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYKSearchUserID">
+        <s:complexType />
+      </s:element>
+      <s:element name="getYKSearchUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getYKSearchUserIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MappingUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strULoginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MappingUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MappingUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_SDbType" type="tns:SearchDbType" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strSID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strSearchQuery" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SearchDbType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Cn" />
+          <s:enumeration value="DocDB" />
+          <s:enumeration value="Dwpi" />
+          <s:enumeration value="UserCustomLibrary" />
+          <s:enumeration value="CnThematicDB" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DoSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_SDbType" type="tns:SearchDbType" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strSID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeneralDataResult" type="tns:ArrayOfGeneralDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGeneralDataInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GeneralDataInfo" nillable="true" type="tns:GeneralDataInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GeneralDataInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NCPIC" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrTI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrTrsTI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrAD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrIPC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NMembers" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrPubID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrPtCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGeneralDataByLstNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_lstNo" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="_SDbType" type="tns:SearchDbType" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGeneralDataByLstNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeneralDataByLstNoResult" type="tns:ArrayOfGeneralDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFmlMemberData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_SDbType" type="tns:SearchDbType" />
+            <s:element minOccurs="1" maxOccurs="1" name="_nCPIC" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFmlMemberDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFmlMemberDataResult" type="tns:ArrayOfGeneralDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strPID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_PdTpe" type="tns:PatentDataType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="PatentDataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="CnMabXmlTxt" />
+          <s:enumeration value="CnDesXmlTxt" />
+          <s:enumeration value="CnClmXmlTxt" />
+          <s:enumeration value="CnAbsFuTuUrl" />
+          <s:enumeration value="CnWGImgUrls" />
+          <s:enumeration value="EnMabXmlTxt" />
+          <s:enumeration value="PDFFileUrl" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPatentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatentDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getYKSearchUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getYKSearchUserID" />
+  </wsdl:message>
+  <wsdl:message name="getYKSearchUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getYKSearchUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="MappingUserSoapIn">
+    <wsdl:part name="parameters" element="tns:MappingUser" />
+  </wsdl:message>
+  <wsdl:message name="MappingUserSoapOut">
+    <wsdl:part name="parameters" element="tns:MappingUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearch" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeneralData" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeneralDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralDataByLstNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeneralDataByLstNo" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralDataByLstNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeneralDataByLstNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFmlMemberDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFmlMemberData" />
+  </wsdl:message>
+  <wsdl:message name="GetFmlMemberDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFmlMemberDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatentData" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatentDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CprsGIISWebSvcSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getYKSearchUserID">
+      <wsdl:input message="tns:getYKSearchUserIDSoapIn" />
+      <wsdl:output message="tns:getYKSearchUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MappingUser">
+      <wsdl:input message="tns:MappingUserSoapIn" />
+      <wsdl:output message="tns:MappingUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearch">
+      <wsdl:input message="tns:DoSearchSoapIn" />
+      <wsdl:output message="tns:DoSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralData">
+      <wsdl:input message="tns:GetGeneralDataSoapIn" />
+      <wsdl:output message="tns:GetGeneralDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralDataByLstNo">
+      <wsdl:input message="tns:GetGeneralDataByLstNoSoapIn" />
+      <wsdl:output message="tns:GetGeneralDataByLstNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFmlMemberData">
+      <wsdl:input message="tns:GetFmlMemberDataSoapIn" />
+      <wsdl:output message="tns:GetFmlMemberDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <wsdl:input message="tns:GetPatentDataSoapIn" />
+      <wsdl:output message="tns:GetPatentDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CprsGIISWebSvcSoap" type="tns:CprsGIISWebSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKSearchUserID">
+      <soap:operation soapAction="http://tempuri.org/getYKSearchUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MappingUser">
+      <soap:operation soapAction="http://tempuri.org/MappingUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearch">
+      <soap:operation soapAction="http://tempuri.org/DoSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralData">
+      <soap:operation soapAction="http://tempuri.org/GetGeneralData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralDataByLstNo">
+      <soap:operation soapAction="http://tempuri.org/GetGeneralDataByLstNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFmlMemberData">
+      <soap:operation soapAction="http://tempuri.org/GetFmlMemberData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <soap:operation soapAction="http://tempuri.org/GetPatentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CprsGIISWebSvcSoap12" type="tns:CprsGIISWebSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYKSearchUserID">
+      <soap12:operation soapAction="http://tempuri.org/getYKSearchUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MappingUser">
+      <soap12:operation soapAction="http://tempuri.org/MappingUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearch">
+      <soap12:operation soapAction="http://tempuri.org/DoSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralData">
+      <soap12:operation soapAction="http://tempuri.org/GetGeneralData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralDataByLstNo">
+      <soap12:operation soapAction="http://tempuri.org/GetGeneralDataByLstNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFmlMemberData">
+      <soap12:operation soapAction="http://tempuri.org/GetFmlMemberData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <soap12:operation soapAction="http://tempuri.org/GetPatentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CprsGIISWebSvc">
+    <wsdl:port name="CprsGIISWebSvcSoap" binding="tns:CprsGIISWebSvcSoap">
+      <soap:address location="http://202.106.92.181/cprs2010/svc/CprsGIISWebSvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CprsGIISWebSvcSoap12" binding="tns:CprsGIISWebSvcSoap12">
+      <soap12:address location="http://202.106.92.181/cprs2010/svc/CprsGIISWebSvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

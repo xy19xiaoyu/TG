@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CfgDataManager">
+  <DataContextMoniker Name="/CfgDataManagerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b0f950e0-7883-4a04-9fb2-860581d60c87" absoluteBounds="4.625, 1.5, 2, 1.448346354166667">
+      <DataClassMoniker Name="/CfgDataManagerDataContext/CountryConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd889b56-4f24-4ea6-aa21-36407e578724" absoluteBounds="4.64, 1.96, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="742d00a8-d111-4ef6-8796-7f3de786e70f" absoluteBounds="3, 2.5, 2, 1.448346354166667">
+      <DataClassMoniker Name="/CfgDataManagerDataContext/Tb_UsetPatentInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ced012ad-72d2-4b4b-b05d-5f4597a246cd" absoluteBounds="3.015, 2.96, 1.9700000000000002, 0.88834635416666663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c086b327-d41c-4a4f-8c2d-0df24caefec0" absoluteBounds="6.875, 1.375, 2, 6.0010807291666657">
+      <DataClassMoniker Name="/CfgDataManagerDataContext/ZPT_SJWH_DLJGPZB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="428c1d8f-d720-47aa-a40f-c0d293352fea" absoluteBounds="6.89, 1.835, 1.9700000000000002, 5.4410807291666661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

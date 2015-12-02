@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>厦漳泉科技基础资源服务平台-专利平台</title>
+    <script src="../Js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="../jquery-easyui-1.8.0/jquery.query-2.1.7.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Js/Common.js"></script>
+    <script type="text/ecmascript" language="javascript">
+        $(document).ready(function () {
+            var jdh = $.query.get('jdh'); //requestUrl("jdh");
+            //            $(img1).attr("src", "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=WX" + jdh + "&lx=wx");
+            //            $(img2).attr("src", "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=" + jdh + "&lx=wx");
+
+            //            $(img1).attr("onerror", "");
+            //            $(img2).attr("onerror", "");
+
+
+            var imgTmp1 = new Image();
+            var imgTmp2 = new Image();
+
+            imgTmp1.onerror = function () {
+                location.href = "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=" + jdh + "&lx=wx";
+            }
+
+            imgTmp2.onerror = function () {
+                location.href = "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=WX" + jdh + "&lx=wx";
+            }
+
+            imgTmp1.src = "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=WX" + jdh + "&lx=wx";
+            imgTmp2.src = "http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=" + jdh + "&lx=wx";
+        });
+        //unbind("onload");
+    </script>
+</head>
+<body>
+    <!--http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=$1&lx=wx-->
+    <img src="" id="img1" width="1" height="1" />
+    <img src="" id="img2" width="1" height="1" />
+    <!--<img src="http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=WX21350&lx="
+        width="1" height="1" onerror="Javascript:location.href='http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=21350&lx=WX'">
+    <img src="http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=21350&lx=WX"
+        width="1" height="1" onerror="Javascript:location.href='http://app.sipo-reexam.gov.cn/reexam_out/searchdoc/decidedetail.jsp?jdh=WX21350&lx='">-->
+</body>
+</html>

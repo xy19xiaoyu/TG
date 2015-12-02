@@ -1,0 +1,5 @@
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\bin\Release\ISearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\bin\Release\ISearch.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Release\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Release\ISearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Release\ISearch.pdb

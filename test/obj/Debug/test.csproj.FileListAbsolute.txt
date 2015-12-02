@@ -1,0 +1,5 @@
+E:\zhejiang\20150601\源代码\test\bin\test.dll
+E:\zhejiang\20150601\源代码\test\bin\test.pdb
+E:\zhejiang\20150601\源代码\test\obj\Debug\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\test\obj\Debug\test.dll
+E:\zhejiang\20150601\源代码\test\obj\Debug\test.pdb

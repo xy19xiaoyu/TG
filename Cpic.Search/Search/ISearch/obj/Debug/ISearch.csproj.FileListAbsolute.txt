@@ -1,0 +1,12 @@
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\bin\Debug\ISearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\bin\Debug\ISearch.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Debug\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Debug\ISearch.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\obj\Debug\ISearch.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\Search\ISearch\bin\Debug\ISearch.XML
+F:\xy\tg\Cpic.Search\Search\ISearch\bin\Debug\ISearch.dll
+F:\xy\tg\Cpic.Search\Search\ISearch\bin\Debug\ISearch.pdb
+F:\xy\tg\Cpic.Search\Search\ISearch\obj\Debug\ResolveAssemblyReference.cache
+F:\xy\tg\Cpic.Search\Search\ISearch\obj\Debug\ISearch.dll
+F:\xy\tg\Cpic.Search\Search\ISearch\obj\Debug\ISearch.pdb
+F:\xy\tg\Cpic.Search\Search\ISearch\bin\Debug\ISearch.XML

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/My/Default.aspx" title="首页" description="">
+    <siteMapNode url="/My/SmartQuery.aspx" title="智能检索" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/frmCnTbSearch.aspx" title="表格检索" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/frmcnExpertSearch.aspx" title="专家检索" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/LawQuery.aspx" title="法律状态检索" description="">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

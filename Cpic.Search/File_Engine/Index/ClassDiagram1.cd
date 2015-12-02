@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Cpic.Cprs2010.Index.DataInterfaceConfig" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAABQAAAAAAEAAAAAAAAABACAAIUAQAgAAAABgA=</HashCode>
+      <FileName>DataInterfaceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cpic.Cprs2010.Index.WordSplit" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AEBAAAEABAAAAAQAgAIAAAAAAAAAAAAAAAAAAAgEAAA=</HashCode>
+      <FileName>WordSplit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cpic.Cprs2010.Index.SearchEnter">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAQAwAISAAQEAEAAIARAAgQAggAQgAEAAAAAAAA=</HashCode>
+      <FileName>SearchEnter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cpic.Cprs2010.Index.IndexFileConfig">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAEARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndexSearchEnter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cpic.Cprs2010.Index.SubSearchEnter">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAIARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubSearchEnter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Cpic.Cprs2010.Index.WordSplitType">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>WordSplitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

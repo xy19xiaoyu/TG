@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocketSearchPool</name>
+    </assembly>
+    <members>
+        <member name="T:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool">
+             <summary>
+            CnSocketPool 的摘要说明
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool._IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool._Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.WaitSecond">
+            <summary>
+            请求连接等待最长时间单位（秒）
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="min">池最小的数量</param>
+            <param name="max">池最大的数量</param>
+            <param name="growth">池每次增长的增长值</param>
+            <param name="ip">对应的Main的 IP地址</param>
+            <param name="port">端口号</param>
+            <param name="type">等待时间</param>
+            <param name="waitsecond">检索类型</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Ini">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.getItem">
+            <summary>
+            得到一个空闲的ISearch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.useItem">
+            <summary>
+            使用一个ISearch
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.freeItem(Cpic.Cprs2010.Search.ISearch)">
+            <summary>
+            释放一个ISearch
+            </summary>
+            <param name="tmpIs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Grow">
+            <summary>
+            ISearchPool 增长
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.freeItems">
+            <summary>
+            空闲的ISearchItem
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.UsedItems">
+            <summary>
+            已经使用的ISearch
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Min">
+            <summary>
+            最小值，即初始阶段的数量
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Growth">
+            <summary>
+            每次增长值
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Count">
+            <summary>
+            当前所有的ISearchItem
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.SearchPool.SocketPool.SocketPool.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7800E50-E0A2-4FD3-8EA1-D3618F886E07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TLC</RootNamespace>
+    <AssemblyName>TLC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Album.cs" />
+    <Compile Include="BLL\Authority.cs" />
+    <Compile Include="BLL\Collect.cs" />
+    <Compile Include="BLL\Corp.cs" />
+    <Compile Include="BLL\Log.cs" />
+    <Compile Include="BLL\Pattern.cs" />
+    <Compile Include="BLL\TbCnLegalStatusNew.cs" />
+    <Compile Include="BLL\User.cs" />
+    <Compile Include="BLL\VryImgGen.cs" />
+    <Compile Include="DAL\DataAccess.cs" />
+    <Compile Include="DAL\DataAccessHelper.cs" />
+    <Compile Include="DAL\SQLDataAccessLayer.cs" />
+    <Compile Include="DefaultValue.cs" />
+    <Compile Include="GlobalUtility.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="PQ.cs">
+      <DependentUpon>PQ.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PQ.designer.cs">
+      <DependentUpon>PQ.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SysTreeHelper.cs" />
+    <Compile Include="UserCollectsHelper.cs" />
+    <Compile Include="UserDownLoadHelper.cs" />
+    <Compile Include="UserTHHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cpic.Demo\DBA\DBA.vbproj">
+      <Project>{95E4DC4D-C9FD-4E6D-AE33-2E28E13641D5}</Project>
+      <Name>DBA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cpic.Demo\ResultData\ResultData.csproj">
+      <Project>{9ECEAF25-A205-4F45-A996-A7F9774681A7}</Project>
+      <Name>ResultData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cpic.Search\Search\ISearch\ISearch.csproj">
+      <Project>{C5EB21DD-D0B3-42DF-8891-A51CAFD16042}</Project>
+      <Name>ISearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProXZQDLL\ProXZQDLL.csproj">
+      <Project>{410C51CD-FACE-4342-B14E-FE96BD75D5A6}</Project>
+      <Name>ProXZQDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\接口程序及测试代码\SearchInterface\SearchInterface.csproj">
+      <Project>{FD3CA31F-EBDE-4493-A472-637C6963E7D0}</Project>
+      <Name>SearchInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="PQ.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PQ.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PQ.dbml.layout">
+      <DependentUpon>PQ.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

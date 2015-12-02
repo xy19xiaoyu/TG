@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="GetSearchPattern" Codebehind="GetSearchPattern.aspx.cs" %>

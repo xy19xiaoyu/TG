@@ -1,0 +1,1375 @@
+﻿body
+{
+    color: #333333;
+    font-size: 14px;
+    line-height: 150%;
+    background-color: #FEFEFE;
+    background-image: url(../Images/bgBody.jpg);
+    background-repeat: repeat;
+    background-position: center top;
+    margin: 0px;
+    background-attachment: fixed;
+}
+.TransA
+{
+     text-decoration:underline;
+     background-image:url(/images/Trans_20.jpg);
+      background-repeat:no-repeat;
+     padding-left:2em     
+}
+a
+{
+    color: #555555;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #FF6600;
+    text-decoration: "underline";
+}
+img
+{
+    border-style: none;
+    vertical-align: middle;
+}
+h1
+{
+    font-size: 24px;
+    font-family: Microsoft YaHei;
+    line-height: 150%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+h2
+{
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    line-height: 150%;
+    padding: 0px;
+    margin: 0px;
+}
+h3
+{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 0px;
+    margin: 0px;
+}
+hr
+{
+    height: 1px;
+    border-style: none;
+    background-image: url("../Images/lineHr.png");
+    background-repeat: no-repeat;
+}
+ul li
+{
+    list-style-type: none;
+}
+dl
+{
+    margin: 20px 0px 0px 10px;
+    padding: 0px;
+}
+dl dt
+{
+    clear: both;
+    float: left;
+    width: 200px;
+    color: #6E6E6E;
+    font-size: 16px;
+    text-align: right;
+    line-height: 42px;
+    padding: 5px 40px 5px 0px;
+}
+dl.user dt
+{
+    width: 100px;
+}
+dl dd
+{
+    font-size: 16px;
+    line-height: 42px;
+    padding: 5px 0px;
+}
+dl dd .command
+{
+    text-align: center;
+}
+select
+{
+    height: 32px;
+    color: #6E6E6E;
+    font-size: 16px;
+    line-height: 20px;
+    border-style: none;
+    padding: 5px;
+}
+table tr td
+{
+    vertical-align: top;
+}
+.smallTextBox
+{
+    width: 190px;
+    height: 32px;
+    color: #6E6E6E;
+    font-size: 16px;
+    line-height: 20px;
+    background-image: url("../Images/bgSmallTextBox.png");
+    border-style: none;
+    padding: 5px;
+}
+.textBox
+{
+    width: 564px;
+    height: 32px;
+    color: #6E6E6E;
+    font-size: 16px;
+    line-height: 20px;
+    background-image: url("../Images/bgTextBox.png");
+    border-style: none;
+    padding: 5px;
+}
+.bigTextBox
+{
+    width: 872px;
+    height: 86px;
+    color: #333333;
+    font-size: 16px;
+    line-height: 20px;
+    background-image: url("../Images/bgBigTextBox.png");
+    border-style: none;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+#header
+{
+    width: 1000px;
+    margin: auto;
+}
+#logo
+{
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+#title
+{
+    float: left;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 20px;
+    line-height:40px;
+}
+#account
+{
+    float: right;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+#menu
+{
+    float: right;
+    width: 719px;
+    height: 52px;
+    background-image: url(../Images/bgMenu.png);
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.menu1
+{
+    float: left;
+    height: 52px;
+    *margin-top:-20px;
+}
+.staticMenuStyle
+{
+    height: 52px;
+    margin-left: 50px;
+}
+.staticMenuItemStyle
+{
+    width: 120px;
+    height: 52px;
+    line-height: 52px;
+}
+.staticMenuItemStyle a
+{
+    color: #FFFFFF;
+    background-image: none;
+    padding-left: 20px;
+}
+.staticSelectedStyle
+{
+    background-image: url("../Images/bgMenuItemSelected.png");
+    background-repeat: no-repeat;
+}
+.staticSelectedStyle a
+{
+    color: #333333;
+}
+.staticHoverStyle
+{
+    background-image: url("../Images/bgMenuItemHover.png");
+    background-repeat: no-repeat;
+}
+.dynamicMenuStyle
+{
+    margin-left: 5px;
+    z-index: 100;
+}
+.dynamicMenuItemStyle
+{
+    padding: 0px 6px;
+}
+.dynamicMenuItemStyle a
+{
+}
+.dynamicSelectedStyle
+{
+}
+.dynamicSelectedStyle a
+{
+}
+.dynamicHoverStyle
+{
+}
+.dynamicHoverStyle a
+{
+}
+#path
+{
+    clear: both;
+    height: 26px;
+    width: 988px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+}
+#content
+{
+    clear: both;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#left
+{
+    float: left;
+    width: 242px;
+    text-align:left;
+}
+h2.treeBar
+{
+    width: 242px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    background-image: url("/Images/bgBarTree.png");
+    background-repeat: no-repeat;
+}
+.treeType
+{
+    width: 242px;
+    height: 39px;
+    text-align: center;
+    background-image: url("/Images/bgBarTreeType.png");
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+#left .boxTop
+{
+    width: 230px;
+}
+#left .boxBottom
+{
+    width: 230px;
+}
+#right
+{
+    float: right;
+    width: 740px;
+}
+#right .boxTop
+{
+    width: 728px;
+}
+#right .boxBottom
+{
+    width: 728px;
+}
+
+.gridView a
+{
+    text-decoration: underline;
+}
+.gridView a:hover
+{
+    color: #FF6600;
+    text-decoration: none;
+}
+.gridView
+{
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+.gridViewHeader
+{
+    background-color: #639AAC;
+    color: #FFFFFF;
+    text-align: center;
+    height: 28px;
+}
+
+.griditem
+{
+    padding: 5px;
+}
+
+.datagrid-btable .griditem .thumbnail
+{
+    float: left;
+    width: 150px;
+    text-align: center;
+}
+.datagrid-btable .griditem .thumbnail img
+{
+    width: 130px;
+    height: 90px;
+}
+.datagrid-btable .griditem .details
+{
+    float: left;
+    width: 800px; 
+}
+.datagrid-btable .griditem .details .title
+{
+    float: left;
+    width: 790px;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+.gridView .title
+{
+    float: left;
+    width: 750px;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+.datagrid-btable .griditem .details .title a
+{
+    color: #FFFFFF;
+}
+
+
+
+.zltable
+{
+     margin:0;
+     padding:0;
+}
+.zltable li
+{
+    border-width: 0 0px 1px 0;
+    border-style: dotted;
+    margin: 0;
+    padding: 0;
+}
+.zltable a
+{
+    text-decoration: underline;
+}
+.zltable .griditem .thumbnail
+{
+    float: left;
+    width: 150px;
+    text-align: center;
+}
+.zltable .griditem .thumbnail img
+{
+    width: 128px;
+    height: 128px;
+}
+.zltable .griditem .details
+{
+    float: left;
+    width: 810px;
+}
+.zltable .griditem .details .title
+{
+    float: left;
+    width: 810px;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+.zltable .griditem .details .title a
+{
+    color: #FFFFFF;
+}
+.zltable .note
+{
+    font-size: 12px;
+}
+.zltable .command
+{
+    text-align: center;
+}
+.zltable .commandzt
+{
+    text-align: center;
+    float:left;
+    margin-left:30px;
+     font: 12px/30px "宋体";
+}
+.zlitem
+{
+}
+.zltable .title
+{
+    clear: both;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    width:960px;
+    padding: 5px;
+}
+.zltable .title a
+{
+    color: #FFFFFF;
+}
+.zltable .title a:hover
+{
+    color: #FFFF33;
+    text-decoration: none;
+}
+.zltable .title a
+{
+    color: #FFFFFF;
+}
+.zltable .title a:hover
+{
+    color: #FF66FF;
+    text-decoration: none;
+}
+#right .zltable .details
+{
+    float: left;
+    width: 550px;
+}
+#right .zltable .details1
+{
+    float: left;
+}
+#right .zltable .details .title
+{
+    float: left;
+    width: 550px;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+#right .zltable .details1 .title
+{
+    float: left;
+    color: #FFFFFF;
+     width: 700px;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+
+#right .datagrid-btable .details
+{
+    float: left;
+    width: 580px;
+}
+#right .datagrid-btable .details .title
+{
+    float: left;
+    width: 580px;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+
+
+.datagrid-btable .note
+{
+    font-size: 12px;
+}
+.datagrid-btable .command
+{
+    position: relative;
+    text-align: center;
+    margin-bottom:0px;
+}
+.datagrid-btable .title
+{
+    clear: both;
+    color: #FFFFFF;
+    background-color: #3B96DF;
+    padding: 5px;
+}
+.datagrid-btable .title a
+{
+    /*color: #FFFFFF;*/
+}
+.datagrid-btable .title a:hover
+{
+    color: #FFFF33;
+    text-decoration: none;
+}
+
+
+table.grid
+{
+    width: 400px;
+    background-color: #333333;
+    border-style: none;
+    margin: 10px auto;
+}
+table.grid tr th
+{
+    font-weight: bold;
+    background-color: #222222;
+    text-align: center;
+    padding: 3px;
+}
+table.grid tr td
+{
+    background-color: #282828;
+    text-align: center;
+    padding: 3px;
+}
+.box
+{
+    clear: both;
+    margin: 10px auto 10px auto;
+}
+.box h2
+{
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+.boxTL
+{
+    clear: both;
+    float: left;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-image: url("../Images/bgBoxTL.png");
+    background-repeat: no-repeat;
+}
+.boxTop
+{
+    float: left;
+    display: block;
+    width: 987px;
+    height: 6px;
+    background-image: url("../Images/bgBoxTop.png");
+    background-repeat: repeat-x;
+}
+.boxTR
+{
+    float: left;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-image: url("../Images/bgBoxTR.png");
+    background-repeat: no-repeat;
+}
+.boxOutter
+{
+    clear: both;
+    width: 100%;
+    background-image: url("../Images/bgBoxLeft.png");
+    background-repeat: repeat-y;
+}
+.boxInner
+{
+    background-color: #FFFFFF;
+    background-image: url("../Images/bgBoxRight.png");
+    background-repeat: repeat-y;
+    background-position: right;
+    margin-left: 6px;
+    padding: 10px;
+}
+.boxInner .left
+{
+    clear: both;
+    float: left;
+    width: 450px;
+    padding: 20px;
+}
+.boxInner .right
+{
+    float: right;
+    width: 450px;
+    text-align: left;
+    border-left: 1px solid #DDDDDD;
+    padding: 20px;
+}
+.boxBL
+{
+    clear: both;
+    float: left;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-image: url("../Images/bgBoxBL.png");
+    background-repeat: no-repeat;
+}
+.boxBottom
+{
+    float: left;
+    display: block;
+    width: 987px;
+    height: 6px;
+    background-image: url("../Images/bgBoxBottom.png");
+    background-repeat: repeat-x;
+}
+.boxBR
+{
+    float: left;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-image: url("../Images/bgBoxBR.png");
+    background-repeat: no-repeat;
+}
+.command
+{
+    /*clear: both;*/
+    font: 12px/30px "宋体";
+}
+.command a
+{   
+	text-decoration:none;
+}
+.commandzt a
+{   
+	text-decoration:none;
+}
+.commandLeft
+{
+    float: left;
+}
+.commandLeft img
+{
+    margin-right: 40px;
+}
+.commandRight
+{
+    float: right;
+    vertical-align: bottom;
+}
+.commandRight img
+{
+    margin-left: 20px;
+}
+#divSetTable
+{
+    position: absolute;
+    float: left;
+    right: 200px;
+    top: 50px;
+    width: 600px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: none;
+}
+#divSetTable .left
+{
+    float: left;
+    width: 300px;
+}
+#divSetTable .right
+{
+    float: right;
+}
+#divSetTable ul
+{
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+}
+#divSetTable ul li
+{
+    float: left;
+    width: 140px;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 2px;
+}
+
+#divSetTable .command
+{
+    clear: both;
+    text-align: right;
+}
+#divQueryTable
+{
+    position: absolute;
+    float: left;
+    left: 200px;
+    top: 50px;
+    width: 700px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: none;
+}
+#divQueryTable dl dt
+{
+    clear: none;
+    float: left;
+    width: 150px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 2px;
+}
+#divQueryTable dl dd
+{
+    clear: none;
+    float: left;
+    width: 150px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 2px;
+}
+#divQueryTable .textBox
+{
+    width: 120px;
+    height: 18px;
+    color: #6E6E6E;
+    font-size: 12px;
+    border: 1px solid #6E6E6E;
+    background-image: none;
+    padding: 3px;
+}
+#divQueryTable .command
+{
+    clear: both;
+    text-align: right;
+}
+#divPattern
+{
+    position: absolute;
+    float: right;
+    right: 100px;
+    top: 50px;
+    width: 400px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: none;
+}
+.treeView
+{
+}
+.treeView .selectedNode
+{
+    color: #FFFFFF;
+    background-color: #AAAAAA;
+    padding: 1px;
+}
+ul.field
+{
+    clear: both;
+}
+ul.field li
+{
+    float: left;
+    width: 150px;
+}
+ul.field li span
+{
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+    border: 1px solid #666666;
+    padding: 10px;
+}
+.btn
+{
+    position: relative;
+    display: inline-block;
+    width: 93px;
+    height: 40px;
+    color: #2A2A2A;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    background-image: url("/Images/bgButton.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.btnBig
+{
+    display: inline-block;
+    width: 140px;
+    height: 37px;
+    color: #2A2A2A;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    background-image: url("/Images/bgButtonBig.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.btnSmall
+{
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+    color: #2A2A2A;
+    font-size: 12px;
+    line-height: 27px;
+    text-align: center;
+    background-image: url("/Images/bgButtonSmall.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.btnTiny
+{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    color: #2A2A2A;
+    font-size: 12px;
+    line-height: 27px;
+    text-align: center;
+    background-image: url("/Images/bgButtonTiny.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.btnCompute
+{
+    display: inline-block;
+    width: 71px;
+    height: 32px;
+    color: #2A2A2A;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    background-image: url("/Images/bgBtnCompute.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.tab .ajax__tab_header
+{
+    margin-left: 10px;
+}
+.tab .ajax__tab_tab
+{
+    width: 90px;
+    height: 42px;
+    color: #2A2A2A;
+    font-size: 13px;
+    line-height: 42px;
+    text-align: center;
+    background-image: url("/Images/bgTab.png");
+    background-repeat: no-repeat;
+    margin-left: 2px;
+}
+/* When mouse over */
+.tab .ajax__tab_hover .ajax__tab_tab
+{
+    color: #257FCF;
+    background-image: url("/Images/bgTabCurrent.png");
+}
+/* Current selected tab */
+.tab .ajax__tab_active .ajax__tab_tab
+{
+    color: #257FCF;
+    background-image: url("/Images/bgTabCurrent.png");
+}
+/* TabPanel Content */
+.tab .ajax__tab_body
+{
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+.tab h3
+{
+    background-color: #3B96DF;
+    background-image: url("/Images/iconDown.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 5px;
+}
+.tab h3.open
+{
+    background-image: url("/Images/iconUp.png");
+}
+.tabButton1
+{
+    height: 30px;
+    color: #FFFFFF;
+    background-image: url("/Images/bgTabButton.png");
+    background-repeat: repeat-x;
+    border-left: 1px solid #0B9FCF;
+    float: left;
+}
+.tabButton1 a
+{
+    display: inline-block;
+    color: #FFFFFF;
+    line-height: 30px;
+    padding: 2px 28px;
+    float: left;
+}
+.tabButton1 a:hover
+{
+    height: 30px;
+    color: #ff7f24;    
+    float: left;    
+}
+a.tabButton
+{
+    display: inline-block;
+    color: #FFFFFF;
+    line-height: 30px;
+    padding: 2px 28px;
+}
+
+.tabButtonCurrent
+{
+    height: 30px;
+    color: #0B9FCF;
+    background-image: url("/Images/bgTabButtonCurrent.png");
+    float: left;
+}
+a.tabButtonCurrent
+{
+    display: inline-block;
+    color: #0B9FCF;
+    line-height: 30px;
+    padding: 1px 31px;
+}
+.divSimilar
+{
+    position: absolute;
+    width: 400px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: none;
+}
+.popup
+{
+    position: fixed;
+    _position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    _height: 900px;
+    background-color: #1E5383;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.popupWindow
+{
+    position: fixed;
+    _position: absolute;
+    left: 50%;
+    width: 600px;
+    border: solid 1px #BDBDBD;
+    background-color: #FFFFFF;
+    margin-left: -300px;
+    margin-top: 20px;
+    padding: 20px;
+    z-index: 1000;
+}
+.popupWindow .windowHeader
+{
+    height: 23px;
+}
+.popupWindow .title
+{
+    float: left;
+}
+.popupWindow .icon
+{
+    float: right;
+}
+.popupWindow .icon .help
+{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    color: #2A2A2A;
+    font-size: 12px;
+    line-height: 27px;
+    text-align: center;
+    background-image: url("/Images/bgButtonTiny.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.popupWindow .icon .close
+{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    color: #2A2A2A;
+    font-size: 12px;
+    line-height: 27px;
+    text-align: center;
+    background-image: url("/Images/bgButtonTiny.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.popupWindow .windowBody
+{
+    clear: both;
+    padding: 5px;
+}
+.popupWindow .tips
+{
+    margin: -150px auto auto -300px;
+}
+.popupWindow ul
+{
+    padding: 3px;
+}
+.popupWindowBig
+{
+    position: fixed;
+    _position: absolute;
+    left: 50%;
+    border: solid 2px #BDBDBD;
+    background-color: #FFFFFF;
+    margin-left: -390px;
+    margin-top: 20px;
+    z-index: 1000;
+}
+.loading
+{
+    position: fixed;
+    _position: absolute;
+    left: 50%;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    margin-left: -100px;
+    margin-top: 100px;
+    z-index: 1000;
+}
+.center
+{
+    text-align: center;
+}
+.center a
+{
+    text-decoration: none;
+}
+.right
+{
+    text-align: right;
+}
+.scroll
+{
+    overflow: auto;
+}
+.clear
+{
+    clear: both;
+}
+#footer
+{
+    clear: both;
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+#toolbar
+{
+    height: 142px;
+    background-color: #FFFFFF;
+    background-image: url("../Images/bgToolbar.png");
+    background-repeat: repeat-x;
+    background-position: top;
+    border-bottom: 1px solid #C9C9C9;
+    padding-top: 10px;
+}
+#toolbar ul
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#toolbar ul li
+{
+    float: left;
+    margin-left: 50px;
+}
+#copyright
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+/**
+	专题库 表格检索 cn
+
+*/
+
+.ztdivQueryTable
+{
+    width: 700px;  
+}
+.ztdivQueryTable dl dt
+{
+    clear: none;
+    float: left;
+    width: 150px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 2px;
+}
+.ztdivQueryTable dl dd
+{
+    clear: none;
+    float: left;
+    width: 150px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 2px;
+}
+.ztdivQueryTable .textBox
+{
+    width: 160px;
+    height: 18px;
+    color: #6E6E6E;
+    font-size: 12px;
+    border: 1px solid #6E6E6E;
+    background-image: none;
+    padding: 3px;
+}
+.ztdivQueryTable .command
+{
+    clear: both;
+    text-align: right;
+}
+
+#SetZT .boxTop
+{
+    width: 250px;
+}
+#SetZT .boxBottom
+{
+    width: 250px;
+}
+#SetZT .box
+{
+    width: 263px;
+}
+
+
+
+/* cart */
+
+#cart
+{
+    position: fixed;
+    top: 300px;
+    right: 20px;
+    width: 343px;
+    margin-top: -100px;
+    display: none;
+    z-index: 998;
+}
+#cart .header
+{
+    height: 24px;
+    color: #FFFFFF;
+    background-image: url("/Images/bgWindowTinyHeader.png");
+    background-repeat: no-repeat;
+    padding: 14px 12px 0px 20px;
+}
+#cart .body
+{
+    clear: both;
+    background-image: url("/Images/bgWindowTinyBody.png");
+    background-repeat: repeat-y;
+    padding: 10px 15px 0px 15px;
+}
+#cartItems
+{
+    clear: both;
+    background-image: url("/Images/bgWindowTinyBody.png");
+    background-repeat: repeat-y;
+    padding: 10px 15px 0px 15px;
+}
+#cart .body .item
+{
+    float: left;
+    width: 260px;
+    height: 27px;
+    line-height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#cart .body .btnTiny
+{
+    float: right;
+}
+#cart .bottom
+{
+    clear: both;
+    height: 28px;
+    background-image: url("/Images/bgWindowTinyBottom.png");
+    background-repeat: no-repeat;
+}
+.hot
+{
+    width:220px;
+}
+.hot a
+{
+	color:#555555;
+	text-decoration:none;
+}
+.hot a:hover
+{
+	color:#FF6600;
+	text-decoration:"underline";
+}
+.hot span
+{    
+    float:right;
+    text-align:right;
+    padding-right:10px;
+    *margin-top:-20px;
+}
+
+a.cn   
+        {
+            background: url('../images/cn1.png') no-repeat 0px 0px;
+            text-decoration:none;
+            width:14px;      
+        }
+        a:hover.cn 
+        {
+            background: url('../images/cn2.png') no-repeat 0px 0px;
+            text-decoration:none;    
+            width:14px;
+        }
+         a.en   
+        {
+            background: url('../images/en1.png') no-repeat 0px 0px;
+            text-decoration:none;
+            width:14px;
+        }
+        a:hover.en 
+        {
+            background: url('../images/en2.png') no-repeat 0px 0px;
+            text-decoration:none;    
+            width:14px;
+        }	
+	a.cn1   
+        {
+            background: url('../images/cn1.png') no-repeat 0px 5px;
+            text-decoration:none;
+            padding-top:5px;
+            padding-bottom:5px;
+            width:14px;
+            line-height:30px;
+        }
+        a:hover.cn1 
+        {
+            background: url('../images/cn22.png') no-repeat 0px 5px;
+            text-decoration:none;       
+            padding-top:6px;
+            padding-bottom:6px;
+            width:14px;
+            line-height:30px;
+        }
+         a.en1  
+        {
+            background: url('../images/en1.png') no-repeat 0px 5px;
+            text-decoration:none;
+            padding-top:5px;
+            padding-bottom:5px;
+            width:14px;
+            line-height:30px;
+        }
+        a:hover.en1
+        {
+            background: url('../images/en22.png') no-repeat 0px 5px;
+            text-decoration:none;       
+            padding-top:6px;
+            padding-bottom:6px;
+            width:14px;
+            line-height:30px;
+        }
+.font12
+{  
+    font: 12px/30px "宋体";
+}
+.font14
+{  
+    font: 14px/30px "宋体";
+}
+.biblio-item
+{
+    float:left; 
+    width:200px;
+}
+.biblio-item2
+{
+    float:left; 
+    min-width:400px;
+}
+.biblio-item1
+{
+    float:left; 
+    width:100%;
+}
+
+#right .biblio-item
+{
+    float:left; 
+    width:270px;
+}
+#right .biblio-item2
+{
+    float:left; 
+    min-width:270px;
+}
+#right .biblio-item1
+{
+    float:left; 
+    width:100%;
+}
+#clear
+{
+    clear:both;
+}
+#ExportCFG ul
+{
+     float:left;
+     width:480px;
+}
+#ExportCFG ul li
+{
+     float:left;
+     width:120px;
+}

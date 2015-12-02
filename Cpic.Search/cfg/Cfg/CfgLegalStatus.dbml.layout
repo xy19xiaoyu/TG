@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CfgLegalStatus">
+  <DataContextMoniker Name="/CfgLegalStatusDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dde30f42-c79b-4162-b505-ea095f1a5376" absoluteBounds="4.125, 1.875, 2, 2.2356999169786773">
+      <DataClassMoniker Name="/CfgLegalStatusDataContext/CnLegalStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eab19c0e-bb60-46de-8465-2558304a0396" absoluteBounds="4.14, 2.335, 1.9700000000000002, 1.6756999169786773" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

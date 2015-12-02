@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery" Class="PQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery;Persist Security Info=True;User ID=sa" SettingsObjectName="TLC.Properties.Settings" SettingsPropertyName="PatentQueryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TLC_Albums" Member="TLC_Albums">
+    <Type Name="TLC_Albums">
+      <Column Name="AlbumId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Collects" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Orders" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="live" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsParent" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TLC_Collects" Member="TLC_Collects">
+    <Type Name="TLC_Collects">
+      <Column Name="CollectId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AlbumId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Types" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppNo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LawState" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CollectDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NoteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sysTree" Member="sysTree">
+    <Type Name="sysTree">
+      <Column Name="NodeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NodeName" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="PNodeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsParent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="des" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="live" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ztTree" Member="ztTree">
+    <Type Name="ztTree">
+      <Column Name="NodeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NodeName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PNodeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsParent" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="thId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreateUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="des" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="live" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Nid" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="PNid" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="zid" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ztsp" Member="ztsp">
+    <Type Name="ztsp">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NodeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NodeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SPNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sp" Type="System.String" DbType="VarChar(1200) NOT NULL" CanBeNull="false" />
+      <Column Name="Hit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateSum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isAutoUpdate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="isUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ztid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="st" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Nid" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="zid" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZtDbList" Member="ZtDbList">
+    <Type Name="ZtDbList">
+      <Column Name="DbID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ztDbName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="dbType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DbDes" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsDel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ztHeardImg" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="zid" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ztdb" Member="ztdb">
+    <Type Name="ztdb">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NodeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Iscore" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="isUpdate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Form" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CreateUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="isdel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nid" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

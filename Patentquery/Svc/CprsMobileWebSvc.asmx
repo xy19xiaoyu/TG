@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="CprsMobileWebSvc.asmx.cs" Class="mobileAppWebService.CprsMobileWebSvc" %>

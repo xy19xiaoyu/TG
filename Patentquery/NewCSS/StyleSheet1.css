@@ -1,0 +1,157 @@
+﻿
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.containerNew
+{
+    background-color: #F0F0F2;
+    width: 1000px;
+    height: 534px;
+    margin: 10px auto 0;
+}
+
+.menuNew
+{
+    width: 1000px;
+    height: 34px;
+    background: url(../NewImg/111111.jpg) repeat-x;
+}
+
+.menuNew ul
+{
+    list-style: none;
+    width: 920px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.contentNew ul
+{
+    list-style: none;
+    width: 920px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.menuNew li
+{
+    background: url(../NewImg/header_tabs.jpg) repeat-x;
+    background-position: 214px 0;
+    display: block;
+    float: left;
+    width: 215px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.menuNew li.current
+{
+    background-position: 0 0;
+}
+
+.menuNew span
+{
+    /*font: bold 22px Verdana, Geneva, sans-serif;*/
+    font-family: 宋体;
+    font-size: 13px;
+    color: #FFE;
+    display: block;
+    line-height: 34px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #666;
+    letter-spacing: 4px;
+}
+
+.current span
+{
+    color: #666;
+    text-shadow: 2px 2px 2px #FFF;
+}
+
+
+.contentNew
+{
+    background: #F0F0F2;
+    width: 1000px;
+    height: 500px;
+    background-color: Red;
+    background: url(../NewImg/2222.jpg) repeat-x;
+}
+
+.contentNew ul
+{
+    width: 960px;
+    height: 500px;
+    list-style: none;
+}
+
+.contentNew li
+{
+    float: left;
+    width: 1000px;
+    height: 500px;
+    margin-left: -40px;
+    display: block;
+}
+
+.contentNew img
+{
+    float: left;
+    width: 400px;
+    margin: 20px 30px;
+}
+
+.infoNew
+{
+    float: left;
+    width: 300px; /*margin: 80px 80px;*/
+    margin-top: 80px;
+    margin-left: 120px;
+    height: auto;
+}
+
+.infoNew p
+{
+    font: bold 24px Verdana, Geneva, sans-serif;
+    color: #999;
+    display: block;
+    line-height: 34px;
+    text-align: center;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.contentNew .input
+{
+    border: 2px solid #4aa2ef;
+    width :240px;
+    height :20px;
+}
+
+.infoNew table
+{
+    width: 750px;
+}
+
+.infoNew table td
+{
+    width: 50%;
+    text-align :right ;
+    height :60px;
+    vertical-align :middle ;
+}
+
+.buttoncss
+{
+    background: url(../NewImg/bt.jpg) repeat-x;
+    width :112px;
+    height :31px;
+    border: 0px solid #4aa2ef;
+    }

@@ -1,0 +1,9 @@
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\bin\Release\Cfg.dll.config
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\bin\Release\Cfg.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\bin\Release\Cfg.XmlSerializers.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\bin\Release\Cfg.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\bin\Release\log4net.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\obj\Release\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\obj\Release\Cfg.dll
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\obj\Release\Cfg.pdb
+E:\zhejiang\20150601\源代码\Cpic.Search\cfg\Cfg\obj\Release\Cfg.XmlSerializers.dll

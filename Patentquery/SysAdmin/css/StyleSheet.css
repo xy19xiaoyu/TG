@@ -1,0 +1,124 @@
+﻿body
+{
+    margin: 0 auto;
+}
+
+#container
+{
+    width: 1024px;
+    height: auto; /*background-image: url("../images/bg.jpg");*/
+    margin: 0px auto;
+}
+
+#lgcontainer
+{
+    width: 1024px;
+    height: 768px; /*background-image: url("../images/bg.jpg");*/
+    background-image: url("../images/lgbg.jpg");
+    margin: 0px auto;
+}
+
+#top
+{
+    width: 1024px;
+    height: 155px;
+    background-image: url("../images/topbg.jpg");
+}
+
+#mid
+{
+    width: 1024px;
+    height: auto;
+    background-image: url("../images/midbg.jpg");
+    background-repeat: repeat-y;
+    position: relative;
+    overflow: hidden;
+}
+
+#down
+{
+    width: 1024px;
+    height: 42px;
+    color: #000000;
+    font-size: 13px;
+    font-family: 宋体;
+    background-image: url("../images/downbg.jpg");
+    background-repeat: no-repeat;
+}
+
+#midleft
+{
+    width: 191px; 
+    min-height: 571px;
+    float: left;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+#midright
+{
+    width: 813px;
+    height: auto;
+    float: left;
+}
+
+.nametd
+{
+    width: 80px;
+    color: #000000;
+    font-size: 13px;
+    font-family: 宋体;
+    text-align: right;
+}
+
+/*td
+{
+    border: solid #000 1px;
+}*/
+
+.timetd
+{
+    width: 110px;
+}
+
+.droptd
+{
+    width: 380px;
+}
+
+.buttontd
+{
+    color: #000000;
+    font-size: 13px;
+    font-family: 宋体;
+}
+
+.linkclass
+{
+    color: #000000;
+    font-size: 13px;
+    font-family: 宋体;
+}
+
+.GridHeaderCss
+{
+    background-color: #87b7d3;
+    color: #192861;
+}
+
+.gridveiwcss
+{
+    margin-left: 40px;
+    border: solid #aeadab 1px;
+}
+
+.textboxborder
+{
+    border: solid #ffffff 0px;
+}
+
+.lgbtcss
+{
+    border: solid #ffffff 0px;
+    }
+

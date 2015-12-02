@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_ZJPT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery_ZJPT;Persist Security Info=True;User ID=sa" SettingsObjectName="ProNewsDll.Properties.Settings" SettingsPropertyName="PatentQuery_ZJPTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NEWSINFO" Member="NEWSINFO">
+    <Type Name="NEWSINFO">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TITLE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SUMMARY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEWS_CONTENT" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEUSER" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuestionInfo" Member="QuestionInfo">
+    <Type Name="QuestionInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TITLE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="QuestionContent" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnserContent" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AnserUser" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AnserDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

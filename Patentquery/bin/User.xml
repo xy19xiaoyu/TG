@@ -1,0 +1,917 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User</name>
+    </assembly>
+    <members>
+        <member name="M:Cpic.Cprs2010.User.Stat.SaveConfig">
+            <summary>
+            保存权限配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.AddRequest(System.String)">
+            <summary>
+            插入一条浏览历史数据
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.DeleteStat(System.String)">
+            <summary>
+             删除一个配置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.getShenFen(System.String)">
+            <summary>
+            得到IP所在省份
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.IP2IPNum(System.String)">
+            <summary>
+            IP地址2IP地址换算
+            </summary>
+            <param name="IP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.GetLocal(System.String)">
+            <summary>
+            得到IP 所在地
+            </summary>
+            <param name="IP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.getStat(System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            根据栏目、时间段 按年月周日小时统计
+            </summary>
+            <param name="LanMu">栏目</param>
+            <param name="StartDate">开始时间</param>
+            <param name="EndDate">结束时间</param>
+            <param name="StatType">统计类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Stat.StatGroupByDiQu(System.DateTime,System.DateTime)">
+            <summary>
+            根据时间段 按地区统计
+            </summary>
+            <param name="StartDate"></param>
+            <param name="EndDate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.Right">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.IniPageConfig">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.AddRight(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加一个权限
+            </summary>
+            <param name="PageFileName"></param>
+            <param name="RightName"></param>
+            <param name="CheckLogIn"></param>
+            <param name="CheckRight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.AddRight(System.Data.SqlClient.SqlTransaction,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加一个权限
+            </summary>
+            <param name="PageFileName"></param>
+            <param name="RightName"></param>
+            <param name="CheckLogIn"></param>
+            <param name="CheckRight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.DeleteRight(System.String)">
+            <summary>
+            删除一个权限
+            </summary>
+            <param name="RightCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.UpdateRight(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新一个权限
+            </summary>
+            <param name="PageFileName"></param>
+            <param name="RightName"></param>
+            <param name="CheckLogIn"></param>
+            <param name="CheckRight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.UpdateRight(System.Data.SqlClient.SqlTransaction,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新一个权限
+            </summary>
+            <param name="PageFileName"></param>
+            <param name="RightName"></param>
+            <param name="CheckLogIn"></param>
+            <param name="CheckRight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.SaveConfig">
+            <summary>
+            保存权限配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.GetWebSitePage">
+            <summary>
+            得到网站所有的页面
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.reFreshWebSitPage">
+            <summary>
+            刷新网站的页面  有可能页面已经不在了
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.GetPages(System.IO.DirectoryInfo,System.Boolean)">
+            <summary>
+            得到目录下所有的aspx,asp,htm,html 文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Right.GetRightsList">
+            <summary>
+            根据子系统得到权限列表
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.User.Right.AllPagesConfig">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.BaseFuction.GetFuctions">
+            <summary>
+            基本功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.Package">
+            <summary>
+            Package套餐设置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.GetPackage(System.String)">
+            <summary>
+            根据套餐代码得到套餐信息
+            </summary>
+            <param name="PackageCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.GetPackage">
+            <summary>
+            得到所有套餐信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.GetPackageDetail(System.String)">
+            <summary>
+            根据套餐代码得到套餐详细信息
+            </summary>
+            <param name="PackageCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.SetPackage(System.Data.SqlClient.SqlTransaction,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            设置套餐
+            </summary>
+            <param name="packagecode"></param>
+            <param name="packagename"></param>
+            <param name="yearmoney"></param>
+            <param name="monthmoney"></param>
+            <param name="packagedes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.SetPackageDetail(System.Data.SqlClient.SqlTransaction,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            设置套餐详细信息
+            </summary>
+            <param name="tran"></param>
+            <param name="PackageCode"></param>
+            <param name="FunctionCode"></param>
+            <param name="EachLimt"></param>
+            <param name="MonthLimit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.DelPackage(System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            删除套餐
+            </summary>
+            <param name="tran"></param>
+            <param name="PackageCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Package.DelPackageDetail(System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            删除套餐明细
+            </summary>
+            <param name="tran"></param>
+            <param name="PackageCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.UserManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetAllUsers">
+            <summary>
+            add by lidonglei(20100419)获得所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetUsersByName(System.String)">
+            <summary>
+            根据用户名获取用户信息
+            </summary>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetUsersByAccount(System.String)">
+            <summary>
+            根据帐号获取用户信息
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetUserInfoByID(System.String)">
+            <summary>
+            根据用户ID获取用户信息
+            </summary>
+            <param name="strID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetAllUserByRoleCode(System.String)">
+            <summary>
+            根据rolecode获得所有用户信息
+            </summary>
+            <param name="strRoleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.ChcekUserName(System.String)">
+            <summary>
+            判断用户名是否存在
+            </summary>
+            <param name="UserName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.AddUser(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="UserName"></param>
+            <param name="ShowName"></param>
+            <param name="Psd"></param>
+            <param name="Tel"></param>
+            <param name="RoleList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.RegisterUser(Cpic.Cprs2010.User.TbUserInfoInfo,System.String)">
+            <summary>
+            注册用户方法（add by lidonglei/2010/04/15）
+            </summary>
+            <param name="userInfo"></param>
+            <param name="strRoleCodes">角色名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetRoleCodeByRoleName(System.String)">
+            <summary>
+            根据RoleName获得RoleCode
+            </summary>
+            <param name="strRoleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetRoleNameByRoleCode(System.String)">
+            <summary>
+            根据RoleCode获得RoleName
+            </summary>
+            <param name="strRoleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.GetUserInfoByLogName(System.String)">
+            <summary>
+            根据登录名获得用户信息
+            </summary>
+            <param name="strLogName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.UpdateUserInfo(Cpic.Cprs2010.User.TbUserInfoInfo)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="userInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.UpdateUserInfo(Cpic.Cprs2010.User.TbUserInfoInfo,System.String,System.Boolean)">
+            <summary>
+            更新用户信息及用户的权限信息
+            </summary>
+            <param name="userInfo"></param>
+            <param name="_strRoleCodes"></param>
+            <param name="_isRoleUpdate">True更新；false不更新权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.UpdateUser(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            更新用户信息 
+            </summary>
+            <param name="UserName"></param>
+            <param name="ShowName"></param>
+            <param name="Psd"></param>
+            <param name="Tel"></param>
+            <param name="RoleList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.DelUser(System.String)">
+            <summary>
+            删除用户
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.LogInCheck(System.String)">
+            <summary>
+            根据用户名以及也面名称判断用户是否有权限访问这个也面
+            </summary>
+            <param name="PageFileName">页面名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.LogIn(System.String,System.String)">
+            <summary>
+            用户登陆
+            </summary>
+            <param name="UserName">用户名</param>
+            <param name="PassWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.CheckPassWord(System.String)">
+            <summary>
+            检测密码是否正确
+            </summary>
+            <param name="psd">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.UpdatePassWord(System.String)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="NewPassWord">新的密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.getChuShiList">
+            <summary>
+            得到所有的处室
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.Dispose">
+            <summary>
+            清空游客用户查询结果
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserManager.UsedGuestId">
+            <summary>
+            已经使用的临时用户ID 字典
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserManager.FreeGuestId">
+            <summary>
+            未使用的临时用户ID 队列
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.getGuestUser(System.String)">
+            <summary>
+            得到一个游客用户
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.freeUsedGuestId(System.String)">
+            <summary>
+            是否某一个游客使用的用户ID、以及目录
+            </summary>
+            <param name="SessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.clearSearchHis(System.Int32,Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            清楚删除用户检索历史
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserManager.clearSearchHisData(System.Int32,Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            删除所有检索结果文件
+            </summary>
+            <param name="UserId"></param>
+            <param name="DBType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.MenuConfig.TabMenu">
+            <summary>
+            TabMenu
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.MenuConfig.mainMenuItem">
+            <summary>
+            主菜单
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.MenuConfig.TopSubMenu">
+            <summary>
+            子菜单头部
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.MenuConfig.MidSubMenu">
+            <summary>
+            子菜单中间
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.MenuConfig.BotSubMenu">
+            <summary>
+            子菜单底部
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.GetTabMenus">
+            <summary>
+            得到所有的Tab
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.GetMainMenus(System.Int32)">
+            <summary>
+            得到Tab下的主菜单
+            </summary>
+            <param name="TabMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.GetSubMenus(System.Int32)">
+            <summary>
+            得到主菜单下的所有子菜单
+            </summary>
+            <param name="TabMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.CreateTabMenu">
+            <summary>
+            创建Tab菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.createMenuItems(System.Int32)">
+            <summary>
+            得到Tab菜单的菜单
+            </summary>
+            <param name="TabMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.createMenuItems1(System.Int32)">
+            <summary>
+            得到Tab菜单的菜单
+            </summary>
+            <param name="TabMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.createMainMenu(System.Int32,System.String)">
+            <summary>
+            创建主菜单
+            </summary>
+            <param name="Id"></param>
+            <param name="menuText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.createSubMenu(System.Int32)">
+            <summary>
+            创建子菜单
+            </summary>
+            <param name="mainMenuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.createMainMenu1(System.Int32,System.String)">
+            <summary>
+            创建主菜单
+            </summary>
+            <param name="Id"></param>
+            <param name="menuText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.AddTabMenu(System.String)">
+            <summary>
+            添加Tab菜单
+            </summary>
+            <param name="TabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.UpdateTabMenu(System.String,System.String)">
+            <summary>
+            修改Tab菜单名字
+            </summary>
+            <param name="NewTabName"></param>
+            <param name="OldTabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.DelTabMenu(System.String)">
+            <summary>
+            删除Tab菜单
+            </summary>
+            <param name="TabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.MoveRight(System.String)">
+            <summary>
+            设置一个Tab菜单顺序向右移动一格
+            </summary>
+            <param name="TabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.MenuConfig.MoveLeft(System.String)">
+            <summary>
+            设置一个Tab菜单顺序向左移动一格
+            </summary>
+            <param name="TabName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.User.TbUserInfoInfo.User_logname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.#ctor">
+            <summary>
+            用户类的构造函数
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.getSearchHis(Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            得到用户的检索历史List
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.getSearchHisPath(Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            得到用户的检索历史文件路径
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.getSearchHisTempDir">
+            <summary>
+            得到用户的检索历史存放临时目录
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.clearSearchHis(Cpic.Cprs2010.Search.SearchDbType)">
+            <summary>
+            清除用户检索历史
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.addSearchHis(Cpic.Cprs2010.Search.SearchPattern)">
+            <summary>
+            添加某一用户的检索历史
+            </summary>
+            <param name="sp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.addSearchHis(Cpic.Cprs2010.Search.SearchPattern,System.String)">
+            <summary>
+            添加某一用户的检索历史,添加内容为strHis
+            </summary>
+            <param name="sp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.validateFormat(System.String)">
+            <summary>
+            验证检索式格式，错误则返回""
+            </summary>
+            <param name="strHis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.deleteBatchSearchHis(Cpic.Cprs2010.Search.SearchPattern,System.String[])">
+            <summary>
+            删除指定编号的检索历史
+            同时删除相关文件，例如删除002.txt以及002.Cnp文件
+            searchNum 必须为002格式
+            </summary>
+            <param name="sp"></param>
+            <param name="searchNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.User.deleteSearchHis(Cpic.Cprs2010.Search.SearchPattern,System.String)">
+            <summary>
+            删除指定编号的检索历史
+            同时删除相关文件，例如删除002.txt以及002.Cnp文件
+            searchNum 必须为002格式
+            </summary>
+            <param name="sp"></param>
+            <param name="searchNum"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.User.User.UserPath">
+            <summary>
+            用户目录
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.LoginManager">
+             <summary>
+            LoginManager 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.CheckUID_SessionID">
+            <summary>
+            验证登陆用户是否已在其它机器登陆
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.User_Login">
+            <summary>
+            更新数据库中的登陆用户对应的sessionID
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.User_LogOut">
+            <summary>
+            注销登陆用户
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.User_logHistory">
+            <summary>
+            记录登录历史
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.UpdateLoginStatus(System.String,System.String,System.String)">
+            <summary>
+            更新在线状态
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.LoginManager.ValidateLogin(System.String,System.String,System.String,System.String)">
+            <summary>
+            登录校验
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.EmailActive.CheckActive(System.String,System.String)">
+            <summary>
+            邮箱验证
+            </summary>
+            <param name="userlogname"></param>
+            <param name="lscode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.EmailActive.ActiveEmail(System.String,System.String)">
+            <summary>
+            激活邮箱
+            </summary>
+            <param name="userlogname"></param>
+            <param name="lscode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.EmailActive.InsertActive(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userlogname"></param>
+            <param name="lscode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.EmailActive.ActivePassWord(System.String,System.String,System.String)">
+            <summary>
+            激活密码
+            </summary>
+            <param name="userlogname"></param>
+            <param name="lscode"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserLevel.Guest">
+            <summary>
+            游客
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserLevel.User">
+            <summary>
+            注册用户
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserLevel.Master">
+            <summary>
+            专家
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserLevel.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.User.UserLevel.SuperAdmin">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.UserDownHis">
+            <summary>
+            UserDownHis用户收费功能使用历史
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserDownHis.GetMoonHisNum(System.String,System.String)">
+            <summary>
+            每月的历史数量统计
+            </summary>
+            <param name="UserCode"></param>
+            <param name="FunctionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserDownHis.GetHisNum(System.String,System.String)">
+            <summary>
+            历史数量统计
+            </summary>
+            <param name="UserCode"></param>
+            <param name="FunctionCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserDownHis.SetHis(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            设置用户历史
+            </summary>
+            <param name="UserCode"></param>
+            <param name="FunctionCode"></param>
+            <param name="PatentName"></param>
+            <param name="PatentNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.GetRoles">
+            <summary>
+            得到所有角色的代码跟角色名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.GetRoleList">
+            <summary>
+            根据子系统得到子系统角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.CheckRoleExsit(System.String)">
+            <summary>
+            判读角色名字是否已经存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.AddRole(System.String,System.String)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="RoleCode"></param>
+            <param name="RoleName"></param>
+            <param name="SubSysCode"></param>
+            <param name="Rights"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.DelRole(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="RoleCode">角色</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.Role.UpdateRole(System.String,System.String,System.String)">
+            <summary>
+            更新一个角色的权限、角色的名称
+            </summary>
+            <param name="RoleCode"></param>
+            <param name="RightCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.WebSiteStat">
+            <summary>
+            流量统计类
+            作者：陈晓雨
+            创建时间：2010-03-17
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.AddRequest">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.AddSession">
+            <summary>
+            一次新的会话请求  在线人数加一
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.BuildPath(System.String)">
+            <summary>
+            构建目录
+            </summary>
+            <param name="_strPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.WebSiteStart">
+            <summary>
+            网站开始 如果网站不是第一次发布  则读取以前的统计信息
+            如果是第一次发布，则所有统计信息为空
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.AuToSaveStat(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="zrs"></param>
+            <param name="maxzx"></param>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.WebSiteStat.WebSiteEnd">
+            <summary>
+            网站停止时
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.UserPackage">
+            <summary>
+            UserPackage用户套餐相关
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserPackage.GetPackageDetailByUser(System.String)">
+            <summary>
+            根据用户名得到套餐明细
+            </summary>
+            <param name="usercode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserPackage.GetPackageByUser(System.String)">
+            <summary>
+            根据用户名得到套餐
+            </summary>
+            <param name="usercode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.UserPackage.SetUserPackage(System.String,System.String,System.String)">
+            <summary>
+            设置用户的套餐
+            </summary>
+            <param name="usercode"></param>
+            <param name="packagecode"></param>
+            <param name="enddate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.User.RequestFilter">
+            <summary>
+            网站请求过滤
+            1.用户登陆以及权限的判断
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.IniCheckList">
+            <summary>
+            得到需要验证登陆验证权限的列表
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.Filter">
+            <summary>
+            过滤每次请求
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.CheckPadRequest">
+            <summary>
+            PAd访问检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.IsPadRequest">
+            <summary>
+            PAd访问检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.CheckLogIn">
+            <summary>
+            验证用户是否登陆
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.CheckUserRight(System.String)">
+            <summary>
+            验证用户权限
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.IpTelUnicConvert">
+            <summary>
+            电信网通双线路转换
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.User.RequestFilter.ConvertUrl_TelUnic(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_strDns"></param>
+            <param name="strUrl"></param>
+            <param name="_strGetUrlType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.User.RequestFilter.CheckLogInList">
+            <summary>
+            验证登陆页面列表
+            </summary>
+        </member>
+    </members>
+</doc>

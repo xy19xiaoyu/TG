@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getCnWgImgUrlsByAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCnWgImgUrlsByANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCnWgImgUrlsByANResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCnAbsFuTuUrlByAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCnAbsFuTuUrlByANResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCnAbsFuTuUrlByANResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BnsByAppNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BnsByAppNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BnsByAppNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BnsByPubNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PubNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BnsByPubNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BnsByPubNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BnsByEpdsDocNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_DocNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BnsByEpdsDocNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BnsByEpdsDocNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatentDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentDes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentDesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatentDesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentClm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatentClmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatentClmResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getCnWgImgUrlsByANSoapIn">
+    <wsdl:part name="parameters" element="tns:getCnWgImgUrlsByAN" />
+  </wsdl:message>
+  <wsdl:message name="getCnWgImgUrlsByANSoapOut">
+    <wsdl:part name="parameters" element="tns:getCnWgImgUrlsByANResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCnAbsFuTuUrlByANSoapIn">
+    <wsdl:part name="parameters" element="tns:getCnAbsFuTuUrlByAN" />
+  </wsdl:message>
+  <wsdl:message name="getCnAbsFuTuUrlByANSoapOut">
+    <wsdl:part name="parameters" element="tns:getCnAbsFuTuUrlByANResponse" />
+  </wsdl:message>
+  <wsdl:message name="BnsByAppNoSoapIn">
+    <wsdl:part name="parameters" element="tns:BnsByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="BnsByAppNoSoapOut">
+    <wsdl:part name="parameters" element="tns:BnsByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BnsByPubNoSoapIn">
+    <wsdl:part name="parameters" element="tns:BnsByPubNo" />
+  </wsdl:message>
+  <wsdl:message name="BnsByPubNoSoapOut">
+    <wsdl:part name="parameters" element="tns:BnsByPubNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BnsByEpdsDocNoSoapIn">
+    <wsdl:part name="parameters" element="tns:BnsByEpdsDocNo" />
+  </wsdl:message>
+  <wsdl:message name="BnsByEpdsDocNoSoapOut">
+    <wsdl:part name="parameters" element="tns:BnsByEpdsDocNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatentData" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatentDes" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentDesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatentDesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentClmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatentClm" />
+  </wsdl:message>
+  <wsdl:message name="GetPatentClmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatentClmResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="getCnWgImgUrlsByAN">
+      <wsdl:input message="tns:getCnWgImgUrlsByANSoapIn" />
+      <wsdl:output message="tns:getCnWgImgUrlsByANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCnAbsFuTuUrlByAN">
+      <wsdl:input message="tns:getCnAbsFuTuUrlByANSoapIn" />
+      <wsdl:output message="tns:getCnAbsFuTuUrlByANSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BnsByAppNo">
+      <wsdl:input message="tns:BnsByAppNoSoapIn" />
+      <wsdl:output message="tns:BnsByAppNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BnsByPubNo">
+      <wsdl:input message="tns:BnsByPubNoSoapIn" />
+      <wsdl:output message="tns:BnsByPubNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BnsByEpdsDocNo">
+      <wsdl:input message="tns:BnsByEpdsDocNoSoapIn" />
+      <wsdl:output message="tns:BnsByEpdsDocNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <wsdl:input message="tns:GetPatentDataSoapIn" />
+      <wsdl:output message="tns:GetPatentDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentDes">
+      <wsdl:input message="tns:GetPatentDesSoapIn" />
+      <wsdl:output message="tns:GetPatentDesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentClm">
+      <wsdl:input message="tns:GetPatentClmSoapIn" />
+      <wsdl:output message="tns:GetPatentClmSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCnWgImgUrlsByAN">
+      <soap:operation soapAction="http://tempuri.org/getCnWgImgUrlsByAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCnAbsFuTuUrlByAN">
+      <soap:operation soapAction="http://tempuri.org/getCnAbsFuTuUrlByAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByAppNo">
+      <soap:operation soapAction="http://tempuri.org/BnsByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByPubNo">
+      <soap:operation soapAction="http://tempuri.org/BnsByPubNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByEpdsDocNo">
+      <soap:operation soapAction="http://tempuri.org/BnsByEpdsDocNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <soap:operation soapAction="http://tempuri.org/GetPatentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentDes">
+      <soap:operation soapAction="http://tempuri.org/GetPatentDes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentClm">
+      <soap:operation soapAction="http://tempuri.org/GetPatentClm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCnWgImgUrlsByAN">
+      <soap12:operation soapAction="http://tempuri.org/getCnWgImgUrlsByAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCnAbsFuTuUrlByAN">
+      <soap12:operation soapAction="http://tempuri.org/getCnAbsFuTuUrlByAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByAppNo">
+      <soap12:operation soapAction="http://tempuri.org/BnsByAppNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByPubNo">
+      <soap12:operation soapAction="http://tempuri.org/BnsByPubNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BnsByEpdsDocNo">
+      <soap12:operation soapAction="http://tempuri.org/BnsByEpdsDocNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentData">
+      <soap12:operation soapAction="http://tempuri.org/GetPatentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentDes">
+      <soap12:operation soapAction="http://tempuri.org/GetPatentDes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatentClm">
+      <soap12:operation soapAction="http://tempuri.org/GetPatentClm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://202.106.92.181/BNS/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://202.106.92.181/BNS/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

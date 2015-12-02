@@ -1,0 +1,61 @@
+﻿body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 0px;
+    margin: 5px;
+}
+form
+{
+    padding: 0px;
+    margin: 0px;
+}
+input
+{
+    /* 用户输入框的样式 */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border: 1px solid #000000;
+   
+    padding: 1px;
+    margin: 0px;
+}
+#popup
+{
+    /* 提示框div块的样式 */
+    position:absolute;
+    width: 260px;
+    color: #004a7e;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:White;
+   
+     z-index:9999;
+}
+#popup.show
+{
+    /* 显示提示框的边框 */
+    border: 1px solid #004a7e;
+}
+#popup.hide
+{
+    /* 隐藏提示框的边框 */
+    border: none;
+}
+/* 提示框的样式风格 */
+ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+li.mouseOver
+{
+    background-color: #004a7e;
+    color: #FFFFFF;
+}
+li.mouseOut
+{
+    background-color: #FFFFFF;
+    color: #004a7e;
+}

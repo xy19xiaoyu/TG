@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cpic.Cprs2010.Search.Result" Collapsed="true">
+    <Position X="1.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAACAgAA=</HashCode>
+      <FileName>Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cpic.Cprs2010.Search.ResultServices" Collapsed="true">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ResultServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cpic.Cprs2010.Search.SearchPattern" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAjAACAgAAAAAAAAAAA=</HashCode>
+      <FileName>SearchPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Cpic.Cprs2010.Search.ISearch">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgACA=</HashCode>
+      <FileName>ISearch.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Cpic.Cprs2010.Search.SearchDbType" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SearchDbType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Cpic.Cprs2010.Search.SearchStatus" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAQAAAgAAAAAAAAAAABgAAAAAAAAAAAI=</HashCode>
+      <FileName>SearchStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

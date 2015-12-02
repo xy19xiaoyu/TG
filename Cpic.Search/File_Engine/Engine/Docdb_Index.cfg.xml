@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<keys split="|" SerialIndex="0" DataType="DOCDB" Encoding="utf-8">
+	<key index="0" name="CPIC" Length="12" DataType="int" Encoding="utf-8" worksplit="false" split="" SingleFile="true" WordLocation="False"></key>		
+	<key index="1" name="PN" Length="20" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="2" name="AN" Length="20" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="3" name="AD" Length="8" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="4" name="PD" Length="8" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="5" name="IC" Length="12" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="6" name="EC" Length="20" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="7" name="PA" Length="16" DataType="string" Encoding="utf-8" worksplit="English" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="8" name="IN" Length="16" DataType="string" Encoding="utf-8" worksplit="English" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="9" name="CT" Length="20" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true" WordLocation="False"></key>			
+	<key index="10" name="PR" Length="20" DataType="string" Encoding="utf-8" worksplit="false" split=";" SingleFile="true"  WordLocation="False"></key>	
+	<key index="11" name="TI" Length="16" DataType="string" Encoding="utf-8" worksplit="English" split=";" SingleFile="true" WordLocation="true"></key>		
+	<key index="12" name="AB" Length="16" DataType="string" Encoding="utf-8" worksplit="English" split=";" SingleFile="false" WordLocation="true"></key>	
+</keys>

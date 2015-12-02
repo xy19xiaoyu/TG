@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PatentQuery_ZJPT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.131.11;Initial Catalog=PatentQuery_ZJPT;Persist Security Info=True;User ID=sa" SettingsObjectName="ProXZQDLL.Properties.Settings" SettingsPropertyName="PatentQuery_ZJPTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TbRight" Member="TbRight">
+    <Type Name="TbRight">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PageName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PageUrl" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PageDes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nodelevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XianShiShunXu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XianShiFlag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRole" Member="UserRole">
+    <Type Name="UserRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbSendMailLog" Member="TbSendMailLog">
+    <Type Name="TbSendMailLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShouJianRen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="YouJianMingCheng" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ZhuanLiQuYu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FaSongShiJian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FaSongZhuangTai" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IPTABLE" Member="IPTABLE">
+    <Type Name="IPTABLE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartIPNum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="EndIPNum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Local" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShengFen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbLog" Member="TbLog">
+    <Type Name="TbLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LanMu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ShiJian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DiQu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="VarChar(800)" CanBeNull="true" />
+      <Column Name="ShengFen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="YongHuLeiXing" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbZhuZhiJGDMZ" Member="TbZhuZhiJGDMZ">
+    <Type Name="TbZhuZhiJGDMZ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbUser" Member="TbUser">
+    <Type Name="TbUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserPWD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RealName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DepartMentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YongHuLeiXing" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="LianXiDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TongXinDiZhi" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="QiYeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SHFlag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="En_Entrances" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Cn_Entrances" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="QiYeMingCheng" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbLegalUrl_Cfg" Member="TbLegalUrl_Cfg">
+    <Type Name="TbLegalUrl_Cfg">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CO" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Des" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LegUrl" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbIP" Member="TbIP">
+    <Type Name="TbIP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbOpinion" Member="TbOpinion">
+    <Type Name="TbOpinion">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="LYTxt" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TJDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbHelpFiles" Member="TbHelpFiles">
+    <Type Name="TbHelpFiles">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="helpTitle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="fileName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UploadDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

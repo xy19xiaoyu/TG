@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetNewsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_pageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewsListResult" type="tns:ArrayOfNewsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNewsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NewsInfo" nillable="true" type="tns:NewsInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NewsInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Summary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="News_Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNewsInf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_strSID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewsInfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewsInfResult" type="tns:ArrayOfNewsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyQuestionList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyQuestionListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyQuestionListResult" type="tns:ArrayOfQuestionsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQuestionsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuestionsInfo" nillable="true" type="tns:QuestionsInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuestionsInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="QID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateUser" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnserContent" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AnserDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnserUser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMyQuestionInf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_strSID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyQuestionInfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyQuestionInfResult" type="tns:ArrayOfQuestionsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitQuestionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="submitQuestionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetNewsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewsList" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsInfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewsInf" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsInfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewsInfResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyQuestionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyQuestionList" />
+  </wsdl:message>
+  <wsdl:message name="GetMyQuestionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyQuestionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyQuestionInfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyQuestionInf" />
+  </wsdl:message>
+  <wsdl:message name="GetMyQuestionInfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyQuestionInfResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:submitQuestion" />
+  </wsdl:message>
+  <wsdl:message name="submitQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:submitQuestionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CprsMobileExtSvcSoap">
+    <wsdl:operation name="GetNewsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取知识产权动态信息列表</wsdl:documentation>
+      <wsdl:input message="tns:GetNewsListSoapIn" />
+      <wsdl:output message="tns:GetNewsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsInf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取知识产权动态信息详情</wsdl:documentation>
+      <wsdl:input message="tns:GetNewsInfSoapIn" />
+      <wsdl:output message="tns:GetNewsInfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取我的咨询列表</wsdl:documentation>
+      <wsdl:input message="tns:GetMyQuestionListSoapIn" />
+      <wsdl:output message="tns:GetMyQuestionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionInf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取我的咨询详情</wsdl:documentation>
+      <wsdl:input message="tns:GetMyQuestionInfSoapIn" />
+      <wsdl:output message="tns:GetMyQuestionInfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">提交咨询</wsdl:documentation>
+      <wsdl:input message="tns:submitQuestionSoapIn" />
+      <wsdl:output message="tns:submitQuestionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CprsMobileExtSvcSoap" type="tns:CprsMobileExtSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewsList">
+      <soap:operation soapAction="http://tempuri.org/GetNewsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsInf">
+      <soap:operation soapAction="http://tempuri.org/GetNewsInf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionList">
+      <soap:operation soapAction="http://tempuri.org/GetMyQuestionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionInf">
+      <soap:operation soapAction="http://tempuri.org/GetMyQuestionInf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitQuestion">
+      <soap:operation soapAction="http://tempuri.org/submitQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CprsMobileExtSvcSoap12" type="tns:CprsMobileExtSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNewsList">
+      <soap12:operation soapAction="http://tempuri.org/GetNewsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsInf">
+      <soap12:operation soapAction="http://tempuri.org/GetNewsInf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionList">
+      <soap12:operation soapAction="http://tempuri.org/GetMyQuestionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyQuestionInf">
+      <soap12:operation soapAction="http://tempuri.org/GetMyQuestionInf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitQuestion">
+      <soap12:operation soapAction="http://tempuri.org/submitQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CprsMobileExtSvc">
+    <wsdl:port name="CprsMobileExtSvcSoap" binding="tns:CprsMobileExtSvcSoap">
+      <soap:address location="http://115.238.84.42:8081/svc/CprsMobileExtSvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CprsMobileExtSvcSoap12" binding="tns:CprsMobileExtSvcSoap12">
+      <soap12:address location="http://115.238.84.42:8081/svc/CprsMobileExtSvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

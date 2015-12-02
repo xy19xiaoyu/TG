@@ -1,0 +1,824 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cfg</name>
+    </assembly>
+    <members>
+        <member name="T:Cpic.Cprs2010.Cfg.CnAppLicationNo">
+             <summary>
+            CnAppLicationNo 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.CnAppLicationNo.ValidCheck(System.String)">
+             <summary>
+            公开方法
+            判断申请号的合法性
+            输入：申请号
+            输出：布尔型，表示申请号是否合法
+            判断方法：依据申请时间，04年以后的，采用13位的校验算法，否则，采用11位的校验算法
+             </summary>
+             <param name="AppNo">[13-14]位申请号|[9-10]位申请号</param>
+             <returns></returns>        
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.CnAppLicationNo.getValidCode(System.String)">
+            <summary>
+            根据申请号计算校验位,89年之前没有校验位
+            </summary>
+            <param name="AppNo">申请号[8|12]</param>
+            <returns>字符串，申请号校验位</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.CnAppLicationNo.Check_ApNoAddVCode(System.String)">
+            <summary>
+            申请号有效验证
+            </summary>
+            <param name="_strApNo">[13-14]位申请号|[9-10]位申请号</param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Port.EPDSInterface">
+             <summary>
+            EPDSInterface 的摘要说明
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.EPDSInterface.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.EPDSInterface.GetBnsFiles(System.String,System.Boolean,Cpic.Cprs2010.Cfg.Port.EpdsInterfaceType)">
+            <summary>
+            调用BNS接口获取文件，返回为连接地址
+            </summary>
+            <param name="_strPubNo"></param>
+            <param name="_bIsAllFile"></param>
+            <param name="_eitype"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.EPDSInterface.GetPdfFilesByPath(System.String,Cpic.Cprs2010.Cfg.Port.EpdsInterfaceType)">
+            <summary>
+            获取PDF文件路径，如果不存在，则通过BSN接口下载至本地
+            </summary>
+            <param name="_strPubNo"></param>
+            <param name="_bIsAllFile"></param>
+            <param name="_eitype"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.EPDSInterface.DownLoadPdfFiles(System.String,Cpic.Cprs2010.Cfg.Port.EpdsInterfaceType)">
+            <summary>
+            通过EPDS接口下载PDF文件
+            </summary>
+            <param name="_strPubNo"></param>
+            <param name="_eitype"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Port.ClassIfication">
+            <summary>
+            获取Ucla或Ecla等分类信息
+            </summary>
+            <remarks>获取Ucla或Ecla等分类信息</remarks>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.ClassIfication.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.ClassIfication._strUclaUrl">
+            <summary>
+            Ucal的请求地址
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.ClassIfication._strEclaUrl">
+            <summary>
+            Ecla的请求地址
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.ClassIfication.GetUcla(System.String)">
+            <summary>
+            获取Ucla分类号信息
+            </summary>
+            <param name="_strApNo">申请号</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.ClassIfication.GetEcla(System.String)">
+            <summary>
+            获取Ecla分类号信息
+            </summary>
+            <param name="_strApNo">申请号</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.ClassIfication.GetHttpStram(System.String)">
+            <summary>
+            发送Http请求，返回Http文本流
+            </summary>
+            <param name="_strUrl">URL请求地址</param>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Port.ClassIfication.StrUclaUrl">
+            <summary>
+            Ucla的请求地址
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Port.ClassIfication.StrEclaUrl">
+            <summary>
+            Ecla的请求地址
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Data.cnDataService">
+             <summary>
+            cnDataService 的摘要说明
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strAbsXmlBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strAbsXmlTransBasePath">
+            <summary>
+            摘要数据翻译目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strFullXmlBasePath">
+            <summary>
+            全文数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strFullXmlNewDataBasePath">
+            <summary>
+            全文NewData数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strImgDocBasePath">
+            <summary>
+            全文图形数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strFuTuBasePath">
+            <summary>
+            附图数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.cnDataService.strFuTuGifBasePath">
+            <summary>
+            附图GIF数据目录
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.Init">
+            <summary>
+            初始配置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getAbsXmlFile(System.String)">
+            <summary>
+            得到指定申请号的摘数文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getAbsXmlTransFile(System.String)">
+            <summary>
+            得到指定申请号的摘要翻译数据文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getClamXmlFile(System.String)">
+            <summary>
+            得到指定申请号的权利要求文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.GetClaimContent(System.String,System.String)">
+            <summary>
+            得到指定申请号的权利要求文件的内容
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.GetXmlContent(System.String,System.String)">
+            <summary>
+            根据申请号和节点标记获得节点内容
+            </summary>
+            <param name="appNo"></param>
+            <param name="mark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.GetNewDataContent(System.String,System.String,System.String)">
+            <summary>
+            新加工整理的数据
+            </summary>
+            <param name="appNo"></param>
+            <param name="date"></param>
+            <param name="LeiXing"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getDesXmlFile(System.String)">
+            <summary>
+            得到指定申请号的说明书文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getImgDocFile(System.String,System.String)">
+            <summary>
+            得到指定图形的全路径,申请号为8位或12位
+            </summary>
+            <param name="_strApNo">申请号.图形编号</param>
+            <param name="_strVol">卷期号</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getFuTuFile(System.String)">
+            <summary>
+            得到指定附图的全路径
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getFuTuGifFile(System.String)">
+            <summary>
+            得到指定附图的全路径(GIF格式)
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getImgPdfFile(System.String)">
+            <summary>
+            得取PDF文件路径
+            </summary>
+            <param name="_strApNo">申请号</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getImgPdfFilePath(System.String)">
+            <summary>
+            得取PDF文件根路径
+            </summary>
+            <param name="_strApNo">申请号</param>
+            <returns>根路径\5\4\</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.getImgPdfFilePath2(System.String)">
+            <summary>
+            得取PDF文件根路径
+            </summary>
+            <param name="_strApNo">申请号</param>
+            <returns>根路径\\5\4\3\</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.ApNo8To12(System.String)">
+            <summary>
+            申请号8位转12位
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.FormatEpoToCNApNo(System.String)">
+            <summary>
+            软换epo中文申请号为原始申请号
+            </summary>
+            <param name="_strApNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.FormatApNoTo11(System.String)">
+            <summary>
+            申请号转11位位欧局格式
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.FormatApNoTo112(System.String)">
+            <summary>
+            申请号转11位欧局格式
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.cnDataService.ApNo8To12Epo(System.String)">
+            <summary>
+            申请号8位转12位
+            </summary>
+            <param name="_strApNo">申请号为8位或12位</param>
+            <returns></returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrAbsXmlBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrAbsXmlTransBasePath">
+            <summary>
+            摘要数据翻译目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrFullXmlBasePath">
+            <summary>
+            全文数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrFullXmlNewDataBasePath">
+            <summary>
+            全文NewData数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrImgDocBasePath">
+            <summary>
+            全文图形数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrFuTuBasePath">
+            <summary>
+            附图数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.cnDataService.StrFuTuGifBasePath">
+            <summary>
+            附图GIF数据目录
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Data.DwpiDataService">
+             <summary>
+            cnDataService 的摘要说明
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DwpiDataService.strAbsXmlBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DwpiDataService.strFuTuBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DwpiDataService.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DwpiDataService.Init">
+            <summary>
+            初始配置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DwpiDataService.getAbsXmlFile(System.String)">
+            <summary>
+            得到指定入藏号的获取文件的全路径
+            </summary>
+            <param name="_strPan">入藏号为10位,6位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DwpiDataService.getFuTuPath(System.String)">
+            <summary>
+            得到指定相对路径的附图全路径
+            </summary>
+            <param name="_relatedPath">相对路径</param>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.DwpiDataService.StrAbsXmlBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.DwpiDataService.StrFuTuBasePath">
+            <summary>
+            摘要数据目录
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Data.DocdbDataService">
+             <summary>
+            cnDataService 的摘要说明
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DocdbDataService.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DocdbDataService.strXmlBasePath">
+            <summary>
+            DOCDB数据XML根目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DocdbDataService.strEnTxtXmlBasePath">
+            <summary>
+            美国全文xml文件根目录
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Data.DocdbDataService.strImgBasePath">
+            <summary>
+            DOCDB数据PDF根目录
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.Init">
+            <summary>
+            初始配置
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.getXmlFile(System.String)">
+            <summary>
+            得到指定公开号得到对应的XML文件
+            </summary>
+            <param name="_strPubNo">公开号</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.getUSTxtXmlFile(System.String)">
+            <summary>
+            获得美国全文xml文件路径
+            </summary>
+            <param name="_strPubNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.GetFilePathByPubNo(System.String)">
+            <summary>
+            根据公开号获得文件相对路径
+            </summary>
+            <param name="pubNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.GetRelativePathByPN(System.String)">
+            <summary>
+            根据公开号获得文件目录的相对路径[含国别]
+            </summary>
+            <param name="pubNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.getImgPdfFile(System.String)">
+            <summary>
+            得取PDF文件路径
+            </summary>
+            <param name="_strPubNo">公开号</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Data.DocdbDataService.getImgPdfFilePath(System.String)">
+            <summary>
+            得取PDF文件根路径
+            </summary>
+            <param name="_strPubNo">公开号</param>
+            <returns>根路径</returns>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.DocdbDataService.StrXmlBasePath">
+            <summary>
+            DOCDB数据XML根目录
+            </summary>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.Data.DocdbDataService.StrImgBasePath">
+            <summary>
+            DOCDB数据PDF根目录
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Code_DE">
+             <summary>
+            Code_DE 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Code_DE.encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Code_DE.EncryptChar(System.Char)">
+            <summary>
+            加密一个字符
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Code_DE.Decryption(System.String)">
+            <summary>
+            解密一个字符串 4个解密成一个
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Code_DE.DecryptionAll(System.String)">
+            <summary>
+            解密整个字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.UrlParameterCode_DE">
+             <summary>
+            UrlParameterCode_DE 的摘要说明
+            加密解密URL参数字符串,
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.UrlParameterCode_DE.encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.UrlParameterCode_DE.EncryptChar(System.Char)">
+            <summary>
+            加密一个字符
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.UrlParameterCode_DE.Decryption(System.String)">
+            <summary>
+            解密一个字符串 4个解密成一个
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.UrlParameterCode_DE.DecryptionAll(System.String)">
+            <summary>
+            解密整个字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Confusion.XmlPathUtil">
+             <summary>
+            XmlPathUtil 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Confusion.XmlPathUtil.getFullFilePath_CN(System.String,System.String,System.String)">
+            <summary>
+            根据申请号和卷期号获得中文全文文献路径
+            </summary>
+            <param name="applyno">申请号</param>
+            <param name="weekno">卷期号</param>
+            <param name="type">D表示说明书，C表示权利要求</param>
+            <returns>文献路径</returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.FileChoose">
+             <summary>
+            FileChoose 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.FileChoose.CopyFilesWithEncrypt(System.String,System.String,System.String)">
+            <summary>
+            把xml文件加密后从srcDir目录中保存到desDir目录中
+            </summary>
+            <param name="AppNoFilePath">申请号列表文件</param>
+            <param name="srcDir">xml文件的原始目录</param>
+            <param name="desDir">拷贝xml文件的目的目录</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.FileChoose.CopyFilesWithDecrypt(System.String,System.String,System.String)">
+            <summary>
+            把xml文件解解后从srcDir目录中保存到desDir目录中
+            </summary>
+            <param name="AppNoFilePath">申请号列表文件</param>
+            <param name="srcDir">xml文件的原始目录</param>
+            <param name="desDir">拷贝xml文件的目的目录</param>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Port.Translation">
+            <summary>
+            英汉互译
+            </summary>
+            <remarks>英汉互译</remarks>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.Translation.ins">
+            <summary>
+            Singleton instance
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.#ctor">
+            <summary>
+            私有构造
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.getInstance">
+            <summary>
+            取得类实例
+            </summary>
+            <returns>单例实例</returns>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.Translation.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.Translation.INDEX_OF_RESSTR_START">
+            <summary>
+            常量
+            </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.Translation.LENGTH_OF_FILTER_STR">
+            <summary>
+            常量
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.EnToCn(System.String)">
+            <summary>
+            英译汉
+            </summary>
+            <param name="_strText">英文文本</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.CnToEn(System.String)">
+            <summary>
+            汉译英
+            </summary>
+            <param name="_strText">中文文本</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.CnToEnSplit(System.String)">
+            <summary>
+            汉译英
+            </summary>
+            <param name="_strText">中文文本</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.Translate(System.String,System.String)">
+            <summary>
+            翻译文本[自动检测源语言类型]
+            ZhangQingFeng    2012-7-27    add
+            </summary>
+            <param name="sourceText">源文本</param>
+            <param name="targetLanguageCode">目标语言类型代码，如：en、zh-CN、zh-TW、ru等</param>
+            <returns>翻译结果</returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Translation.Translate(System.String,System.String,System.String)">
+            <summary>
+            翻译文本
+            ZhangQingFeng    2012-7-27    add
+            </summary>
+            <param name="sourceText">源文本</param>
+            <param name="sourceLanguageCode">源语言类型代码，如：en、zh-CN、zh-TW、ru等</param>
+            <param name="targetLanguageCode">目标语言类型代码，如：en、zh-CN、zh-TW、ru等</param>
+            <returns>翻译结果</returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByAppNo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByAppNoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByAppNoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByPubNo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByPubNoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByPubNoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByAppNoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.Service.BnsByPubNoCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByAppNoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByAppNoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByAppNoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByPubNoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByPubNoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Cpic.Cprs2010.Cfg.EPDS_BSN_ServiceReference.BnsByPubNoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Data.LegalStatusService">
+             <summary>
+            LegalStatusService 的摘要说明
+             </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Confusion.Common">
+             <summary>
+            Common 的摘要说明
+             </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Port.Clustering">
+            <summary>
+            聚类
+            </summary>
+            <remarks>聚类</remarks>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.Clustering._strSimDocUrl">
+            <summary>
+            申请度请求地址
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Clustering.GetSimilarDoc(System.String)">
+            <summary>
+            根据传入的申请号，获取其相似文本
+            </summary>
+            <param name="_strApNo">申请号</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Clustering.GetSimilarDoc(System.String,System.Double)">
+            <summary>
+            根据传入的申请号，获取其相似文本
+            </summary>
+            <param name="_strApNo">申请号</param>
+            <param name="_douSvalue">过滤条件，大于等于此相似度值的</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.Clustering.GetHttpStram">
+            <summary>
+            发送Http请求，返回Http文本流
+            </summary>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.DmManager">
+             <summary>
+            DmManager 的摘要说明
+             </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getCCName(System.String)">
+            <summary>
+            根据国省代码返回名称
+            </summary>
+            <param name="_strCNM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getCC_Display(System.String)">
+            <summary>
+            根据国省代码返回显示内容
+            </summary>
+            <param name="_strCNM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getAGame(System.String)">
+            <summary>
+            根据代理机构代码返回MC
+            </summary>
+            <param name="_strAGNM"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getAG_Display(System.String)">
+            <summary>
+            根据代理机构代码返回显示内容
+            </summary>
+            <param name="_strAGNM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getAG_Addres(System.String)">
+            <summary>
+            根据代理机构代码返回getAG_Addres
+            </summary>
+            <param name="_strAGNM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.DmManager.getUsetInfo(System.String,System.Int32)">
+            <summary>
+            获取用户自定义信息
+            </summary>
+            <param name="_strApNo"></param>
+            <param name="_strUid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj">
+             <summary>
+            cnDataFromTransPrj 对外检索中文说明书及权利要求通过翻译项目获取数据
+             </summary>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj.ins">
+            <summary>
+            Singleton instance
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj.getInstance">
+            <summary>
+            取得类实例
+            </summary>
+            <returns>单例实例</returns>
+        </member>
+        <member name="F:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj.logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj.getClamXmlFile(System.String)">
+            <summary>
+            得到指定申请号的权利要求文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+        <member name="M:Cpic.Cprs2010.Cfg.Port.cnDataFromTransPrj.getDesXmlFile(System.String)">
+            <summary>
+            得到指定申请号的说明书文件的全路径
+            </summary>
+            <param name="_strApNo">申请号为12位,8位内部转换</param>
+        </member>
+    </members>
+</doc>

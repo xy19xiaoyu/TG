@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+
+.menu  img{cursor:pointer;margin-right:5px;position: relative;top:center;left: 0; vertical-align:middle;} /*top:-15%;*/
+.imgOpen{ padding-left:0px;}
+/*一级菜单样式*/
+.menu ul li {
+	display:block;
+	width:170px;
+	margin-bottom:1px;
+	background:url(../images/useCenter_menu1.png) top center no-repeat;
+	list-style:none;
+	overflow:visible;
+	margin-top:0px;
+}
+
+
+.menu ul li a {
+	display:block;
+	height:26px; 
+	width:140px;
+	margin-top:0px;
+	padding-top:5px;
+	padding-left:30px;
+	font-size:14px;
+	/**color:#82846f;*/
+	color:#FFFFFF;
+	outline:none;
+	font-weight:bold;
+	font-family:microsoft yahei;
+	text-decoration:none;
+	white-space:nowrap; /*不换行*/
+	line-height:26px;
+}
+
+.menu ul li ul {
+	width:98%;
+	display:none;   
+}
+
+
+.menu ul li .active,.menu ul li a.active{
+	/**background:url(../images/on.png) top right no-repeat;*/
+	color:#FFFF00;
+	font-weight:bold;
+	font-family:microsoft yahei;
+}
+
+.menu ul li .inactive {
+	/*background:url(../images/off.png) top right no-repeat;*/
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:microsoft yahei;
+}
+/*------------------------一级菜单结束----------------------------------------------------*/
+
+/*------------------------二级菜单样式-----------------------------------------------------*/
+.menu ul li ul li {
+	width:100%;
+	display:block;
+	background:none;
+	font-size:12px;
+	list-style:circle;
+	color:#ff0000;
+	margin-bottom:0px;
+	margin-top:2px;
+	padding-top:0px;
+	padding-bottom:0px;
+	/*padding-left:35px;*/
+}
+.menu ul li ul li a {
+    padding-left:10px;
+    display:block;
+    width:95%;
+	background:none;
+	font-size:12px;
+	height:25px;
+	color:#ff0000;
+	text-decoration:none;
+	line-height:25px;
+	vertical-align:middle;
+}
+/*二级菜单缩进*/
+
+.menu ul li ul li a.aSelectedBackground{background:url(../images/useCenter_menu_selected.png) center center no-repeat; color:#666666;}
+.menu ul li ul li a:hover{background:url(../images/useCenter_menu_selected.png) center center no-repeat; color:#666666;}
+.menu ul li ul li .active {
+	color:#FFFF00;
+	font-weight:normal;
+	font-family:microsoft yahei;
+}
+
+.menu ul li ul li .inactive {
+	color:#666666;
+	font-weight:normal;
+	font-family:microsoft yahei;
+}
+
+.menu ul li ul li ul li a {padding-left:30px;}/*3级*/
+.menu ul li ul li ul li ul li a {padding-left:60px;}/*4级*/
+.menu ul li ul li ul li ul li ul li a {padding-left:85px;}/*5级*/
+.menu ul li ul li ul li ul li ul li ul li a {padding-left:114px;}/*6级*/
+.menu ul li ul li ul li ul li ul li ul li ul li a {padding-left:140px;}/*7级*/
+.menu ul li ul li ul li ul li ul li ul li ul li ul li a {padding-left:165px;}/*8级*/
+/*li的宽度*/
+.menu ul li ul li ul li{width:178px;} /*3级*/
+.menu ul li ul li ul li ul li{ width:147px;}/*4级*/
+.menu ul li ul li ul li ul li ul li{width:121px;}/*5级*/
+.menu ul li ul li ul li ul li ul li ul li{width:90px;}/*6级*/
+.menu ul li ul li ul li ul li ul li ul li ul li{width:63px;}/*7级*/
+.menu ul li ul li ul li ul li ul li ul li ul li ul li{width:35px;}/*8级*/
+/*----------------------------------第二级菜单样式结束----------------------------------------*/
+
+
+.overflow_l1{
+	width:204px;
+	overflow:auto;
+	/*overflow-x:hidden;*/
+	margin-bottom:0px;
+	margin-top:3px;
+	scrollbar-arrow-color:#779391;/*三角箭头颜色779391*/
+	scrollbar-3dlight-color:#5c6f71; /*立体滚动条亮边的颜色*/ 
+	scrollbar-highlight-color:#5c6f71; /*滚条的高亮颜色（左阴影？）*/ 
+	scrollbar-track-color:#071716; /*立体滚动条背景颜色*/ 
+	scrollbar-base-color:#163939; /*滚动条的基色*/
+	cursor:pointer;
+	border:solid 1px #50636a;
+}

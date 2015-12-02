@@ -1,0 +1,256 @@
+﻿body 
+{
+	color:#AFAFAF;
+	font-size:14px;
+	font-family:Microsoft YaHei;
+	line-height:150%;
+	background-color:#282828;
+	background-image: url(../Images/Admin/bgBody.jpg);
+	margin:0px;
+}
+a
+{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+img
+{
+    border-style:none;
+    vertical-align:middle;
+}
+h1
+{
+    font-size:24px;
+    font-family:Microsoft YaHei;
+    line-height:150%;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+}
+h2
+{
+    font-size:18px;
+    font-family:Microsoft YaHei;
+    line-height:150%;
+    padding:0px;
+    margin:0px;
+}
+h3
+{
+    font-size:15px;
+    font-weight:bold;
+    line-height:150%;
+    padding:0px;
+    margin:0px;
+}
+dl
+{
+	margin:20px 0px 0px 10px;
+	padding:0px;
+}
+dl dt
+{
+	clear:both;
+	float:left;
+	width:100px;
+	text-align:right;
+	line-height:26px;
+	padding:0px 10px 0px 0px;
+}
+dl dd
+{
+	padding:4px 0px
+}
+dl dd .command
+{
+	text-align:center;
+}
+.textBox
+{
+	color:#AFAFAF;
+	border:solid 1px #4E4E4E;
+	background-color:#1A1A1A;
+}
+.btn
+{
+	width:80px;
+	height:20px;
+	color:#FF6600;
+	line-height:20px;
+	text-align:center;
+	background-image: url(../Images/Admin/bgBtn.gif);
+	background-color:#1A1A1A;
+	border-style:none;
+}
+.btnCancel
+{
+	width:80px;
+	height:20px;
+	color:#888888;
+	line-height:20px;
+	text-align:center;
+	background-image: url(../Images/Admin/bgBtn.gif);
+	background-color:#1A1A1A;
+	border-style:none;
+}
+#header
+{
+	height:42px;
+	line-height:42px;
+	background-image: url(../Images/Admin/bgHeader.gif);
+}
+#logo
+{
+	float:left; 
+	margin:10px 20px auto 20px;
+}
+#menu
+{
+	float:left;
+	height:24px;
+	line-height:24px;
+	margin-top:9px;
+}
+#home
+{
+	float:left;
+	height:24px;
+	background-image: url(../Images/Admin/bgMenuLeft.gif);
+	background-repeat:no-repeat;
+	padding:0px 10px 0px 18px;
+}
+.menu
+{
+	float:left;
+	height:24px;
+	background-image: url(../Images/Admin/bgMenuRight.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+	*margin-top:-20px;
+}
+.staticMenuStyle
+{
+}
+.staticMenuItemStyle
+{
+	padding:0px 8px;
+}
+.staticMenuItemStyle a
+{
+}
+.staticSelectedStyle
+{
+}
+.staticHoverStyle
+{
+}
+.dynamicMenuStyle
+{
+	margin-left:5px;
+	z-index:100;
+}
+.dynamicMenuItemStyle
+{
+	background-color:#111111;
+	border:solid 1px #111111;
+	padding:0px 6px;
+}
+.dynamicMenuItemStyle a
+{
+}
+.dynamicSelectedStyle
+{
+	background-color:#333333;
+}
+.dynamicSelectedStyle a
+{
+}
+.dynamicHoverStyle
+{
+	background-color:#333333;
+}
+.dynamicHoverStyle a
+{
+}
+#account
+{
+	float:right;
+	padding-right:10px;
+}
+#path
+{
+	clear:both;
+	height:26px;
+	line-height:26px;
+	background-image: url(../Images/Admin/bgPath.gif);
+	padding-left:10px;
+}
+#content
+{
+	clear:both;
+	background-image:none;
+	padding:0px 20px 20px 20px;
+}
+#command
+{
+	float:right;
+	margin-top:-20px;
+}
+.gridView
+{
+	clear:both;
+	text-align:center;
+	margin-top:10px;
+}
+.gridView td
+{
+	border:solid 1px #282828;
+}
+.gridView th
+{
+	color:#FFFFFF;
+	background-color: #191919;
+	border:solid 1px  #333333;
+	line-height:25px;
+}
+.repeaterItem
+{
+	float:left;
+	width:150px;
+	text-align:center;
+	padding:20px;
+}
+.repeaterItem img
+{
+	vertical-align:middle;
+}
+.quota
+{
+	border-collapse:collapse;
+}
+.quota td,th
+{
+	border:solid 1px #DDDDDD;
+	padding:3px;
+}
+.quota td input
+{
+	width:30px;
+	color:#AFAFAF;
+	text-align:right;
+	border:solid 1px #4E4E4E;
+	background-color:#1A1A1A;
+}
+.quota th
+{
+	background-color:#333333;
+}
+a.current
+{
+	color:#FF6600;
+	font-weight:bold;
+}
+.clear
+{
+    clear:both;
+}

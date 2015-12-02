@@ -1,0 +1,10 @@
+E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\bin\Debug\ParseXml.dll
+E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\bin\Debug\ParseXml.pdb
+E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Debug\ResolveAssemblyReference.cache
+E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Debug\ParseXml.dll
+E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Debug\ParseXml.pdb
+F:\xy\tg\Cpic.Demo\ParseXml\bin\Debug\ParseXml.dll
+F:\xy\tg\Cpic.Demo\ParseXml\bin\Debug\ParseXml.pdb
+F:\xy\tg\Cpic.Demo\ParseXml\obj\Debug\ResolveAssemblyReference.cache
+F:\xy\tg\Cpic.Demo\ParseXml\obj\Debug\ParseXml.dll
+F:\xy\tg\Cpic.Demo\ParseXml\obj\Debug\ParseXml.pdb

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="LegalStatus" Class="CfgLegalStatusDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.75.8.118;Initial Catalog=LegalStatus;User ID=sa" SettingsObjectName="Cpic.Cprs2010.Cfg.Properties.Settings" SettingsPropertyName="LegalStatusConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CnLegalStatus" Member="CnLegalStatus">
+    <Type Name="CnLegalStatus">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AppNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LegalDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LegalCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InidCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldInid" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewInid" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tfile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

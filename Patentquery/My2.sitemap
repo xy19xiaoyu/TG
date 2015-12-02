@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/My/Default.aspx" title="首页" description="">
+    <siteMapNode url="/My/SmartQuery.aspx" title="智能检索" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/frmCnTbSearch.aspx" title="中国专利表格检索" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/frmWdTbSearch.aspx" title="世界专利表格检索" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/ExpertQuery.aspx" title="专家检索" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/frmcnExpertSearch.aspx" title="中国专利专家检索" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/frmEnExpertSearch.aspx" title="世界专利专家检索" description="">
+    </siteMapNode>    
+   
+    <siteMapNode url="/My/LawQuery.aspx" title="法律状态检索" description="">
+      <siteMapNode url="/My/LawQueryResult.aspx" title="多案法律状态查询" description="">
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="/My/frmTreeQuery.aspx" title="分类导航" description="">
+    </siteMapNode>
+    <siteMapNode url="/zt/frmthlist.aspx" title="专题数据库列表" description="">
+    </siteMapNode>
+    <siteMapNode url="/zt/ztdb.aspx" title="专题数据库、企业在线数据库" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/Trans/TransMain.aspx" title="机器翻译" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/frmPatentList.aspx" title="专利概览" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/frmPatDetails.aspx" title="中国专利数据详览" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/CnPatentDetails.aspx" title="中国专利详览" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/DesignPatentDetails.aspx" title="中国外观设计专利详览" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/ComparePatent.aspx" title="专利对比" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/EnPatentDetails.aspx" title="世界专利详览" description="">
+    </siteMapNode>
+
+    <siteMapNode url="/My/MyAccount.aspx" title="用户中心" description="">
+      <siteMapNode url="/My/frmCollectList.aspx" title="收藏管理" description="">
+      </siteMapNode>
+      <siteMapNode url="/My/frmQueryMag.aspx" title="检索式管理" description="">
+      </siteMapNode>
+      <siteMapNode url="/My/EditUser.aspx" title="个人资料" description="">
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="/My/Hint.aspx" title="提示" description="">
+    </siteMapNode>
+    <siteMapNode url="/My/Help.aspx" title="帮助" description="">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 8.75" name="PQ">
+  <DataContextMoniker Name="/PQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c89448e-4d3e-4e64-8531-efbb94267547" absoluteBounds="3.875, 1.125, 2, 2.4600651041666666">
+      <DataClassMoniker Name="/PQDataContext/TLC_Albums" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1c1588c-7b49-4812-83d3-6ed0e50aee46" absoluteBounds="3.8899999999999997, 1.585, 1.9700000000000002, 1.9000651041666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f6c0e4c5-61e7-493a-89d4-2d8066735133" absoluteBounds="9.625, 2, 2, 3.1345442708333331">
+      <DataClassMoniker Name="/PQDataContext/TLC_Collects" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1675ce16-f587-497f-b2ac-b36c223af807" absoluteBounds="9.64, 2.46, 1.9700000000000002, 2.574544270833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c665bdf2-9950-44dc-af5d-c2850053bc95" absoluteBounds="1.5, 1.25, 2, 2.1228255208333335">
+      <DataClassMoniker Name="/PQDataContext/sysTree" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6a8dae9-25d6-404f-8dec-ca7830a08cde" absoluteBounds="1.5149999999999997, 1.71, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a021781-3b6a-4099-867f-c2bb81739c0d" absoluteBounds="0.75, 4.75, 2, 3.1345442708333326">
+      <DataClassMoniker Name="/PQDataContext/ztTree" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5de261b-0d20-4cf9-b6e6-ee79c90b93c6" absoluteBounds="0.765, 5.21, 1.9700000000000002, 2.574544270833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b8d2d14-2148-484d-b4f0-c7fc8bd7f006" absoluteBounds="3.75, 4.75, 2, 3.8090234374999987">
+      <DataClassMoniker Name="/PQDataContext/ztsp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a01503b-04f1-4117-926c-e6d96ecfb775" absoluteBounds="3.765, 5.21, 1.9700000000000002, 3.2490234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45c884ed-2df0-4bfc-b1dc-268c4d3c71d3" absoluteBounds="6.75, 0.75, 2, 2.2914453125000005">
+      <DataClassMoniker Name="/PQDataContext/ZtDbList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4c5d39a-03c2-46fe-8d0d-226ffa531e6e" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ff81f7a-17c4-4fbc-a09c-e2b67ef1145e" absoluteBounds="6.75, 4.75, 2, 2.6286848958333326">
+      <DataClassMoniker Name="/PQDataContext/ztdb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91a14d00-5de6-4bb1-9774-5c5c97b0f4cc" absoluteBounds="6.765, 5.21, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
