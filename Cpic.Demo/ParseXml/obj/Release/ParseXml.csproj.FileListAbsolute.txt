@@ -1,5 +1,0 @@
-E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\bin\Release\ParseXml.dll
-E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\bin\Release\ParseXml.pdb
-E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Release\ResolveAssemblyReference.cache
-E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Release\ParseXml.dll
-E:\zhejiang\20150601\源代码\Cpic.Demo\ParseXml\obj\Release\ParseXml.pdb

@@ -1,6 +1,0 @@
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\bin\Release\Cpic.Cprs2010.Log.dll
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\bin\Release\Cpic.Cprs2010.Log.pdb
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\bin\Release\log4net.dll
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\obj\Release\ResolveAssemblyReference.cache
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\obj\Release\Cpic.Cprs2010.Log.dll
-E:\zhejiang\20150601\源代码\Cpic.Search\Log\obj\Release\Cpic.Cprs2010.Log.pdb
