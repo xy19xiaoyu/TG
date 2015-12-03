@@ -15,53 +15,24 @@
             <div id="left_title " class="left_ti" style="text-align: center;">
                 &nbsp;<span>用户中心</span>&nbsp;
             </div>
-            <div class="left_content2" style="padding: 0px; width: 220px">
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="../sysadmin/"><span>>>>系统后台管理</span></a>
+            <div class="left_content2" style="padding: 0px; width: 220px; min-height: 505px">
+                <div id="leftmue" class="easyui-accordion " style="width: 220px; height: 505px;">
+                    <div title=">>>系统后台管理" data-options="selected:false" url="../sysadmin/"></div>
+                    <div title="个人资料" data-options="selected:false" url="EditUser.aspx"></div>
+                    <div title="检索式管理" data-options="selected:false" url="frmQueryMag.aspx"></div>
+                    <div title="标引管理" data-options="selected:false" url="UserCSIndex.aspx"></div>
+                    <div title="我的收藏夹" data-options="selected:false" url="frmCollectList.aspx" style="overflow: auto; padding: 10px; min-height: 250px;">
+                        <div id="divzt" style="min-height: 250px">
+                            <ul id="CO" class="easyui-tree" data-options="lines:true" />
                         </div>
                     </div>
-                </div>
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title ">
-                            <a href="#"><span style="color: #800000;">个人资料</span></a></div>
-                        <</div>
-                </div>
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="frmQueryMag.aspx"><span>检索式管理</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" style="width: 220px; ">
-                    <div class="panel-header accordion-header" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title ">
-                            <a href="UserCSIndex.aspx">标引管理</a></div>
-                        <</div>
-                </div>
-                <div class="panel" style="width: 220px;">
-                    <div class="panel-header accordion-header" style="height: 16px; width: 210px; border-width: 0 0 0 0px;">
-                        <div class="panel-title">
-                            <a href="frmCollectList.aspx"><span>我的收藏夹</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="easyui-accordion " style="width: 220px; height: 410px;">
-                    <div title="热门收藏" style="overflow: inherit; min-height: 250px;">
+                    <div title="热门收藏" data-options="selected:true" url="" style="overflow: inherit; min-height: 250px;">
                         <div id="divtop" style="min-height: 250px; width: 202px; padding: 10px;">
                             <table id="tbhot" class="easyui-datagrid" style="width: 210px; overflow: visible"
                                 data-options="singleSelect:true,collapsible:true">
                                 <thead>
                                     <tr>
-                                        <th data-options="field:'Title',width:210">
-                                        </th>
+                                        <th data-options="field:'Title',width:210"></th>
                                     </tr>
                                 </thead>
                             </table>
@@ -130,8 +101,32 @@
             </dl>
         </asp:Panel>
         <asp:Panel ID="PanelResult" Visible="false" runat="server">
-            <h2>
-                修改成功!</h2>
+            <h2>修改成功!</h2>
         </asp:Panel>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".accordion-header").each(function () {
+
+                var url = $(this).parent().find("div.accordion-body").attr("url");
+                if (url == null || url == "" || url == "undefined") {
+                    return;
+                }
+                //如果有Url  panel不展开，取消Musedown 时间注册 
+                $(this).parent().unbind();
+                $(this).parent().bind("mousedown", function (e) {
+                    console.log(e.button);
+                    if (e.button == 0) {
+
+                        var url = $(this).find("div.accordion-body").attr("url");
+                        if (url == null || url == "" || url == "undefined") {
+                            return;
+                        }
+                        $(this).parent().unbind();
+                        location.href = url;
+                    }
+                });
+            });
+        });
+    </script>
 </asp:Content>

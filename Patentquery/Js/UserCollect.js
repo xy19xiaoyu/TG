@@ -288,7 +288,6 @@ function ShowHotTop() {
                     //
                     if (!frozen) {
                         cc.push('<td class="hot">');
-                        debugger;
                         cc.push(FormatCoTitle(rowData.type, rowData.title, rowData.Number, rowData.zhuanLiLeiXing, rowData.count, rowData.Pid));
                         cc.push('</td>'); ;
                     }
@@ -318,7 +317,6 @@ function ShowHotTop() {
 }
 
 function FormatCoTitle(type, strTitle, strANX, zhuanLiLeiXing, count, cpic) {
-    debugger;
     var strReturn = "";
     if (type.toUpperCase() == "CN") {
         if (zhuanLiLeiXing == "3")//外观设计专利

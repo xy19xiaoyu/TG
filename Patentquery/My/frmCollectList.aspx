@@ -14,48 +14,24 @@
             <div id="left_title " class="left_ti" style="text-align: center;">
                 &nbsp;<span>用户中心</span>&nbsp;
             </div>
-            <div class="left_content2" style="padding: 0px; width: 220px">
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="../sysadmin/"><span>>>>系统后台管理</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" style="width: 220px;">
-                    <div class="panel-header accordion-header" style="height: 16px; width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="EditUser.aspx"><span style="width: 200px;">个人资料</span></a></div>
-                    </div>
-                </div>
-                <div class="panel" style="width: 220px;">
-                    <div class="panel-header accordion-header" style="height: 16px; width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="frmQueryMag.aspx"><span>检索式管理</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" style="width: 220px;">
-                    <div class="panel-header accordion-header" style="height: 16px; width: 210px; border-width: 0 0 0 0px;">
-                        <div class="panel-title ">
-                            <a href="UserCSIndex.aspx">标引管理</a></div>
-                        <</div>
-                </div>
-                <div class="easyui-accordion " style="width: 220px; height: 450px;">
-                    <div title="我的收藏夹" style="overflow: auto; padding: 10px; min-height: 250px;">
+            <div class="left_content2" style="padding: 0px; width: 220px; min-height: 505px">
+                <div id="leftmue" class="easyui-accordion " style="width: 220px; height: 505px;">
+                    <div title=">>>系统后台管理" url="../sysadmin/"></div>
+                    <div title="个人资料" url="EditUser.aspx"></div>
+                    <div title="检索式管理" url="frmQueryMag.aspx"></div>
+                    <div title="标引管理" url="UserCSIndex.aspx"></div>
+                    <div title="我的收藏夹" url="" data-options="selected:true" style="overflow: auto; padding: 10px; min-height: 250px;">
                         <div id="divzt" style="min-height: 250px">
                             <ul id="CO" class="easyui-tree" data-options="lines:true" />
                         </div>
                     </div>
-                    <div title="热门收藏" style="overflow: inherit; min-height: 250px;">
+                    <div title="热门收藏" url="" style="overflow: inherit; min-height: 250px;">
                         <div id="divtop" style="min-height: 250px; width: 202px; padding: 10px;">
                             <table id="tbhot" class="easyui-datagrid" style="width: 210px; overflow: visible"
                                 data-options="singleSelect:true,collapsible:true">
                                 <thead>
                                     <tr>
-                                        <th data-options="field:'Title',width:210">
-                                        </th>
+                                        <th data-options="field:'Title',width:210"></th>
                                     </tr>
                                 </thead>
                             </table>
@@ -142,25 +118,27 @@
     <!-- 右键菜单 开始-->
     <div id="mm" class="easyui-menu" style="width: 120px;">
         <div onclick="appendco('CO','添加收藏夹')" data-options="iconCls:'icon-add'">
-            添加收藏夹</div>
+            添加收藏夹
+        </div>
         <div onclick="editco('CO','修改收藏夹')" data-options="iconCls:'icon-edit'">
             修改收藏夹
         </div>
         <div class="menu-sep">
         </div>
         <div onclick="RemoveNodeco('CO') " data-options="iconCls:'icon-remove'">
-            删除</div>
+            删除
+        </div>
     </div>
     <div id="maddzt" class="easyui-menu" style="width: 120px;">
         <div onclick="appendco('CO','添加收藏夹 ')" data-options="iconCls:'icon-add'">
-            添加收藏夹</div>
+            添加收藏夹
+        </div>
     </div>
     <div id="DivAddNode" style="min-width: 400px; display: none;">
         <span id="dialogtitle" style="display: none"></span>
         <table>
             <tr>
-                <th>
-                    收藏夹名称:
+                <th>收藏夹名称:
                 </th>
                 <td>
                     <input type="text" id="newclass" name="newclass" style="width: 280px" /><br />
@@ -168,12 +146,10 @@
                 </td>
             </tr>
             <tr>
-                <th>
-                    简介：
+                <th>简介：
                 </th>
                 <td>
-                    <textarea id="txtNodeDes" cols="200" name="txtNodeDes" rows="40" style="width: 280px;
-                        height: 100px"></textarea>
+                    <textarea id="txtNodeDes" cols="200" name="txtNodeDes" rows="40" style="width: 280px; height: 100px"></textarea>
                 </td>
             </tr>
         </table>
@@ -183,12 +159,10 @@
     <div id="EditNote" style="min-width: 400px; display: none;">
         <table>
             <tr>
-                <th>
-                    标注：
+                <th>标注：
                 </th>
                 <td>
-                    <textarea id="txtNote" cols="200" name="txtNodeDes" rows="40" style="width: 340px;
-                        height: 100px"></textarea>
+                    <textarea id="txtNote" cols="200" name="txtNodeDes" rows="40" style="width: 340px; height: 100px"></textarea>
                 </td>
             </tr>
         </table>
@@ -196,18 +170,17 @@
     <!-- 修改标注结束 -->
     <!-- 同类专利-->
     <div id="sm" style="width: 520px; height: 300px; display: none;">
-        <iframe id="ism" name="ism" scrolling="no" frameborder="0" src="" style="width: 100%;
-            height: 100%;"></iframe>
+        <iframe id="ism" name="ism" scrolling="no" frameborder="0" src="" style="width: 100%; height: 100%;"></iframe>
     </div>
     <!-- 同类专利-->
     <div id="cart">
         <div class="header">
-            专利对比</div>
+            专利对比
+        </div>
         <div id="cartItems" class="body">
         </div>
         <div class="body center">
-            <span class="btnSmall" onclick="clearCart()">清空</span> <span class="btnSmall" onclick="closeCart()">
-                关闭</span> <span class="btnSmall" onclick="submitCart()">确定</span>
+            <span class="btnSmall" onclick="clearCart()">清空</span> <span class="btnSmall" onclick="closeCart()">关闭</span> <span class="btnSmall" onclick="submitCart()">确定</span>
         </div>
         <div class="bottom">
         </div>
@@ -224,8 +197,7 @@
         </div>
     </div>
     <!-- 添加到专题库 结束-->
-    <iframe id="ifile" name="ifile" frameborder="0" src="" style="width: 0; height: 0;">
-    </iframe>
+    <iframe id="ifile" name="ifile" frameborder="0" src="" style="width: 0; height: 0;"></iframe>
     <input type="hidden" id="tname" name="tname" value="zt" />
     <input type="hidden" id="hidthid" name="hidthid" value="1" />
     <input type="hidden" id="hidNodeId" name="hidNodeId" value="1" />
@@ -239,4 +211,33 @@
     <input type="hidden" id="hidQuery" name="hidQuery" value="" />
     <asp:HiddenField ID="rightlist" runat="server" ClientIDMode="Static" Value="," />
     <asp:HiddenField ID="yonghuleixing" runat="server" ClientIDMode="Static" Value="个人" />
+
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(initleftmenu, 500);
+        });
+        function initleftmenu() {
+            $(".accordion-header").each(function () {
+
+                var url = $(this).parent().find("div.accordion-body").attr("url");
+                if (url == null || url == "" || url == "undefined") {
+                    return;
+                }
+                //如果有Url  panel不展开，取消Musedown 时间注册 
+                $(this).parent().unbind();
+                $(this).parent().bind("mousedown", function (e) {
+                    console.log(e.button);
+                    if (e.button == 0) {
+
+                        var url = $(this).find("div.accordion-body").attr("url");
+                        if (url == null || url == "" || url == "undefined") {
+                            return;
+                        }
+                        $(this).parent().unbind();
+                        location.href = url;
+                    }
+                });
+            });
+        }
+    </script>
 </asp:Content>

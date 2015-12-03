@@ -19,54 +19,24 @@
             <div id="left_title " class="left_ti" style="text-align: center;">
                 &nbsp;<span>用户中心</span>&nbsp;
             </div>
-            <div class="left_content2" style="padding: 0px; width: 220px">
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="../sysadmin/"><span>>>>系统后台管理</span></a>
+            <div class="left_content2" style="padding: 0px; width: 220px; min-height: 505px">
+                <div id="leftmue" class="easyui-accordion " style="width: 220px; height: 505px;">
+                    <div title=">>>系统后台管理" data-options="selected:false" url="../sysadmin/"></div>
+                    <div title="个人资料" data-options="selected:false" url="EditUser.aspx"></div>
+                    <div title="检索式管理" data-options="selected:false" url="frmQueryMag.aspx"></div>
+                    <div title="标引管理" data-options="selected:false" url="UserCSIndex.aspx"></div>
+                    <div title="我的收藏夹" data-options="selected:false" url="frmCollectList.aspx" style="overflow: auto; padding: 10px; min-height: 250px;">
+                        <div id="divzt" style="min-height: 250px">
+                            <ul id="CO" class="easyui-tree" data-options="lines:true" />
                         </div>
                     </div>
-                </div>
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title ">
-                            <a href="EditUser.aspx"><span>个人资料</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" style="width: 220px; background-color: #FBEC88">
-                    <div class="panel-header accordion-header accordion-header-selected" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title">
-                            <a href="frmQueryMag.aspx"><span style="color: #800000;">检索式管理</span></a>
-                        </div>
-                    </div>
-                </div>
-                  <div class="panel" style="width: 220px; ">
-                    <div class="panel-header accordion-header" style="height: 16px;
-                        width: 210px; border-width: 0 0 1px;">
-                        <div class="panel-title ">
-                            <a href="UserCSIndex.aspx">标引管理</a></div>
-                        <</div>
-                </div>
-                <div class="panel" style="width: 220px;">
-                    <div class="panel-header accordion-header" style="height: 16px; width: 210px; border-width: 0 0 0 0px;">
-                        <div class="panel-title">
-                            <a href="frmCollectList.aspx"><span>我的收藏夹</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="easyui-accordion " style="width: 220px; height: 410px;">
-                    <div title="热门收藏" style="overflow: inherit; min-height: 250px;">
+                    <div title="热门收藏" data-options="selected:true" url="" style="overflow: inherit; min-height: 250px;">
                         <div id="divtop" style="min-height: 250px; width: 202px; padding: 10px;">
                             <table id="tbhot" class="easyui-datagrid" style="width: 210px; overflow: visible"
                                 data-options="singleSelect:true,collapsible:true">
                                 <thead>
                                     <tr>
-                                        <th data-options="field:'Title',width:210">
-                                        </th>
+                                        <th data-options="field:'Title',width:210"></th>
                                     </tr>
                                 </thead>
                             </table>
@@ -91,8 +61,7 @@
                         <div>
                             <table width="100%">
                                 <tr style="padding-top: 2px; vertical-align: middle">
-                                    <td align="right" style="padding-top: 2px; vertical-align: middle">
-                                        来 源：
+                                    <td align="right" style="padding-top: 2px; vertical-align: middle">来 源：
                                     </td>
                                     <td align="left" style="padding-top: 2px; vertical-align: middle; width: 145px;">
                                         <asp:DropDownList ID="ddlModel" runat="server" CssClass="" Width="140px">
@@ -105,18 +74,15 @@
                                             <asp:ListItem Value="5">过滤检索</asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
-                                    <td align="right" style="padding-top: 2px; vertical-align: middle">
-                                        检索式：
+                                    <td align="right" style="padding-top: 2px; vertical-align: middle">检索式：
                                     </td>
                                     <td align="left" style="padding-top: 2px; vertical-align: middle; width: 145px">
                                         <asp:TextBox ID="TextBoxKeyword" runat="server" Width="165" />
                                     </td>
-                                    <td>
-                                    </td>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <td align="right" style="padding-top: 2px; vertical-align: middle">
-                                        检索时间：
+                                    <td align="right" style="padding-top: 2px; vertical-align: middle">检索时间：
                                     </td>
                                     <td align="center" colspan="3" style="padding-top: 2px; vertical-align: middle; text-align: justify;">
                                         <asp:TextBox ID="txtSTime" Width="190" runat="server" CssClass="Wdate" onClick="var d5222=$dp.$('ctl00_ContentPlaceHolder1_txtEndTime');WdatePicker({onpicked:function(){d5222.focus();},maxDate:'#F{$dp.$D(\'ctl00_ContentPlaceHolder1_txtEndTime\')}'})"></asp:TextBox>
@@ -142,7 +108,8 @@
                                 <asp:TemplateField>
                                     <HeaderTemplate>
                                         <input type="checkbox" id="input2" onclick="selectAll(this)" />
-                                        全选</HeaderTemplate>
+                                        全选
+                                    </HeaderTemplate>
                                     <ItemTemplate>
                                         <asp:CheckBox ID="CheckBoxSelect" runat="server" />
                                     </ItemTemplate>
@@ -154,7 +121,8 @@
                                         <div style="width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                                             title='(<%# Eval("Number") %>) <%# Eval("Expression") %>'>
                                             (<%# Eval("Number") %>)
-                                            <%# Eval("Expression") %></div>
+                                            <%# Eval("Expression") %>
+                                        </div>
                                     </ItemTemplate>
                                     <ItemStyle Width="310px"></ItemStyle>
                                 </asp:TemplateField>
@@ -202,6 +170,34 @@
             //alert(SetValue);
             //$('input[type=checkbox]').attr('checked', $(checkbox).attr('checked'));
             $("input[type='checkbox']").attr("checked", SetValue);
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(initleftmenu, 500);
+        });
+        function initleftmenu() {
+            $(".accordion-header").each(function () {
+
+                var url = $(this).parent().find("div.accordion-body").attr("url");
+                if (url == null || url == "" || url == "undefined") {
+                    return;
+                }
+                //如果有Url  panel不展开，取消Musedown 时间注册 
+                $(this).parent().unbind();
+                $(this).parent().bind("mousedown", function (e) {
+                    console.log(e.button);
+                    if (e.button == 0) {
+
+                        var url = $(this).find("div.accordion-body").attr("url");
+                        if (url == null || url == "" || url == "undefined") {
+                            return;
+                        }
+                        $(this).parent().unbind();
+                        location.href = url;
+                    }
+                });
+            });
         }
     </script>
 </asp:Content>

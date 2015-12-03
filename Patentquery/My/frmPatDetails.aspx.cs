@@ -23,7 +23,7 @@ namespace Patentquery.My
             {
                 try
                 {
-                    if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
+                   if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
                     {
                         string strFormatUrl = "<a href='frmDoSq.aspx?db=CN&Query=F XX ({0}/{1})' target='_blank'>{2}</a>";
                         //string strFormatUrl = "<span re='frmDoSq.aspx?db=CN&Query=F XX ({0}/{1})' >{2}</span>";
@@ -123,164 +123,115 @@ namespace Patentquery.My
         {
             SearchInterface.ClsSearch search = new SearchInterface.ClsSearch();
 
-            switch (hidActiveTabTi.Value)
-            {
-                // <li><a href="#tabMianXml">著录项目信息</a></li>
-                //<li><a href="#TabDegImgs">外观图形</a></li>
-                //<li><a href="#DivtabPdf">全文PDF</a></li>
-                //<li><a href="#divTabDes">说明书</a></li>
-                //<li><a href="#divTabClams">权利要求</a></li>
-                //<li><a href="#divTabLegal">法律状态</a></li>
-                case "外观图形":
-                    if (LiteralPictureList.Text == "Loading......")
-                    {
-                        if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
-                        {
-                            LiteralPictureList.Text = string.Format("<iframe id='irmWgIms' src='frmDesignImgs.aspx?Id={0}' frameborder='0' width='100%' height='660'></iframe>", Request.QueryString["Id"]);
-                        }
-                    }
-                    LinkButtonDownload.Visible = false;
-                    break;
-                case "全文PDF":
-                    if (LiteralPdf.Text == "Loading......")
-                    {
-                        if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
-                        {
-                            #region closed.....
-                            //string strPdfUrls = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "2");
-                            //string[] strArryPdfUrls = strPdfUrls.Split('|');
-                            //StringBuilder strBud = new StringBuilder();
-                            //for (int i = 0; i < strArryPdfUrls.Length; i++)
-                            //{
-                            //    if (strArryPdfUrls[i].Contains("0ACN"))
-                            //    {
-                            //        string pdfInfo = "公开文本";
-                            //        //strBud.Append(string.Format("<a id='hrf{2}' href='{1}' target='_blank' onclick='return LoadPdf(this)'>公开文本[{0}]</a>&nbsp;&nbsp;",
-                            //        //    bnsFiles[i].Substring(bnsFiles[i].LastIndexOf('/') + 1, 34), bnsFiles[i], i + 1));
-                            //        strBud.Append(string.Format("<a id='hrf{0}' href='{1}' target='_blank' onclick='return LoadPdf(this)'>" + pdfInfo + "</a>&nbsp;&nbsp;", i + 1, strArryPdfUrls[i]));
-                            //    }
-                            //    else
-                            //    {
-                            //        string pdfInfo = "公告文本";
-                            //        //strBud.Append(string.Format("<a id='hrf{2}' href='{1}' target='_blank' onclick='return LoadPdf(this)'>公告文本[{0}]</a>&nbsp;&nbsp;",
-                            //        //    bnsFiles[i].Substring(bnsFiles[i].LastIndexOf('/') + 1, 34), bnsFiles[i], i + 1));
-                            //        strBud.Append(string.Format("<a id='hrf{0}' href='{1}' target='_blank' onclick='return LoadPdf(this)'>" + pdfInfo + "</a>&nbsp;&nbsp;", i + 1, strArryPdfUrls[i]));
-                            //    }
-                            //}
-                            //LiteralPdf.Text = string.Format("", "");
-                            //LiteralPdf.Text = "<object classid=\"clsid:CA8A9780-280D-11CF-A24D-444553540000\" width=\"900\" height=\"600\" border=\"0\"><param name=\"_Version\" value=\"65539\"><param name=\"_ExtentX\" value=\"20108\"><param name=\"_ExtentY\" value=\"10866\"><param name=\"_StockProps\" value=\"0\"><param name=\"SRC\" value=\"" + search.getInfoByPatentID(Request.QueryString["Id"], "CN", "2") + "\"><object align=\"center\" data=\"" + search.getInfoByPatentID(Request.QueryString["Id"], "CN", "2") + "\" type=\"application/pdf\" width=\"900\" height=\"600\"></object></object>";
+            //switch (hidActiveTabTi.Value)
+            //{               
+            //    case "外观图形":
+            //        if (LiteralPictureList.Text == "Loading......")
+            //        {
+            //            if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
+            //            {
+            //                LiteralPictureList.Text = string.Format("<iframe id='irmWgIms' src='frmDesignImgs.aspx?Id={0}' frameborder='0' width='100%' height='660'></iframe>", Request.QueryString["Id"]);
+            //            }
+            //        }
+            //        LinkButtonDownload.Visible = false;
+            //        break;
+            //    case "全文PDF":
+            //        if (LiteralPdf.Text == "Loading......")
+            //        {
+            //            if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
+            //            {
+            //                LiteralPdf.Text = "<div id='divPfpage'>Loading......</div>";
+            //                string strCprsPdfUrlPage = string.Format("http://211.160.117.105/bns/comm/GetBns.aspx?PNo=APP{0}&type=CN", Request.QueryString["Id"].Trim());                           
+            //                LiteralPdf.Text = string.Format("<iframe id='irmPdf' src='{0}' style='z-index:0;' frameborder='0' width='100%' height='600'></iframe>", strCprsPdfUrlPage);
+            //            }
+            //        }
+            //        LinkButtonDownload.Visible = false;
+            //        break;
+            //    case "权利要求":
+            //        if (LiteralRights.Text == "Loading......")
+            //        {
+            //            if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
+            //            {
+            //                string xmltext = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "0");
 
-                            //<form name="form1" method="post" action="GetBns.aspx?PNo=APP6CCA6DDA9HBA9GFF9EFB9GEB9ICB9EDB9GHH9IGG3BAA5CBA&amp;type=CN" id="form1">
-                            //string strCprsPdfUrls = "<form id='frmPdf_1' method='post' action='http://202.106.92.181/cprs2010/docdb/GetBns.aspx?PNo=APP{0}&type=CN'></form><script type='text/javascript'>alter(document.getElementById('frmPdf_1'))</script>";
-                            //LiteralPdf.Text = string.Format(strCprsPdfUrls, Request.QueryString["Id"].Trim());
-                            //LiteralPdf.Text = "<div><form id='aspnetForm' name='aspnetForm' method='post' action='http://202.106.92.181/cprs2010/docdb/GetBns.aspx?PNo=APP&type=CN'></form></div>";
+            //                if (xmltext.StartsWith("ERROR："))
+            //                {
+            //                    LiteralRights.Text = xmltext;
+            //                }
+            //                else
+            //                {
+            //                    MSXML2.DOMDocument30Class xml = new MSXML2.DOMDocument30Class();
+            //                    MSXML2.DOMDocument30Class xslt = new MSXML2.DOMDocument30Class();
+            //                    //xmltext=xmltext.Replace("<![CDATA[<math>", "<math>").Replace("</math>]]>", "</math>");
+            //                    xml.loadXML(xmltext);
 
-                            //LiteralPdf.Mode = LiteralMode.Encode;
-                            #endregion
+            //                    XmlDocument doc = new XmlDocument();
+            //                    doc.Load(Server.MapPath("~") + "\\newcss\\claims.xsl");
+            //                    string xsltext = doc.InnerXml;
 
-                            LiteralPdf.Text = "<div id='divPfpage'>Loading......</div>";
-                            string strCprsPdfUrlPage = string.Format("http://211.160.117.105/bns/comm/GetBns.aspx?PNo=APP{0}&type=CN", Request.QueryString["Id"].Trim());
-                            //string strCprsPdfUrlPage = string.Format("http://202.106.92.181/cprs2010/docdb/GetBns.aspx?PNo=APP{0}&type=CN", Request.QueryString["Id"].Trim());
+            //                    xslt.loadXML(xsltext);
+            //                    LiteralRights.Text = xml.transformNode(xslt).Replace("charset=UTF-16", "charset=GB2312");
+            //                }
+            //            }
+            //        }
+            //        LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "QWXZ");
+            //        break;
+            //    case "说明书":
+            //        if (LiteralBook.Text == "Loading......")
+            //        {
+            //            if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
+            //            {
+            //                LiteralBook.Text = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "1");
+            //            }
+            //        }
+            //        LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "QWXZ");
+            //        break;
+            //    case "法律状态":
+            //        if (LiteralLeagl.Text == "Loading......")
+            //        {
 
-
-                            //System.Net.WebClient MyWebClient = new System.Net.WebClient();
-                            //MyWebClient.Encoding = System.Text.Encoding.UTF8;
-                            //string strRs = MyWebClient.DownloadString(strCprsPdfUrlPage);
-                            ////LiteralPdf.Text = strRs;
-                            //ScriptManager.RegisterStartupScript(this, this.GetType(), "LiteralPdf", "LoadPdfFile('divPfpage','" + strCprsPdfUrlPage + "')", true);
-                            //HiddenField1Pdf.Value = strRs;
-                            //strCprsPdfUrlPage = "http://pdfobject.com/examples/simplest-styled.html";
-                            LiteralPdf.Text = string.Format("<iframe id='irmPdf' src='{0}' style='z-index:0;' frameborder='0' width='100%' height='600'></iframe>", strCprsPdfUrlPage);
-                        }
-                    }
-                    LinkButtonDownload.Visible = false;
-                    break;
-                case "权利要求":
-                    if (LiteralRights.Text == "Loading......")
-                    {
-                        if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
-                        {
-                            //LiteralRights.Text = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "0");
-                            string xmltext = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "0");
-
-                            if (xmltext.StartsWith("ERROR："))
-                            {
-                                LiteralRights.Text = xmltext;
-                            }
-                            else
-                            {
-                                MSXML2.DOMDocument30Class xml = new MSXML2.DOMDocument30Class();
-                                MSXML2.DOMDocument30Class xslt = new MSXML2.DOMDocument30Class();
-                                //xmltext=xmltext.Replace("<![CDATA[<math>", "<math>").Replace("</math>]]>", "</math>");
-                                xml.loadXML(xmltext);
-
-                                XmlDocument doc = new XmlDocument();
-                                doc.Load(Server.MapPath("~") + "\\newcss\\claims.xsl");
-                                string xsltext = doc.InnerXml;
-
-                                xslt.loadXML(xsltext);
-                                LiteralRights.Text = xml.transformNode(xslt).Replace("charset=UTF-16", "charset=GB2312");
-                            }
-                        }
-                    }
-                    LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "QWXZ");
-                    break;
-                case "说明书":
-                    if (LiteralBook.Text == "Loading......")
-                    {
-                        if (Request.QueryString["Id"] != null && Request.QueryString["Id"] != "")
-                        {
-                            LiteralBook.Text = search.getInfoByPatentID(Request.QueryString["Id"], "CN", "1");
-                        }
-                    }
-                    LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "QWXZ");
-                    break;
-                case "法律状态":
-                    if (LiteralLeagl.Text == "Loading......")
-                    {
-
-                        SearchInterface.WSFLZT.CnLegalStatus[] currentDataSet = search.getFalvZhuangTai(Request.QueryString["Id"]);
-                        if (currentDataSet != null)
-                        {
-                            GridViewLegal.DataSource = currentDataSet;
-                            GridViewLegal.DataBind();
-                        }
-                    }
-                    LiteralLeagl.Text = "";
-                    GridViewLegal.Visible = true;
-                    LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "FLZTXZ");
-                    break;
-                case "引文信息":
-                    if (LiteralQuote.Text == "Loading......")
-                    {
-                        if (LiteralAnnNo.Text != null && LiteralAnnNo.Text != "")
-                        {
-                            string yzInf = search.getYZInf(LiteralAnnNo.Text);
-                            if (!yzInf.Equals(""))
-                            {
-                                if (yzInf.IndexOf("@@@") > 0)
-                                {
-                                    LiteralQuote.Text = yzInf.Replace("@@@", "<br />");
-                                }
-                                else
-                                {
-                                    LiteralQuote.Text = yzInf;
-                                }
-                            }
-                            else
-                            {
-                                LiteralQuote.Text = "暂无数据";
-                            }
-                            //LiteralQuote.Text = yzInf == "" ? "暂无数据" : yzInf;
-                        }
-                        else
-                        {
-                            LiteralQuote.Text = "暂无数据";
-                        }
-                    }
-                    LinkButtonDownload.Visible = true;
-                    break;
-            }
+            //            SearchInterface.WSFLZT.CnLegalStatus[] currentDataSet = search.getFalvZhuangTai(Request.QueryString["Id"]);
+            //            if (currentDataSet != null)
+            //            {
+            //                GridViewLegal.DataSource = currentDataSet;
+            //                GridViewLegal.DataBind();
+            //            }
+            //        }
+            //        LiteralLeagl.Text = "";
+            //        GridViewLegal.Visible = true;
+            //        LinkButtonDownload.Visible = UserRight.getVisibleRight(Session["UserID"].ToString(), "FLZTXZ");
+            //        break;
+            //    case "引文信息":
+            //        if (LiteralQuote.Text == "Loading......")
+            //        {
+            //            if (LiteralAnnNo.Text != null && LiteralAnnNo.Text != "")
+            //            {
+            //                string yzInf = search.getYZInf(LiteralAnnNo.Text);
+            //                if (!yzInf.Equals(""))
+            //                {
+            //                    if (yzInf.IndexOf("@@@") > 0)
+            //                    {
+            //                        LiteralQuote.Text = yzInf.Replace("@@@", "<br />");
+            //                    }
+            //                    else
+            //                    {
+            //                        LiteralQuote.Text = yzInf;
+            //                    }
+            //                }
+            //                else
+            //                {
+            //                    LiteralQuote.Text = "暂无数据";
+            //                }
+            //                //LiteralQuote.Text = yzInf == "" ? "暂无数据" : yzInf;
+            //            }
+            //            else
+            //            {
+            //                LiteralQuote.Text = "暂无数据";
+            //            }
+            //        }
+            //        LinkButtonDownload.Visible = true;
+            //        break;
+            //}
         }
 
         /// <summary>
@@ -314,109 +265,79 @@ namespace Patentquery.My
                 strReturn = date;
             }
             return strReturn;
-        }
-
-
-        //protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        //{
-        //    TextBox txNote = (TextBox)GridView1.Rows[e.RowIndex].Controls[0].Controls[1];
-
-        //    string strUpSql = "update TLC_Collects set Note='{1}' where CollectId={0}";
-
-        //    DBA.SqlDbAccess.ExecNoQuery(CommandType.Text, string.Format(strUpSql, e.Keys[0], txNote.Text));
-
-        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "GridView1", "alert('修改成功!')", true);
-        //}
-
-        protected void GridViewLegal_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            GridViewLegal.PageIndex = e.NewPageIndex;
-            GridViewLegal.DataBind();
-        }
-
-        protected void GridViewLegal_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                //各行加上鼠标经过效果
-                e.Row.Attributes.Add("onmouseover", "currentcolor=this.style.backgroundColor;this.style.backgroundColor='#F3F3F3';");
-                e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=currentcolor;");
-                //自定义按钮加上CommandArgument以支持按钮事件
-            }
-        }
-
+        }  
 
         protected void LinkButtonDownload_Click(object sender, EventArgs e)
         {
-            String strFileName = LiteralApNo.Text;  // "PatentDetails_" + DateTime.Today.ToString("yyyyMMdd");
+            //String strFileName = LiteralApNo.Text;  // "PatentDetails_" + DateTime.Today.ToString("yyyyMMdd");
 
-            string strComma = ",";
-            string strNewLine = Environment.NewLine;
+            //string strComma = ",";
+            //string strNewLine = Environment.NewLine;
 
-            StringBuilder sbContent = new StringBuilder();
-            bool success = false;
+            //StringBuilder sbContent = new StringBuilder();
+            //bool success = false;
 
-            SearchInterface.ClsSearch search = new SearchInterface.ClsSearch();
-            switch (hidActiveTabTi.Value)
-            {
-                case "著录项目信息"://著录信息
-                    Response.Redirect(string.Format("ptdownload.aspx?Id={0}&tp=cn", Request.QueryString["Id"]));
-                    break;
-                case "PDF全文"://PDF
-                    //Response.Redirect(search.getInfoByPatentID(Request.QueryString["Id"], "CN", "2"));
-                    break;
-                case "权利要求"://代码化全文
+            //SearchInterface.ClsSearch search = new SearchInterface.ClsSearch();
+            //switch (hidActiveTabTi.Value)
+            //{
+            //    case "著录项目信息"://著录信息
+            //        Response.Redirect(string.Format("ptdownload.aspx?Id={0}&tp=cn", Request.QueryString["Id"]));
+            //        break;
+            //    case "PDF全文"://PDF
+            //        //Response.Redirect(search.getInfoByPatentID(Request.QueryString["Id"], "CN", "2"));
+            //        break;
+            //    case "权利要求"://代码化全文
 
-                    sbContent.Append(LiteralRights.Text);
+            //        sbContent.Append(LiteralRights.Text);
 
-                    Page.Response.Clear();
-                    success = ResponseFile(Page.Request, Page.Response, strFileName + "_C.html", sbContent.ToString(), 1024000);
-                    if (success)
-                    {
-                        //LiteralHint.Text = "成功";
-                    }
-                    break;
-                case "说明书"://代码化全文
-                    sbContent.Append(LiteralBook.Text);
-                    Page.Response.Clear();
-                    success = ResponseFile(Page.Request, Page.Response, strFileName + "_D.html", sbContent.ToString(), 1024000);
-                    if (success)
-                    {
-                        //LiteralHint.Text = "成功";
-                    }
-                    break;
-                case "法律状态"://法律状态
-                    sbContent.Append("申请号");
-                    sbContent.Append(strComma);
-                    sbContent.Append("法律状态公告日");
-                    sbContent.Append(strComma);
-                    sbContent.Append("法律状态");
-                    sbContent.Append(strComma);
-                    sbContent.Append("详细信息");
-                    SearchInterface.WSFLZT.CnLegalStatus[] currentDataSet = search.getFalvZhuangTai(Request.QueryString["Id"]);
-                    if (currentDataSet != null)
-                    {
-                        foreach (var item in currentDataSet)
-                        {
-                            sbContent.Append(strNewLine);
-                            sbContent.Append("'" + item.SHENQINGH);
-                            sbContent.Append(strComma);
-                            sbContent.Append(item.LegalDate);
-                            sbContent.Append(strComma);
-                            sbContent.Append(item.LegalStatusInfo);
-                            sbContent.Append(strComma);
-                            sbContent.Append(item.LegalStatusInfo + ";" + item.DETAIL);
-                        }
-                    }
+            //        Page.Response.Clear();
+            //        success = ResponseFile(Page.Request, Page.Response, strFileName + "_C.html", sbContent.ToString(), 1024000);
+            //        if (success)
+            //        {
+            //            //LiteralHint.Text = "成功";
+            //        }
+            //        break;
+            //    case "说明书"://代码化全文
+            //        sbContent.Append(LiteralBook.Text);
+            //        Page.Response.Clear();
+            //        success = ResponseFile(Page.Request, Page.Response, strFileName + "_D.html", sbContent.ToString(), 1024000);
+            //        if (success)
+            //        {
+            //            //LiteralHint.Text = "成功";
+            //        }
+            //        break;
+            //    case "法律状态"://法律状态
+            //        sbContent.Append("申请号");
+            //        sbContent.Append(strComma);
+            //        sbContent.Append("法律状态公告日");
+            //        sbContent.Append(strComma);
+            //        sbContent.Append("法律状态");
+            //        sbContent.Append(strComma);
+            //        sbContent.Append("详细信息");
+            //        SearchInterface.WSFLZT.CnLegalStatus[] currentDataSet = search.getFalvZhuangTai(Request.QueryString["Id"]);
+            //        if (currentDataSet != null)
+            //        {
+            //            foreach (var item in currentDataSet)
+            //            {
+            //                sbContent.Append(strNewLine);
+            //                sbContent.Append("'" + item.SHENQINGH);
+            //                sbContent.Append(strComma);
+            //                sbContent.Append(item.LegalDate);
+            //                sbContent.Append(strComma);
+            //                sbContent.Append(item.LegalStatusInfo);
+            //                sbContent.Append(strComma);
+            //                sbContent.Append(item.LegalStatusInfo + ";" + item.DETAIL);
+            //            }
+            //        }
 
-                    Page.Response.Clear();
-                    success = ResponseFile(Page.Request, Page.Response, strFileName + "_L.csv", sbContent.ToString(), 1024000);
-                    if (success)
-                    {
-                        //LiteralHint.Text = "成功";
-                    }
-                    break;
-            }
+            //        Page.Response.Clear();
+            //        success = ResponseFile(Page.Request, Page.Response, strFileName + "_L.csv", sbContent.ToString(), 1024000);
+            //        if (success)
+            //        {
+            //            //LiteralHint.Text = "成功";
+            //        }
+            //        break;
+            //}
         }
 
 
