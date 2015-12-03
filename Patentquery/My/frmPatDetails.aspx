@@ -9,25 +9,23 @@
         }
 
         .accordion .accordion-header-selected {
-            background: #0081c2;
+            background: #E0ECFF;
         }
 
         .accordion-header-selected {
-            background: #0081c2;
+            background: #E0ECFF;
         }
 
         .accordion .accordion-header-selected .panel-title {
-            color: #fff;
+            color: #0E2D5F;
         }
 
         .easyui-accordion .panel {
             margin-bottom: 0px;
         }
-
-            .easyui-accordion .panel .panel-title {
-                font-size: 12px;
-            }
-
+        #ptinfo div .panel {
+            border-top-width:0px;
+        }
         .thumbnail img {
             width: 280px;
             height: 280px;
@@ -283,7 +281,7 @@
             onSelect: function (title, index) {
                 if ($("#ptinfo").accordion("getPanel", index).find("div.val").length > 0) return;
                 switch (title) {
-                    case "自动标引":                       
+                    case "自动标引":
                         break;
                     case "权利要求":
                         type = "C";
