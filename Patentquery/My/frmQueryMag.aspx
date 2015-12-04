@@ -174,9 +174,6 @@
     </script>
     <script type="text/javascript">
         $(function () {
-            setTimeout(initleftmenu, 500);
-        });
-        function initleftmenu() {
             $(".accordion-header").each(function () {
 
                 var url = $(this).parent().find("div.accordion-body").attr("url");
@@ -198,6 +195,6 @@
                     }
                 });
             });
-        }
+        });
     </script>
 </asp:Content>
